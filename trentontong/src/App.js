@@ -1,11 +1,22 @@
+import React from 'react';
+import './App.css';
+import Navigation from './components/Navigation';
+import Home from './components/HeroSection';
+import About from './components/About';
+import Contact from './components/Contact';
+import Experience from './components/Experience';
+import Projects from './components/Projects';
+
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Trenton Tong</h1>
-        <p>Coming Soon</p>
-      </header>
-    </div>
+    <>
+      <Navigation />
+      <Home />
+      <About />
+      <Experience />
+      <Projects />
+    </>
+      //<Contact />
   );
 }
 

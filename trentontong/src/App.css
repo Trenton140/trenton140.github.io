@@ -1,38 +1,265 @@
-.App {
-  text-align: center;
+/* Reset default margins and padding */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Ensure the content is padded to account for the fixed navbar */
+body {
+  padding-top: 0; /* Remove the padding if the navbar is transparent */
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f7ff; /* Light blue background */
+  color: #333;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.custom-navbar {
+  background-color: rgba(255, 255, 255, 1) !important; /* Light background with some transparency */
+  margin: 1rem auto; /* Top and bottom margin with auto side margins for centering */
+  max-width: 500px; /* Maximum width of the navbar */
+  border-radius: 50px; /* Pill-shaped border radius */
+  padding: 0.5rem 2rem; /* Padding inside the navbar */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for a floating effect */
+}
+
+.custom-navbar .navbar-nav .nav-link {
+  font-family: 'Arial', sans-serif; /* Use the same font family as the brand */
+  font-size: 1rem; /* Use the same font size as the brand */
+  color: black !important; /* Match the brand text color */
+}
+
+
+/* Overwrite Bootstrap's navbar-brand styles if necessary */
+.navbar-brand-custom {
+  padding: 0.5rem 2rem; /* Padding inside the navbar */
+  color: black !important; /* Color of the brand text */
+  font-weight: bold; /* Optional: if you want the brand text to be bold */
+}
+
+/* Overwrite Bootstrap's navbar dark theme if necessary */
+.custom-navbar .navbar-light .navbar-nav .nav-link {
+  color: black; /* Color of the nav links */
+}
+
+.custom-navbar .navbar-light .navbar-nav .nav-link:hover,
+.custom-navbar .navbar-light .navbar-nav .nav-link:focus {
+  color: blue !important; /* Blue color for the active/hover state */
+  background-color: transparent; /* Keep the background transparent */
+}
+
+/* Custom toggle icon colors */
+.custom-navbar .navbar-light .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,/* your svg path here */"); /* Path to your custom SVG for the toggle icon */
+}
+
+/* Responsive changes */
+@media (max-width: 768px) {
+  .custom-navbar {
+    max-width: 100%; /* Full width on smaller screens */
+    border-radius: 0; /* Remove border-radius on smaller screens */
+    margin: 0rem auto; /* Top and bottom margin with auto side margins for centering */
+  }
+  .navbar-expand-lg .navbar-toggler {
+    display: block;
+  }
+
+  .navbar-expand-lg .navbar-collapse {
+    overflow: hidden;
+    height: 0;
+  }
+
+  .navbar-expand-lg .navbar-collapse.collapsing {
+    height: auto;
+    overflow: hidden;
+  }
+
+  .navbar-expand-lg .navbar-collapse.show {
+    overflow: visible;
+    height: auto;
+  }
+
+  .navbar-expand-lg .navbar-nav {
+    flex-direction: column;
+    margin-top: 0.5rem;
+  }
+
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding-left: 1rem;
+  }
+
+  .profile-pic {
+    margin-bottom: 0.5rem;
+    max-width: 150px; /* Smaller image size for mobile */
   }
 }
 
+/* Profile picture styles */
+.profile-pic {
+  width: 100%; /* Make the image responsive to the container width */
+  max-width: 250px; /* Maximum width for the image */
+  margin-bottom: 1rem; /* Space below the image */
+  border-radius: 15px; /* Rounded corners for modern look */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Modern shadow effect */
+  border: none; /* Removing the border for a cleaner look */
+}
+
+/* Ensures the card does not overlap the navbar when navigating to sections */
+.card {
+  margin-top: 1rem; /* Adds space above the card */
+}
+
+/* App header styling */
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 20px;
+  text-align: center;
+  background-color: #007bff; /* Bootstrap blue color */
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* Cards styling for sections */
+.card {
+  margin: 20px 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card:hover {
+  transform: translateY(-5px); /* Moves the card up slightly on hover */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Adds shadow effect on hover */
+}
+
+.card-title {
+  color: #0056b3; /* Blue color for titles inside cards */
+}
+
+/* Section titles styling */
+h2 {
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 10px;
+  color: #0056b3;
+}
+
+/* Contact form styling */
+.form-control, .btn-primary {
+  border-radius: 0; /* Square edges for form elements */
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+/* Links styling */
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #0056b3;
+}
+
+/* Add some space between your content and the footer */
+.content {
+  padding-bottom: 50px;
+}
+
+.hero-section {
+  position: relative;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  color: black;
+}
+
+/* HeroSection.css */
+.hero-section h1 {
+  font-size: 4rem; /* Adjust the size as needed */
+  /* Additional styles for h1 */
+}
+
+/* If you want to style the typed text specifically */
+.react-typed {
+  font-size: 2.5rem; /* Adjust the size as needed */
+  /* Additional styles for typed text */
+}
+
+/* HeroSection.css */
+.hero-section {
+  position: relative;
+  /* Other styles */
+}
+
+/* This pseudo-element covers the entire .hero-section */
+.hero-section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.45); /* White with 50% opacity */
+  z-index: 1; /* Ensure it's above the background image but below the content */
+}
+
+/* Ensure that content in the hero section is above the overlay */
+.hero-section * {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-section .hero-icons {
+  margin-top: 20px; /* Space from the text above */
+  display: flex;
+  justify-content: center; /* Center the icons horizontally */
+  gap: 20px; /* Space between icons */
+}
+
+.hero-section .hero-icons a {
+  color: white; /* Icon color */
+  font-size: 24px; /* Icon size */
+  transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.icons a:hover {
+  color: #0d6efd; /* Icon hover color */
+}
+
+.icons {
+  margin-top: 20px; /* Space from the text above */
+  display: flex;
+  justify-content: center; /* Center the icons horizontally */
+  gap: 20px; /* Space between icons */
+}
+
+.icons a {
+  color: black; /* Icon color */
+  font-size: 24px; /* Icon size */
+  transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.hero-section .hero-icons a:hover {
+  color: #0d6efd; /* Icon hover color */
+}
+
+/* Remove focus outline for the navbar-toggler element */
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* You might also want to remove the border if there is one */
+.navbar-toggler {
+  border: none;
 }

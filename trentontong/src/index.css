@@ -11,3 +11,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* Add some responsive padding to the body to ensure some space around the content */
+body {
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+}
