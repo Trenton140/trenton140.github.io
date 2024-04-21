@@ -1,19 +1,23 @@
 import React from 'react';
-import { ReactTyped } from 'react-typed'; // This is for versions >= 2.0.0
-
-import backgroundImage from '../assets/images/UKPhoto1.jpg'; // Correct path to your image
+import { ReactTyped } from 'react-typed'; // For the typing effect
+import backgroundImage from '../assets/images/UKPhoto1.jpg'; // Path to the background image
 
 function HeroSection() {
   return (
     <div className="hero-section" style={{ backgroundImage: `url(${backgroundImage})` }}>
+      {/* Main Heading */}
       <h1>Hi, I'm Trenton</h1>
+      
+      {/* Typed Effect */}
       <ReactTyped
         strings={['I love technology.', 'I love travel.', 'I love fitness.']}
         typeSpeed={40}
         backSpeed={50}
-        style={{ fontSize: '2.5rem' }} // Add inline styles here
+        style={{ fontSize: '2.5rem' }} // Inline style for the typed text
         loop
       />
+      
+      {/* Icons */}
       <div className="hero-icons">
         <a href="https://github.com/trenton140" target="_blank" rel="noopener noreferrer">
           <i className="fab fa-github"></i>
@@ -25,6 +29,11 @@ function HeroSection() {
           <i className="fab fa-linkedin"></i>
         </a>
       </div>
+      
+      {/* Scroll Down Arrow */}
+      <a href="#nextSection" className="scroll-down">
+        <i className="fas fa-chevron-down"></i>
+      </a>
     </div>
   );
 }
