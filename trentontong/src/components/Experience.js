@@ -7,8 +7,17 @@ const Experience = () => {
       <h2>Work Experience</h2>
       <Card>
         <Card.Body>
+          <Card.Title>FRP Value Stream Associate Intern</Card.Title>
+          <Card.Subtitle className="mb-2 text-muted">TD Bank (Corporate Finance) - May 2024 – Present</Card.Subtitle>
+          <Card.Text>
+            
+          </Card.Text>
+        </Card.Body>
+      </Card>
+      <Card>
+        <Card.Body>
           <Card.Title>Technology Solutions Intern</Card.Title>
-          <Card.Subtitle className="mb-2 text-muted">TD Bank (Corporate Finance) - May 2023 – Present</Card.Subtitle>
+          <Card.Subtitle className="mb-2 text-muted">TD Bank (Corporate Finance) - May 2023 – April 2024</Card.Subtitle>
           <Card.Text>
             Led the development of the Centralized Diamond Attestation Program, managed SharePoint List backends, and utilized Power BI for data analysis and reporting.
           </Card.Text>

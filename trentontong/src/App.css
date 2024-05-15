@@ -17,7 +17,7 @@ body {
 .custom-navbar {
   background-color: rgba(255, 255, 255, 1) !important; /* Light background with some transparency */
   margin: 1rem auto; /* Top and bottom margin with auto side margins for centering */
-  max-width: 500px; /* Maximum width of the navbar */
+  max-width: 550px; /* Maximum width of the navbar */
   border-radius: 50px; /* Pill-shaped border radius */
   padding: 0.5rem 2rem; /* Padding inside the navbar */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for a floating effect */
@@ -274,4 +274,87 @@ a:hover {
 /* You might also want to remove the border if there is one */
 .navbar-toggler {
   border: none;
+}
+
+.photo-gallery-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.photo-gallery {
+  width: 80%; /* Smaller portion of the screen width */
+  max-width: 800px; /* Maximum width for the gallery */
+  height: 500px; /* Fixed height for the gallery */
+  position: relative;
+  overflow: hidden; /* Hide overflow to create a clipping effect */
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for a floating effect */
+}
+
+.gallery-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Ensure the image fits within the area without stretching */
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out; /* Smooth fade transition for image change */
+}
+
+.gallery-image.active {
+  opacity: 1; /* Make the active image visible */
+}
+
+.gallery-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  margin-top: 10px;
+}
+
+.gallery-button {
+  background-color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.gallery-button:hover {
+  background-color: #f0f7ff;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-button i {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.gallery-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 20px;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 4px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #717171;
 }

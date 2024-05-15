@@ -1,7 +1,7 @@
 // Import the image at the top of your About.js file
 import React from 'react';
 import { Container, Row, Col, Card, Image } from 'react-bootstrap';
-import profilePic from '../assets/images/UKphoto.jpg'; // Update the import path if necessary
+import profilePic from '../assets/images/NiceFrance.JPG'; // Update the import path if necessary
 
 function About() {
     // JSX code for your component
