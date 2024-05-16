@@ -6,7 +6,10 @@ html, body {
   height: 100%;
 }
 
-/* Ensure the content is padded to account for the fixed navbar */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   padding-top: 0; /* Remove the padding if the navbar is transparent */
   font-family: 'Arial', sans-serif;
@@ -39,22 +42,11 @@ body {
   background-color: transparent; /* Keep the background transparent */
 }
 
-/* Ensure the hover color overrides Bootstrap styles */
-.custom-navbar .navbar-light .navbar-nav .nav-link:hover,
-.custom-navbar .navbar-light .navbar-nav .nav-link:focus {
-  color: #0056b3 !important;
-}
-/* Custom toggle icon colors */
-.custom-navbar .navbar-light .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,/* your svg path here */"); /* Path to your custom SVG for the toggle icon */
-}
-
-/* Responsive changes */
 @media (max-width: 768px) {
   .custom-navbar {
     max-width: 100%; /* Full width on smaller screens */
     border-radius: 0; /* Remove border-radius on smaller screens */
-    margin: 0rem auto; /* Top and bottom margin with auto side margins for centering */
+    margin: 0 auto; /* Center on smaller screens */
   }
   .navbar-expand-lg .navbar-toggler {
     display: block;
@@ -113,7 +105,6 @@ body {
   }
 }
 
-/* Profile picture styles */
 .profile-pic {
   width: 100%; /* Make the image responsive to the container width */
   max-width: 250px; /* Maximum width for the image */
@@ -123,42 +114,26 @@ body {
   border: none; /* Removing the border for a cleaner look */
 }
 
-/* Ensures the card does not overlap the navbar when navigating to sections */
 .card {
   margin-top: 1rem; /* Adds space above the card */
-}
-
-/* App header styling */
-.App-header {
-  padding: 20px;
-  text-align: center;
-  background-color: #007bff; /* Bootstrap blue color */
-  color: white;
-}
-
-/* Cards styling for sections */
-.card {
-  margin: 20px 0;
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
 }
 
 .card:hover {
   transform: translateY(-5px); /* Moves the card up slightly on hover */
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Adds shadow effect on hover */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Adds shadow effect on hover */
 }
 
 .card-title {
   color: #0056b3; /* Blue color for titles inside cards */
 }
 
-/* Section titles styling */
 h2 {
   border-bottom: 2px solid #007bff;
   padding-bottom: 10px;
   color: #0056b3;
 }
 
-/* Contact form styling */
 .form-control, .btn-primary {
   border-radius: 0; /* Square edges for form elements */
 }
@@ -173,7 +148,6 @@ h2 {
   border-color: #0056b3;
 }
 
-/* Links styling */
 a {
   color: #007bff;
   text-decoration: none;
@@ -183,7 +157,6 @@ a:hover {
   color: #0056b3;
 }
 
-/* Add some space between your content and the footer */
 .content {
   padding-bottom: 50px;
 }
@@ -200,20 +173,20 @@ a:hover {
   flex-direction: column;
   text-align: center;
   color: black;
+  transition: opacity 1s ease-in-out, background-image 1s ease-in-out; /* Ensure only these properties transition */
 }
 
-/* HeroSection.css */
-.hero-section h1 {
-  font-size: 4rem; /* Adjust the size as needed */
-  /* Additional styles for h1 */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.45);
+  z-index: 1;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0.6;
 }
-
-/* If you want to style the typed text specifically */
-.react-typed {
-  font-size: 2.5rem; /* Adjust the size as needed */
-  /* Additional styles for typed text */
-}
-
 /* This pseudo-element covers the entire .hero-section */
 .hero-section::after {
   content: '';
@@ -222,12 +195,20 @@ a:hover {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(255, 255, 255, 0.45); /* White with 50% opacity */
+  background: rgba(255, 255, 255, 0.40); /* White with 50% opacity */
   z-index: 1; /* Ensure it's above the background image but below the content */
 }
 
-/* Ensure that content in the hero section is above the overlay */
+.hero-overlay.fade-in {
+  opacity: 0;
+}
+
+.hero-overlay.fade-out {
+  opacity: 1;
+}
+
 .hero-section * {
+  position: relative;
   z-index: 2;
 }
 
@@ -265,15 +246,15 @@ a:hover {
   color: #0d6efd; /* Icon hover color */
 }
 
-/* Remove focus outline for the navbar-toggler element */
-.navbar-toggler:focus {
-  outline: none;
-  box-shadow: none;
-}
-
-/* You might also want to remove the border if there is one */
-.navbar-toggler {
-  border: none;
+.scroll-down {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 2rem;
+  z-index: 10;
+  animation: bounce 2s infinite;
 }
 
 .photo-gallery-container {
@@ -284,28 +265,34 @@ a:hover {
 }
 
 .photo-gallery {
-  width: 80%; /* Smaller portion of the screen width */
-  max-width: 800px; /* Maximum width for the gallery */
-  height: 500px; /* Fixed height for the gallery */
+  width: 80%;
+  max-width: 800px;
+  height: 500px;
   position: relative;
-  overflow: hidden; /* Hide overflow to create a clipping effect */
+  overflow: hidden;
   border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for a floating effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: #ffffff;
+  transition: background 1s ease-in-out;
 }
 
 .gallery-image {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* Ensure the image fits within the area without stretching */
+  object-fit: contain;
   position: absolute;
   top: 0;
   left: 0;
   opacity: 0;
-  transition: opacity 1s ease-in-out; /* Smooth fade transition for image change */
+  transition: opacity 1s ease-in-out;
 }
 
-.gallery-image.active {
-  opacity: 1; /* Make the active image visible */
+.gallery-image.fade-in {
+  opacity: 1;
+}
+
+.gallery-image.fade-out {
+  opacity: 0;
 }
 
 .gallery-controls {
@@ -357,4 +344,66 @@ a:hover {
 
 .dot.active {
   background-color: #717171;
+}
+
+.dark-mode-toggle {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+  width: 60px;
+  height: 30px;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2.5px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+}
+
+.toggle {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  transition: all 0.3s;
+}
+
+.toggle.dark {
+  transform: translateX(30px);
+  background-color: #555;
+  color: #f5f5f5; /* White color for the moon icon */
+}
+
+.toggle.light {
+  transform: translateX(0);
+  background-color: #ffec99;
+  color: #555; /* Dark color for the sun icon */
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.custom-navbar.dark {
+  background-color: #333;
+  color: #e0e0e0;
+}
+
+.custom-navbar.light {
+  background-color: rgba(255, 255, 255, 1);
+  color: black;
+}
+
+.custom-navbar .navbar-nav .nav-link:hover,
+.custom-navbar .navbar-nav .nav-link:focus {
+  color: #0056b3;
+  background-color: transparent;
 }

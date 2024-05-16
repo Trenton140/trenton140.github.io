@@ -1,72 +1,125 @@
-import React, { useState, useEffect } from 'react';
-import UKPhoto from '../assets/images/UKphoto.jpg';
-import AnotherPhoto from '../assets/images/UKPhoto1.jpg';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
+import { FastAverageColor } from 'fast-average-color';
 import { Container } from 'react-bootstrap';
-// Add other images similarly
 
 const images = [
-  UKPhoto,
-  AnotherPhoto,
-  // Add other imported images here
+  require('../assets/images/UKphoto.jpg'), // Use require to ensure the paths are correct
+  require('../assets/images/UKPhoto1.jpg'),
+  require('../assets/images/PlaceMassena.jpg'),
+  // Add more images as needed
 ];
 
 function PhotoGallery() {
   const [index, setIndex] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
+  const [backgroundColor, setBackgroundColor] = useState('#ffffff');
+  const imgRef = useRef(null);
+  const [fadeState, setFadeState] = useState('fade-in'); // single state for fade
+  const intervalRef = useRef(null);
+
+  const startInterval = useCallback(() => {
+    clearInterval(intervalRef.current);
+    intervalRef.current = setInterval(() => {
+      setFadeState('fade-out'); // Start fading out
+      setTimeout(() => {
+        setIndex((currentIndex) => (currentIndex + 1) % images.length);
+        setFadeState('fade-in'); // Start fading in the next image
+      }, 1000); // Transition time for fading out
+    }, 8000); // Change image every 8000 milliseconds (8 seconds)
+  }, []);
 
   useEffect(() => {
-    if (!isPaused) {
-      const intervalId = setInterval(() => {
-        setIndex(currentIndex => (currentIndex + 1) % images.length);
-      }, 8000); // Change image every 8000 milliseconds (8 seconds)
+    startInterval();
+    return () => clearInterval(intervalRef.current);
+  }, [startInterval]);
 
-      return () => clearInterval(intervalId);
+  useEffect(() => {
+    const fac = new FastAverageColor(); // Initialize fac inside useEffect
+    const updateBackgroundColor = () => {
+      if (imgRef.current) {
+        fac.getColorAsync(imgRef.current)
+          .then(color => setBackgroundColor(color.hex))
+          .catch(e => console.log(e));
+      }
+    };
+
+    updateBackgroundColor();
+
+    const currentImgRef = imgRef.current;
+    if (currentImgRef) {
+      currentImgRef.addEventListener('load', updateBackgroundColor);
     }
-  }, [isPaused]);
+
+    return () => {
+      if (currentImgRef) {
+        currentImgRef.removeEventListener('load', updateBackgroundColor);
+      }
+    };
+  }, [index]);
 
   const handleNext = () => {
-    setIndex((index + 1) % images.length);
-    setIsPaused(true);
-    setTimeout(() => setIsPaused(false), 10000); // Pause for 10 seconds
+    setFadeState('fade-out'); // Start fading out
+    setTimeout(() => {
+      setIndex((index + 1) % images.length);
+      setFadeState('fade-in'); // Start fading in the next image
+    }, 1000); // Transition time for fading out
+    startInterval(); // Reset the timer
   };
 
-  const handlePrevious = () => {
-    setIndex((index - 1 + images.length) % images.length);
-    setIsPaused(true);
-    setTimeout(() => setIsPaused(false), 10000); // Pause for 10 seconds
+  const handlePrev = () => {
+    setFadeState('fade-out'); // Start fading out
+    setTimeout(() => {
+      setIndex((index - 1 + images.length) % images.length);
+      setFadeState('fade-in'); // Start fading in the previous image
+    }, 1000); // Transition time for fading out
+    startInterval(); // Reset the timer
+  };
+
+  const handleDotClick = (i) => {
+    setFadeState('fade-out'); // Start fading out
+    setTimeout(() => {
+      setIndex(i);
+      setFadeState('fade-in'); // Start fading in the selected image
+    }, 1000); // Transition time for fading out
+    startInterval(); // Reset the timer
   };
 
   return (
     <Container id="gallery" className="my-5">
     <div className="photo-gallery-container">
-      <div className="photo-gallery">
-        {images.map((image, i) => (
-          <img
-            key={i}
-            src={image}
-            alt="Travel Photography"
-            className={`gallery-image ${i === index ? 'active' : ''}`}
-          />
-        ))}
+      <div
+        className="photo-gallery"
+        style={{
+          background: backgroundColor,
+          transition: 'background 1s ease-in-out'
+        }}
+      >
+        <img
+          src={images[index]}
+          alt="Travel Photography"
+          ref={imgRef}
+          className={`gallery-image ${fadeState}`}
+        />
       </div>
       <div className="gallery-controls">
-        <button onClick={handlePrevious} className="gallery-button">
+        <button
+          className="gallery-button"
+          onClick={handlePrev}
+        >
           <i className="fas fa-chevron-left"></i>
         </button>
         <div className="gallery-dots">
           {images.map((_, i) => (
             <span
               key={i}
-              className={`dot ${i === index ? 'active' : ''}`}
-              onClick={() => {
-                setIndex(i);
-                setIsPaused(true);
-                setTimeout(() => setIsPaused(false), 10000); // Pause for 10 seconds
-              }}
+              className={`dot ${index === i ? 'active' : ''}`}
+              onClick={() => handleDotClick(i)}
             ></span>
           ))}
         </div>
-        <button onClick={handleNext} className="gallery-button">
+        <button
+          className="gallery-button"
+          onClick={handleNext}
+        >
           <i className="fas fa-chevron-right"></i>
         </button>
       </div>

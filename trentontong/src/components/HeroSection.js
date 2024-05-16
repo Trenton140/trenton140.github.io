@@ -1,24 +1,34 @@
-import React from 'react';
-import { ReactTyped } from 'react-typed'; // For the typing effect
-import backgroundImage from '../assets/images/UKPhoto1.jpg'; // Path to the background image
-import { Container } from 'react-bootstrap';
+import React, { useState, useEffect } from 'react';
+import { ReactTyped } from 'react-typed'; // Correct import for ReactTyped
+import backgroundImageLight from '../assets/images/UKPhoto2.jpg'; // Light mode image
+import backgroundImageDark from '../assets/images/PlaceMassena1.jpg'; // Dark mode image
 
-function HeroSection() {
+function HeroSection({ darkMode }) {
+  const [fadeState, setFadeState] = useState('fade-in');
+  const [currentImage, setCurrentImage] = useState(backgroundImageLight);
+
+  useEffect(() => {
+    setFadeState('fade-out');
+    const timer = setTimeout(() => {
+      setCurrentImage(darkMode ? backgroundImageDark : backgroundImageLight);
+      setFadeState('fade-in');
+    }, 500); // Half of the transition duration to smoothly switch images
+
+    return () => clearTimeout(timer);
+  }, [darkMode]);
+
   return (
-    <div id="home" className="hero-section" style={{ backgroundImage: `url(${backgroundImage})` }}>
-      {/* Main Heading */}
+    <div id="home" className="hero-section" style={{ backgroundImage: `url(${currentImage})` }}>
       <h1>Hi, I'm Trenton</h1>
       
-      {/* Typed Effect */}
       <ReactTyped
-        strings={['', 'Always and Forever.', 'I love Teddy.']}
+        strings={['I\'m a computer science student.', 'I\'m passionate about fitness and travel.', 'I thrive on tech challenges and new experiences!']}
         typeSpeed={40}
         backSpeed={50}
         style={{ fontSize: '2.5rem' }} // Inline style for the typed text
         loop
-        />
+      />
       
-      {/* Icons */}
       <div className="hero-icons">
         <a href="https://github.com/trenton140" target="_blank" rel="noopener noreferrer">
           <i className="fab fa-github"></i>
@@ -31,10 +41,10 @@ function HeroSection() {
         </a>
       </div>
       
-      {/* Scroll Down Arrow */}
       <a href="#about" className="scroll-down">
         <i className="fas fa-chevron-down"></i>
       </a>
+      <div className={`hero-overlay ${fadeState}`}></div>
     </div>
   );
 }
