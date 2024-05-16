@@ -1,13 +1,28 @@
 {
   "files": {
-    "main.css": "/static/css/main.e6c13ad2.css",
-    "main.js": "/static/js/main.fb257996.js",
+    "main.css": "/static/css/main.cfd0fc9a.css",
+    "main.js": "/static/js/main.6187049a.js",
+    "static/media/9.jpg": "/static/media/9.d22a8945ed8d9a92dc79.jpg",
+    "static/media/3.jpg": "/static/media/3.f74beb579c8ed4520012.jpg",
+    "static/media/6.jpg": "/static/media/6.faa9e3382bf57dfc9999.jpg",
+    "static/media/7.jpg": "/static/media/7.682110b1674d285a3ba9.jpg",
+    "static/media/4.jpg": "/static/media/4.7f94b58ff0cac3d5f772.jpg",
+    "static/media/5.jpg": "/static/media/5.e13b48f2923fa2dd26f2.jpg",
+    "static/media/12.jpg": "/static/media/12.ba3eafa324fda4aa9553.jpg",
+    "static/media/11.jpg": "/static/media/11.056aedc8b2332a1cf578.jpg",
+    "static/media/1.jpg": "/static/media/1.37589ee9063b3c8a2400.jpg",
+    "static/media/2.jpg": "/static/media/2.9ee104bd3e0018912c64.jpg",
+    "static/media/8.jpg": "/static/media/8.4db24ffe41126cc4ac8e.jpg",
+    "static/media/PlaceMassena1.jpg": "/static/media/PlaceMassena1.bc788bce73dbb7a69404.jpg",
+    "static/media/13.jpg": "/static/media/13.c6ce1bda531607a876f1.jpg",
+    "static/media/UKPhoto2.jpg": "/static/media/UKPhoto2.90783c7139d720be6cde.jpg",
+    "static/media/NiceFrance.JPG": "/static/media/NiceFrance.5cb1bd9b1b96394b3ae2.JPG",
     "index.html": "/index.html",
-    "main.e6c13ad2.css.map": "/static/css/main.e6c13ad2.css.map",
-    "main.fb257996.js.map": "/static/js/main.fb257996.js.map"
+    "main.cfd0fc9a.css.map": "/static/css/main.cfd0fc9a.css.map",
+    "main.6187049a.js.map": "/static/js/main.6187049a.js.map"
   },
   "entrypoints": [
-    "static/css/main.e6c13ad2.css",
-    "static/js/main.fb257996.js"
+    "static/css/main.cfd0fc9a.css",
+    "static/js/main.6187049a.js"
   ]
 }
