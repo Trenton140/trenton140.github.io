@@ -3,11 +3,12 @@ import './App.css';
 import Navigation from './components/Navigation';
 import HeroSection from './components/HeroSection';
 import About from './components/About';
-import Contact from './components/Contact';
+//import Contact from './components/Contact';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
 import PhotoGallery from './components/PhotoGallery';
 import DarkModeToggle from './components/DarkModeToggle';
+import Footer from './components/Footer';
 
 function App() {
   const [darkMode, setDarkMode] = useState(() => {
@@ -32,11 +33,12 @@ function App() {
       <DarkModeToggle darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       <Navigation />
       <HeroSection darkMode={darkMode} />
-      <About />
-      <Experience />
-      <Projects />
-      <PhotoGallery />
+      <About darkMode={darkMode}/>
+      <Experience darkMode={darkMode}/>
+      <Projects darkMode={darkMode}/>
+      <PhotoGallery darkMode={darkMode}/>
       {/*<Contact />*/}
+      <Footer />
     </>
   );
 }

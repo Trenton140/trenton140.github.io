@@ -13,9 +13,10 @@ function About() {
                         <Card.Body>
                             <Card.Title>About Me</Card.Title>
                             <Card.Text>
-                                Trenton Tong<br />
-                                Location: Toronto, Ontario, Canada<br />
-                                Carleton University: Bachelor of Computer Science, Cybersecurity Stream, Minor in Business (GPA: 3.7/4 A-)<br />
+                               Welcome to my personal website! I'm Trenton Tong, currently pursuing a Bachelor of Computer Science Honours Degree at Carleton University with a focus on Internet Security and a minor in Business. <br/><br/> 
+                               I have a diverse skill set that includes Java, C, C++, Python, HTML/CSS, JavaScript, and SQL, all of which I've utilized in various projects and coursework. <br/><br/>  
+                               I'm passionate about solving complex problems and thrive on innovation and adaptability. Explore my website to learn more about my projects, experience, and interests. <br/><br/> 
+                               Feel free to connect if you'd like to chat about tech, business, or potential collaborations. Thanks for visiting!
                                 <div className="icons">
                                     <a href="https://github.com/trenton140" target="_blank" rel="noopener noreferrer">
                                         <i className="fab fa-github"></i>

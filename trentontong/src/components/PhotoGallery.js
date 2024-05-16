@@ -3,10 +3,18 @@ import { FastAverageColor } from 'fast-average-color';
 import { Container } from 'react-bootstrap';
 
 const images = [
-  require('../assets/images/UKphoto.jpg'), // Use require to ensure the paths are correct
-  require('../assets/images/UKPhoto1.jpg'),
-  require('../assets/images/PlaceMassena.jpg'),
-  // Add more images as needed
+  require('../assets/images/gallery/1.jpg'),
+  require('../assets/images/gallery/2.jpg'),
+  require('../assets/images/gallery/3.jpg'),
+  require('../assets/images/gallery/4.jpg'),
+  require('../assets/images/gallery/5.jpg'),
+  require('../assets/images/gallery/6.jpg'),
+  require('../assets/images/gallery/7.jpg'),
+  require('../assets/images/gallery/8.jpg'),
+  require('../assets/images/gallery/9.jpg'),
+  require('../assets/images/gallery/11.jpg'),
+  require('../assets/images/gallery/12.jpg'),
+  require('../assets/images/gallery/13.jpg'),
 ];
 
 function PhotoGallery() {
@@ -85,45 +93,46 @@ function PhotoGallery() {
 
   return (
     <Container id="gallery" className="my-5">
-    <div className="photo-gallery-container">
-      <div
-        className="photo-gallery"
-        style={{
-          background: backgroundColor,
-          transition: 'background 1s ease-in-out'
-        }}
-      >
-        <img
-          src={images[index]}
-          alt="Travel Photography"
-          ref={imgRef}
-          className={`gallery-image ${fadeState}`}
-        />
-      </div>
-      <div className="gallery-controls">
-        <button
-          className="gallery-button"
-          onClick={handlePrev}
+      <h2>Photography</h2>
+      <div className="photo-gallery-container">
+        <div
+          className="photo-gallery"
+          style={{
+            background: backgroundColor,
+            transition: 'background 1s ease-in-out'
+          }}
         >
-          <i className="fas fa-chevron-left"></i>
-        </button>
-        <div className="gallery-dots">
-          {images.map((_, i) => (
-            <span
-              key={i}
-              className={`dot ${index === i ? 'active' : ''}`}
-              onClick={() => handleDotClick(i)}
-            ></span>
-          ))}
+          <img
+            src={images[index]}
+            alt="Travel Photography"
+            ref={imgRef}
+            className={`gallery-image ${fadeState}`}
+          />
         </div>
-        <button
-          className="gallery-button"
-          onClick={handleNext}
-        >
-          <i className="fas fa-chevron-right"></i>
-        </button>
+        <div className="gallery-controls">
+          <button
+            className="gallery-button"
+            onClick={handlePrev}
+          >
+            <i className="fas fa-chevron-left"></i>
+          </button>
+          <div className="gallery-dots">
+            {images.map((_, i) => (
+              <span
+                key={i}
+                className={`dot ${index === i ? 'active' : ''}`}
+                onClick={() => handleDotClick(i)}
+              ></span>
+            ))}
+          </div>
+          <button
+            className="gallery-button"
+            onClick={handleNext}
+          >
+            <i className="fas fa-chevron-right"></i>
+          </button>
+        </div>
       </div>
-    </div>
     </Container>
   );
 }
