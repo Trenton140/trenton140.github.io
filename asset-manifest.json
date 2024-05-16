@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.cfd0fc9a.css",
-    "main.js": "/static/js/main.6187049a.js",
+    "main.js": "/static/js/main.425bc617.js",
     "static/media/9.jpg": "/static/media/9.d22a8945ed8d9a92dc79.jpg",
     "static/media/3.jpg": "/static/media/3.f74beb579c8ed4520012.jpg",
     "static/media/6.jpg": "/static/media/6.faa9e3382bf57dfc9999.jpg",
@@ -19,10 +19,10 @@
     "static/media/NiceFrance.JPG": "/static/media/NiceFrance.5cb1bd9b1b96394b3ae2.JPG",
     "index.html": "/index.html",
     "main.cfd0fc9a.css.map": "/static/css/main.cfd0fc9a.css.map",
-    "main.6187049a.js.map": "/static/js/main.6187049a.js.map"
+    "main.425bc617.js.map": "/static/js/main.425bc617.js.map"
   },
   "entrypoints": [
     "static/css/main.cfd0fc9a.css",
-    "static/js/main.6187049a.js"
+    "static/js/main.425bc617.js"
   ]
 }
