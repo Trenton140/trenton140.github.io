@@ -19,9 +19,14 @@ You may also see any lint errors in the console.
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
+### `npm run optimize-images`
+
+Compresses all images in `src/assets/images` using **imagemin**. This command is automatically run during `npm run build` but can be executed on its own if needed.
+
 ### `npm run build`
 
 Builds the app for production to the `build` folder.\
+Before bundling, images in `src/assets/images` are compressed using **imagemin** to reduce the final bundle size.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
 The build is minified and the filenames include the hashes.\
