@@ -33,7 +33,7 @@ function About() {
                     </Card>
                 </Col>
                 <Col md={4} className="text-center">
-                    <Image src={profilePic} alt="Trenton Tong" className="profile-pic" roundedCircle loading="lazy" />
+                    <Image src={profilePic} alt="Trenton Tong" className="profile-pic" roundedCircle />
                 </Col>
             </Row>
         </Container>
