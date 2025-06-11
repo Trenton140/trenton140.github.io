@@ -107,6 +107,7 @@ function PhotoGallery() {
             alt="Travel Photography"
             ref={imgRef}
             className={`gallery-image ${fadeState}`}
+            loading="lazy"
           />
         </div>
         <div className="gallery-controls">
