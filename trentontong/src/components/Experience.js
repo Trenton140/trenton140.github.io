@@ -7,8 +7,26 @@ const Experience = () => {
       <h2>Work Experience</h2>
       <Card>
         <Card.Body>
-          <Card.Title>FRP Value Stream Associate Intern</Card.Title>
-          <Card.Subtitle className="mb-2 text-muted">TD Bank (Corporate Finance) - May 2024 – Present</Card.Subtitle>
+          <Card.Title>AI2 Data Scientist Associate</Card.Title>
+          <Card.Subtitle className="mb-2 text-muted">TD Bank (Wealth AI2) - January 2026 – Present</Card.Subtitle>
+          <Card.Text>
+            
+          </Card.Text>
+        </Card.Body>
+      </Card>
+      <Card>
+        <Card.Body>
+          <Card.Title>Wealth AI2 Analytics & Data Science Intern</Card.Title>
+          <Card.Subtitle className="mb-2 text-muted">TD Bank (Wealth AI2) - May 2025 – December 2025</Card.Subtitle>
+          <Card.Text>
+            
+          </Card.Text>
+        </Card.Body>
+      </Card>
+      <Card>
+        <Card.Body>
+          <Card.Title>Financial Intern</Card.Title>
+          <Card.Subtitle className="mb-2 text-muted">TD Bank (Corporate Finance) - May 2024 – May 2025</Card.Subtitle>
           <Card.Text>
             
           </Card.Text>
