@@ -4,11 +4,15 @@ import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
 
 function DarkModeToggle({ darkMode, toggleDarkMode }) {
   return (
-    <div className="dark-mode-toggle" onClick={toggleDarkMode}>
-      <div className={`toggle ${darkMode ? 'dark' : 'light'}`}>
+    <button
+      className="dark-mode-toggle"
+      onClick={toggleDarkMode}
+      aria-label={darkMode ? 'Switch to light mode' : 'Switch to dark mode'}
+    >
+      <span className={`toggle ${darkMode ? 'dark' : 'light'}`}>
         <FontAwesomeIcon icon={darkMode ? faMoon : faSun} />
-      </div>
-    </div>
+      </span>
+    </button>
   );
 }
 
