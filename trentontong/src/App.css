@@ -1,4 +1,24 @@
-/* Reset default margins and padding */
+/* ===========================
+   CSS Custom Properties
+   =========================== */
+:root {
+  --color-primary: #007bff;
+  --color-primary-dark: #0056b3;
+  --color-primary-accent: #0d6efd;
+  --color-text: #333;
+  --color-bg: #f0f7ff;
+  --color-bg-dark: #121212;
+  --color-text-dark: #e0e0e0;
+  --shadow-sm: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 6px 12px rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 8px 15px rgba(0, 0, 0, 0.2);
+  --transition-fast: 0.3s;
+  --transition-normal: 0.5s;
+}
+
+/* ===========================
+   Reset & Base
+   =========================== */
 html, body {
   margin: 0;
   padding: 0;
@@ -11,86 +31,125 @@ html {
 }
 
 body {
-  padding-top: 0; /* Remove the padding if the navbar is transparent */
-  font-family: 'Arial', sans-serif;
-  background-color: #f0f7ff; /* Light blue background */
-  color: #333;
+  padding-top: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
 }
 
+/* ===========================
+   Navbar
+   =========================== */
 .custom-navbar {
-  background-color: rgba(255, 255, 255, 1) !important; /* Light background with some transparency */
-  margin: 1rem auto; /* Top and bottom margin with auto side margins for centering */
-  max-width: 550px; /* Maximum width of the navbar */
-  border-radius: 50px; /* Pill-shaped border radius */
-  padding: 0.5rem 2rem; /* Padding inside the navbar */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for a floating effect */
+  background-color: rgba(255, 255, 255, 1);
+  margin: 1rem auto;
+  max-width: 550px;
+  border-radius: 50px;
+  padding: 0.5rem 2rem;
+  box-shadow: var(--shadow-sm);
 }
 
 .custom-navbar .navbar-nav .nav-link,
 .navbar-brand-custom {
-  padding: 0.5rem 2rem; /* Padding inside the navbar */
-  font-family: 'Arial', sans-serif;
+  padding: 0.5rem 2rem;
   font-size: 1rem;
-  color: black; /* Color of the brand text and nav links */
-  font-weight: bold; /* Bold font for all nav items */
-  transition: color 0.3s; /* Smooth transition for color change */
+  color: black;
+  font-weight: bold;
+  transition: color var(--transition-fast);
 }
 
 .custom-navbar .navbar-nav .nav-link:hover,
 .custom-navbar .navbar-nav .nav-link:focus {
-  color: #0056b3; /* Blue color for the active/hover state */
-  background-color: transparent; /* Keep the background transparent */
+  color: var(--color-primary-dark);
+  background-color: transparent;
 }
 
-@media (max-width: 768px) {
-  .custom-navbar {
-    max-width: 100%; /* Full width on smaller screens */
-    border-radius: 0; /* Remove border-radius on smaller screens */
-    margin: 0 auto; /* Center on smaller screens */
-  }
-  .navbar-expand-lg .navbar-toggler {
-    display: block;
-  }
-
-  .navbar-expand-lg .navbar-collapse {
-    overflow: hidden;
-    height: 0;
-  }
-
-  .navbar-expand-lg .navbar-collapse.collapsing {
-    height: auto;
-    overflow: hidden;
-  }
-
-  .navbar-expand-lg .navbar-collapse.show {
-    overflow: visible;
-    height: auto;
-  }
-
-  .navbar-expand-lg .navbar-nav {
-    flex-direction: column;
-    margin-top: 0.5rem;
-  }
-
-  .navbar-expand-lg .navbar-nav .nav-link {
-    padding-left: 1rem;
-  }
-
-  .profile-pic {
-    margin-bottom: 0.5rem;
-    max-width: 150px; /* Smaller image size for mobile */
-  }
+/* ===========================
+   Hero Section
+   =========================== */
+.hero-section {
+  position: relative;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  color: black;
+  transition: opacity 1s ease-in-out, background-image 1s ease-in-out;
 }
 
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.45);
+  z-index: 1;
+  transition: opacity var(--transition-normal) ease-in-out;
+  opacity: 0.6;
+}
+
+.hero-section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.45);
+  z-index: 1;
+}
+
+.hero-overlay.fade-in {
+  opacity: 0;
+}
+
+.hero-overlay.fade-out {
+  opacity: 1;
+}
+
+.hero-section > h1,
+.hero-section > .hero-icons,
+.hero-section > .scroll-down,
+.hero-section > span {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-icons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.hero-icons a {
+  color: white;
+  font-size: 24px;
+  transition: color var(--transition-fast);
+}
+
+.hero-icons a:hover {
+  color: var(--color-primary-accent);
+}
+
+/* ===========================
+   Scroll Down Arrow
+   =========================== */
 .scroll-down {
   position: absolute;
-  bottom: 20px; /* Adjust as needed for placement from the bottom */
-  left: 50%; /* Center horizontally */
-  transform: translateX(-50%); /* Center horizontally */
-  color: white; /* White color for the arrow */
-  font-size: 2rem; /* Size of the arrow */
-  z-index: 10; /* Make sure it's above other content */
-  animation: bounce 2s infinite; /* Apply the bounce animation */
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 2rem;
+  z-index: 10;
+  animation: bounce 2s infinite;
 }
 
 @keyframes bounce {
@@ -105,163 +164,102 @@ body {
   }
 }
 
+/* ===========================
+   Profile & About
+   =========================== */
 .profile-pic {
-  width: 100%; /* Make the image responsive to the container width */
-  max-width: 250px; /* Maximum width for the image */
-  margin-bottom: 1rem; /* Space below the image */
-  border-radius: 15px; /* Rounded corners for modern look */
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Modern shadow effect */
-  border: none; /* Removing the border for a cleaner look */
+  width: 100%;
+  max-width: 250px;
+  margin-bottom: 1rem;
+  border-radius: 15px;
+  box-shadow: var(--shadow-lg);
+  border: none;
 }
 
+.icons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.icons a {
+  color: black;
+  font-size: 24px;
+  transition: color var(--transition-fast);
+}
+
+.icons a:hover {
+  color: var(--color-primary-accent);
+}
+
+/* ===========================
+   Cards
+   =========================== */
 .card {
-  margin-top: 1rem; /* Adds space above the card */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+  margin-top: 1rem;
+  transition: transform var(--transition-fast) ease, box-shadow var(--transition-fast) ease;
 }
 
 .card:hover {
-  transform: translateY(-5px); /* Moves the card up slightly on hover */
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Adds shadow effect on hover */
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .card-title {
-  color: #0056b3; /* Blue color for titles inside cards */
+  color: var(--color-primary-dark);
 }
 
+/* ===========================
+   Typography & Links
+   =========================== */
 h2 {
-  border-bottom: 2px solid #007bff;
+  border-bottom: 2px solid var(--color-primary);
   padding-bottom: 10px;
-  color: #0056b3;
+  color: var(--color-primary-dark);
 }
 
 .form-control, .btn-primary {
-  border-radius: 0; /* Square edges for form elements */
+  border-radius: 0;
 }
 
 .btn-primary {
-  background-color: #007bff;
-  border-color: #007bff;
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
 }
 
 .btn-primary:hover {
-  background-color: #0056b3;
-  border-color: #0056b3;
+  background-color: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
 }
 
 a {
-  color: #007bff;
+  color: var(--color-primary);
   text-decoration: none;
 }
 
 a:hover {
-  color: #0056b3;
+  color: var(--color-primary-dark);
 }
 
 .content {
   padding-bottom: 50px;
 }
 
-.hero-section {
-  position: relative;
-  height: 100vh;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
-  color: black;
-  transition: opacity 1s ease-in-out, background-image 1s ease-in-out; /* Ensure only these properties transition */
-}
-
-.hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(255, 255, 255, 0.45);
-  z-index: 1;
-  transition: opacity 0.5s ease-in-out;
-  opacity: 0.6;
-}
-/* This pseudo-element covers the entire .hero-section */
-.hero-section::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(255, 255, 255, 0.40); /* White with 50% opacity */
-  z-index: 1; /* Ensure it's above the background image but below the content */
-}
-
-.hero-overlay.fade-in {
-  opacity: 0;
-}
-
-.hero-overlay.fade-out {
-  opacity: 1;
-}
-
-.hero-section * {
-  position: relative;
-  z-index: 2;
-}
-
-.hero-section .hero-icons {
-  margin-top: 20px; /* Space from the text above */
-  display: flex;
-  justify-content: center; /* Center the icons horizontally */
-  gap: 20px; /* Space between icons */
-}
-
-.hero-section .hero-icons a {
-  color: white; /* Icon color */
-  font-size: 24px; /* Icon size */
-  transition: color 0.3s; /* Smooth transition for hover effect */
-}
-
-.icons a:hover {
-  color: #0d6efd; /* Icon hover color */
-}
-
-.icons {
-  margin-top: 20px; /* Space from the text above */
-  display: flex;
-  justify-content: center; /* Center the icons horizontally */
-  gap: 20px; /* Space between icons */
-}
-
-.icons a {
-  color: black; /* Icon color */
-  font-size: 24px; /* Icon size */
-  transition: color 0.3s; /* Smooth transition for hover effect */
-}
-
-.hero-section .hero-icons a:hover {
-  color: #0d6efd; /* Icon hover color */
-}
-
-.scroll-down {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  color: white;
-  font-size: 2rem;
-  z-index: 10;
-  animation: bounce 2s infinite;
-}
-
+/* ===========================
+   Photo Gallery
+   =========================== */
 .photo-gallery-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 20px 0;
+}
+
+.photo-gallery-container:focus {
+  outline: 2px solid var(--color-primary-accent);
+  outline-offset: 4px;
+  border-radius: 15px;
 }
 
 .photo-gallery {
@@ -271,7 +269,7 @@ a:hover {
   position: relative;
   overflow: hidden;
   border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-sm);
   background: #ffffff;
   transition: background 1s ease-in-out;
 }
@@ -306,12 +304,12 @@ a:hover {
 
 .gallery-button {
   background-color: white;
-  border: none; /* White border for the circle */
+  border: none;
   padding: 10px;
   border-radius: 50%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-sm);
   cursor: pointer;
-  transition: background-color 0.3s, box-shadow 0.3s;
+  transition: background-color var(--transition-fast), box-shadow var(--transition-fast);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -320,13 +318,18 @@ a:hover {
 }
 
 .gallery-button:hover {
-  background-color: #f0f7ff;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  background-color: var(--color-bg);
+  box-shadow: var(--shadow-md);
 }
 
-.gallery-button i {
+.gallery-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.gallery-button svg {
   font-size: 1.5rem;
-  color: #333;
+  color: var(--color-text);
 }
 
 .gallery-dots {
@@ -345,12 +348,21 @@ a:hover {
   display: inline-block;
   transition: background-color 0.6s ease;
   cursor: pointer;
+  border: none;
+  padding: 0;
+}
+
+.dot:hover {
+  background-color: #888;
 }
 
 .dot.active {
-  background-color: #0d6efd;
+  background-color: var(--color-primary-accent);
 }
 
+/* ===========================
+   Dark Mode Toggle
+   =========================== */
 .dark-mode-toggle {
   position: fixed;
   top: 10px;
@@ -360,13 +372,14 @@ a:hover {
   height: 30px;
   background-color: rgba(255, 255, 255, 1);
   border-radius: 50px;
+  border: none;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 2.5px;
   cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s;
+  box-shadow: var(--shadow-sm);
+  transition: background-color var(--transition-fast);
 }
 
 .toggle {
@@ -377,29 +390,45 @@ a:hover {
   align-items: center;
   justify-content: center;
   font-size: 16px;
-  transition: all 0.3s;
+  transition: all var(--transition-fast);
 }
 
 .toggle.dark {
   transform: translateX(30px);
   background-color: #555;
-  color: #f5f5f5; /* White color for the moon icon */
+  color: #f5f5f5;
 }
 
 .toggle.light {
   transform: translateX(0);
   background-color: #ffec99;
-  color: #555; /* Dark color for the sun icon */
+  color: #555;
 }
 
+/* ===========================
+   Footer
+   =========================== */
+.footer {
+  background-color: #333;
+  color: var(--color-text-dark);
+  text-align: center;
+  padding: 0.5px;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* ===========================
+   Dark Mode Overrides
+   =========================== */
 body.dark-mode {
-  background-color: #121212;
-  color: #e0e0e0;
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-dark);
 }
 
 .custom-navbar.dark {
   background-color: #333;
-  color: #e0e0e0;
+  color: var(--color-text-dark);
 }
 
 .custom-navbar.light {
@@ -407,23 +436,60 @@ body.dark-mode {
   color: black;
 }
 
-.custom-navbar .navbar-nav .nav-link:hover,
-.custom-navbar .navbar-nav .nav-link:focus {
-  color: #0056b3;
-  background-color: transparent;
-}
-
-.footer {
-  background-color: #333; /* Dark background */
-  color: #e0e0e0; /* Light text color */
-  text-align: center; /* Center text */
-  padding: 0.5px; /* Padding for spacing */
-  bottom: 0;
-  width: 100%;
-  box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for a floating effect */
-}
-
 body.dark-mode .footer {
-  background-color: #121212; /* Even darker background for dark mode */
-  color: #e0e0e0; /* Keep text color light */
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-dark);
+}
+
+/* ===========================
+   Responsive
+   =========================== */
+@media (max-width: 768px) {
+  .custom-navbar {
+    max-width: 100%;
+    border-radius: 0;
+    margin: 0 auto;
+  }
+
+  .navbar-expand-lg .navbar-toggler {
+    display: block;
+  }
+
+  .navbar-expand-lg .navbar-collapse {
+    overflow: hidden;
+    height: 0;
+  }
+
+  .navbar-expand-lg .navbar-collapse.collapsing {
+    height: auto;
+    overflow: hidden;
+  }
+
+  .navbar-expand-lg .navbar-collapse.show {
+    overflow: visible;
+    height: auto;
+  }
+
+  .navbar-expand-lg .navbar-nav {
+    flex-direction: column;
+    margin-top: 0.5rem;
+  }
+
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding-left: 1rem;
+  }
+
+  .profile-pic {
+    margin-bottom: 0.5rem;
+    max-width: 150px;
+  }
+
+  .photo-gallery {
+    width: 100%;
+    height: 300px;
+  }
+
+  .hero-section {
+    background-attachment: scroll;
+  }
 }

@@ -3,7 +3,6 @@ import './App.css';
 import Navigation from './components/Navigation';
 import HeroSection from './components/HeroSection';
 import About from './components/About';
-//import Contact from './components/Contact';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
 import PhotoGallery from './components/PhotoGallery';
@@ -12,7 +11,11 @@ import Footer from './components/Footer';
 
 function App() {
   const [darkMode, setDarkMode] = useState(() => {
-    return localStorage.getItem('dark-mode') === 'true';
+    try {
+      return localStorage.getItem('dark-mode') === 'true';
+    } catch {
+      return false;
+    }
   });
 
   useEffect(() => {
@@ -21,7 +24,11 @@ function App() {
     } else {
       document.body.classList.remove('dark-mode');
     }
-    localStorage.setItem('dark-mode', darkMode);
+    try {
+      localStorage.setItem('dark-mode', darkMode);
+    } catch {
+      // localStorage unavailable
+    }
   }, [darkMode]);
 
   const toggleDarkMode = () => {
@@ -33,11 +40,10 @@ function App() {
       <DarkModeToggle darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       <Navigation />
       <HeroSection darkMode={darkMode} />
-      <About darkMode={darkMode}/>
-      <Experience darkMode={darkMode}/>
-      <Projects darkMode={darkMode}/>
-      <PhotoGallery darkMode={darkMode}/>
-      {/*<Contact />*/}
+      <About darkMode={darkMode} />
+      <Experience darkMode={darkMode} />
+      <Projects darkMode={darkMode} />
+      <PhotoGallery darkMode={darkMode} />
       <Footer />
     </>
   );
