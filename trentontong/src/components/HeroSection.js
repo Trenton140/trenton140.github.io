@@ -42,7 +42,7 @@ function HeroSection({ darkMode }) {
       <h1>Hi, I'm Trenton</h1>
 
       <ReactTyped
-        strings={['I\'m a computer science student.', 'I\'m passionate about fitness and travel.', 'I thrive on tech challenges and new experiences!']}
+        strings={['I\'m a computer science graduate.', 'I\'m passionate about fitness and travel.', 'I thrive on tech challenges and new experiences!']}
         typeSpeed={40}
         backSpeed={50}
         style={{ fontSize: '2.5rem' }}
