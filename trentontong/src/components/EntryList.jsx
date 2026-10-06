@@ -27,11 +27,11 @@ export default function EntryList({ entries, twoColumn = false }) {
           {/* Decorative: the organization's name is written out beside it. */}
           {logo && <img className={styles.logo} src={logos[logo]} alt="" />}
           <div>
-            <h3 className={styles.title}>{title}</h3>
-            <p className={styles.meta}>
-              <span>{org}</span>
-              <span>{dates}</span>
-            </p>
+            <div className={styles.header}>
+              <h3 className={styles.title}>{title}</h3>
+              <p className={styles.org}>{org}</p>
+              <p className={styles.dates}>{dates}</p>
+            </div>
             {description && <p>{description}</p>}
             {points && <Points points={points} />}
             {sections && (

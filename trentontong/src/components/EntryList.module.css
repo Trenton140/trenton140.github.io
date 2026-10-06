@@ -38,20 +38,56 @@
   }
 }
 
+/* Title, organization and dates. Phones stack them; wider screens put the dates on the
+   title's line, right-aligned and sharing its baseline. */
+.header {
+  display: grid;
+  grid-template-areas:
+    'title'
+    'org'
+    'dates';
+  row-gap: 0.2rem;
+  margin-bottom: 0.85rem;
+}
+
+.header:last-child {
+  margin-bottom: 0;
+}
+
+@media (min-width: 640px) {
+  .header {
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      'title dates'
+      'org org';
+    column-gap: 1.5rem;
+    align-items: baseline;
+  }
+}
+
 .title {
-  margin-bottom: 0.3rem;
+  grid-area: title;
+  margin: 0;
   font-size: 1.2rem;
 }
 
-.meta {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 0 1rem;
-  margin-bottom: 0.85rem;
+.org,
+.dates,
+.sectionDates {
+  margin: 0;
   font-family: var(--font-mono);
   font-size: 0.875rem;
+  font-weight: 400;
   color: var(--text-muted);
+}
+
+.org {
+  grid-area: org;
+}
+
+.dates {
+  grid-area: dates;
+  white-space: nowrap;
 }
 
 .points {
@@ -80,19 +116,14 @@
   border-left-color: var(--accent);
 }
 
+/* Team name with its dates right after it (not pushed to the edge, so they never read as
+   part of the role's dates). */
 .sectionHeading {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 0 1rem;
+  align-items: baseline;
+  gap: 0.1rem 0.75rem;
   margin: 0 0 0.5rem;
   font-size: 1.05rem;
   font-weight: 600;
-}
-
-.sectionDates {
-  font-family: var(--font-mono);
-  font-size: 0.875rem;
-  font-weight: 400;
-  color: var(--text-muted);
 }
