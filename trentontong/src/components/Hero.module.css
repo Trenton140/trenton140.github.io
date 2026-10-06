@@ -4,7 +4,7 @@
   place-items: center;
   min-height: 100vh;
   min-height: 100svh;
-  padding: 6rem 1rem 5rem;
+  padding: 6rem 0.75rem 5rem;
   text-align: center;
   color: var(--hero-text);
   background: url('../assets/images/hero-light.webp') center / cover no-repeat;
@@ -16,7 +16,7 @@
   background-image: url('../assets/images/hero-dark.webp');
 }
 
-/* Tints the photo so the text stays readable: paper wash in light mode, charcoal in dark. */
+/* Tints the photo so the text stays readable: light wash in light mode, dark wash in dark. */
 .hero::before {
   content: '';
   position: absolute;
@@ -39,7 +39,7 @@
 .tagline {
   min-height: 3em; /* room for two lines so wrapping never shifts the layout */
   font-family: var(--font-mono);
-  font-size: clamp(0.95rem, 0.8rem + 0.8vw, 1.3rem);
+  font-size: clamp(0.875rem, 0.55rem + 1.3vw, 1.45rem);
   line-height: 1.5;
 }
 

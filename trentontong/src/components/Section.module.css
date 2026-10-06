@@ -1,5 +1,5 @@
 .section {
-  padding-block: 3.5rem;
+  padding-block: clamp(2.25rem, 1.5rem + 2.5vw, 3.5rem);
   scroll-margin-top: 3rem; /* keeps the heading clear of the fixed header */
   counter-increment: section;
 }
@@ -20,7 +20,7 @@
   content: counter(section, decimal-leading-zero);
   content: counter(section, decimal-leading-zero) / '';
   font-family: var(--font-mono);
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   letter-spacing: 0.05em;
   color: var(--accent);
 }

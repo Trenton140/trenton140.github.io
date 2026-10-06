@@ -32,6 +32,23 @@ describe('Gallery', () => {
     expect(shownPhoto()).toBe(`Travel photography 3 of ${total}`);
   });
 
+  it('changes photo on a horizontal swipe but not on a vertical scroll', () => {
+    render(<Gallery />);
+    const total = photoCount();
+    const frame = screen.getByRole('img').closest('[aria-live]');
+    const swipe = (from, to) => {
+      fireEvent.touchStart(frame, { touches: [{ clientX: from[0], clientY: from[1] }] });
+      fireEvent.touchEnd(frame, { changedTouches: [{ clientX: to[0], clientY: to[1] }] });
+    };
+
+    swipe([300, 100], [150, 110]); // swipe left -> next
+    expect(shownPhoto()).toBe(`Travel photography 2 of ${total}`);
+    swipe([100, 100], [250, 90]); // swipe right -> previous
+    expect(shownPhoto()).toBe(`Travel photography 1 of ${total}`);
+    swipe([200, 300], [180, 100]); // mostly vertical -> ignored
+    expect(shownPhoto()).toBe(`Travel photography 1 of ${total}`);
+  });
+
   it('keeps the previous photo underneath until the new one has faded in', () => {
     render(<Gallery />);
     const framePhotos = () =>

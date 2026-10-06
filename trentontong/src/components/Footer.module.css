@@ -2,7 +2,7 @@
   margin-top: 2rem;
   padding: 2rem 1rem;
   font-family: var(--font-mono);
-  font-size: 0.8rem;
+  font-size: 0.875rem;
   text-align: center;
   color: var(--text-muted);
   border-top: 1px solid var(--border);
@@ -10,4 +10,5 @@
 
 .footer p {
   margin: 0.25rem 0;
+  text-wrap: balance;
 }

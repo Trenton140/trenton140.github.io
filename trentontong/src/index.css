@@ -1,18 +1,19 @@
 /* Theme tokens. Components use only these variables, so switching data-theme on <html>
-   restyles the whole page. Warm paper and ink, with a single clay accent used sparingly. */
+   restyles the whole page. Cool mist and ink, with a single petrol accent used sparingly. */
 :root {
   color-scheme: light;
-  --bg: #f4f1ea;
-  --surface: #fbf9f5;
-  --border: #e2ddd2;
-  --text: #1e1c19;
-  --text-muted: #6a655c;
-  --accent: #a8491f;
-  --on-accent: #fbf9f5;
-  --dot: #cdc6b8;
-  --scrim: rgb(244 241 234 / 0.6);
-  --hero-text: #1e1c19;
-  --shadow: 0 1px 2px rgb(30 28 25 / 0.04), 0 8px 24px rgb(30 28 25 / 0.06);
+  --bg: #eef1f1;
+  --surface: #fafbfb;
+  --border: #d6dddd;
+  --text: #121819;
+  --text-muted: #566164;
+  --accent: #1d6670;
+  --on-accent: #fafbfb;
+  --dot: #c1cbcb;
+  --scrim: rgb(238 241 241 / 0.6);
+  --hero-text: #121819;
+  --logo-bg: #ffffff;
+  --shadow: 0 1px 2px rgb(18 24 25 / 0.04), 0 8px 24px rgb(18 24 25 / 0.06);
 
   --font-sans: 'Geist Variable', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   --font-serif: 'Instrument Serif', Georgia, 'Times New Roman', serif;
@@ -23,16 +24,17 @@
 
 :root[data-theme='dark'] {
   color-scheme: dark;
-  --bg: #121110;
-  --surface: #1f1d1a;
-  --border: #34312b;
-  --text: #ece6dc;
-  --text-muted: #a39c90;
-  --accent: #e08a5c;
-  --on-accent: #121110;
-  --dot: #4a453d;
-  --scrim: rgb(18 17 16 / 0.6);
-  --hero-text: #f3eee6;
+  --bg: #0d1213;
+  --surface: #182123;
+  --border: #283436;
+  --text: #e3eaea;
+  --text-muted: #93a2a4;
+  --accent: #6bbfc6;
+  --on-accent: #0d1213;
+  --dot: #3a4749;
+  --scrim: rgb(13 18 19 / 0.6);
+  --hero-text: #eef3f3;
+  --logo-bg: #e8eeee;
   --shadow: 0 8px 24px rgb(0 0 0 / 0.35);
 }
 
@@ -43,7 +45,10 @@
   box-sizing: border-box;
 }
 
+/* Fluid type scale: 16px on phones up to 18px on large screens. Percent/rem units keep it
+   relative to the visitor's browser font-size setting, and all rem sizes scale with it. */
 html {
+  font-size: clamp(100%, 0.9rem + 0.3vw, 112.5%);
   scroll-behavior: smooth;
 }
 
@@ -108,12 +113,12 @@ button {
 
 /* Shared layout */
 .container {
-  width: min(100% - 2rem, 1100px);
+  width: min(100% - 2.5rem, 74rem);
   margin-inline: auto;
 }
 
 .card {
-  padding: 1.25rem 1.5rem;
+  padding: clamp(1.1rem, 0.8rem + 1vw, 1.6rem) clamp(1.2rem, 0.8rem + 1.2vw, 1.9rem);
   background-color: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);

@@ -20,7 +20,7 @@ export default function App() {
           <EntryList entries={experience} />
         </Section>
         <Section id="projects" title="Project Experience">
-          <EntryList entries={projects} />
+          <EntryList entries={projects} twoColumn />
         </Section>
         <Section id="gallery" title="Photography">
           <Gallery />

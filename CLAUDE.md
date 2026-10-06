@@ -33,7 +33,9 @@ A single-page React 19 app built with Vite. Plain CSS (CSS Modules + theme varia
 ## How things work
 
 - **Editing content**: change `src/content.js`. Components only handle layout. Experience/project
-  entries are `{ title, org, dates, description?, points? }` (`points` renders as bullets). The site is
+  entries are `{ title, org, dates, logo?, description?, points?, sections? }`: `points` renders
+  as bullets; `sections` (`[{ heading, dates, points? }]`, newest first) splits one role into teams;
+  `logo` is a key (`'td'`, `'telus'`) mapped to an image in `EntryList.jsx`. The site is
   public: keep entries resume-level and leave out employer-internal names, figures, and contact details. A new section needs a `navLinks` entry in
   `content.js` and a matching `<Section id=…>` in `App.jsx`.
 - **Dark mode**: the theme is the `data-theme` attribute (`light` | `dark`) on `<html>`. An inline
@@ -43,7 +45,7 @@ A single-page React 19 app built with Vite. Plain CSS (CSS Modules + theme varia
   `:root[data-theme='dark']` overrides them. Components use only these variables, so **to restyle
   dark mode, edit the token block**, not individual components. The only per-theme rule outside it
   is the hero background photo in `Hero.module.css`.
-- **Look**: warm paper/ink palette with a single clay accent (`--accent`), used sparingly (links,
+- **Look**: cool mist/ink palette with a single petrol-teal accent (`--accent`), used sparingly (links,
   hovers, active states, section numbers). Fonts are self-hosted via Fontsource packages imported in
   `main.jsx`: Instrument Serif for display (`--font-serif`: hero name, section titles, brand),
   Geist for body (`--font-sans`), Geist Mono for small details (`--font-mono`: dates, tagline,
@@ -51,7 +53,9 @@ A single-page React 19 app built with Vite. Plain CSS (CSS Modules + theme varia
 - **Images**: WebP only (supported by every current browser). To add a gallery photo: drop the JPG
   in `source-images/gallery/`, run `npm run optimize-images`, and commit the new
   `src/assets/images/gallery/*.webp`. `Gallery.jsx` picks up every file in that folder
-  automatically (`import.meta.glob`), sorted by numeric filename. CI does **not** run the optimizer.
+  automatically (`import.meta.glob`), sorted by numeric filename. Company logos live in
+  `source-images/logos/` and are listed in the optimizer's `logos` array (lossless WebP output in
+  `src/assets/images/logos/`). CI does **not** run the optimizer.
   The WebP files must be committed.
 
 ## Develop, test, build

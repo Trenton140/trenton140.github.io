@@ -38,3 +38,19 @@ for (const file of galleryFiles) {
   const output = file.replace(/\.\w+$/, '.webp');
   await optimize(path.join(SOURCE_DIR, 'gallery', file), path.join(OUTPUT_DIR, 'gallery', output), 1200);
 }
+
+// Logos: lossless so flat colours and edges stay crisp. `trim` removes transparent margins.
+const logos = [
+  { input: 'td.png', output: 'td.webp' },
+  { input: 'telus-health.png', output: 'telus-health.webp', trim: true },
+];
+
+fs.mkdirSync(path.join(OUTPUT_DIR, 'logos'), { recursive: true });
+for (const { input, output, trim } of logos) {
+  const source = path.join(SOURCE_DIR, 'logos', input);
+  const target = path.join(OUTPUT_DIR, 'logos', output);
+  let image = sharp(source);
+  if (trim) image = image.trim();
+  await image.resize({ height: 128, withoutEnlargement: true }).webp({ lossless: true }).toFile(target);
+  console.log(`  ${path.relative(ROOT, source)} (${kb(source)}) -> ${path.relative(ROOT, target)} (${kb(target)})`);
+}

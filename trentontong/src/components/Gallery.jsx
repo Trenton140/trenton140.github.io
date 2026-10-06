@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa6';
 import styles from './Gallery.module.css';
 
@@ -44,9 +44,26 @@ export default function Gallery() {
     () => !window.matchMedia?.('(prefers-reduced-motion: reduce)').matches,
   );
 
+  const touchStart = useRef(null);
+
   const show = (i) => {
     setAutoplay(false);
     setCurrent((i + photos.length) % photos.length);
+  };
+
+  // Swipe left/right on touch screens. Only a mostly-horizontal swipe of 40px or more counts,
+  // so vertical scrolling over the photo still works normally.
+  const handleTouchStart = (event) => {
+    const { clientX, clientY } = event.touches[0];
+    touchStart.current = { x: clientX, y: clientY };
+  };
+  const handleTouchEnd = (event) => {
+    if (!touchStart.current) return;
+    const { clientX, clientY } = event.changedTouches[0];
+    const dx = clientX - touchStart.current.x;
+    const dy = clientY - touchStart.current.y;
+    touchStart.current = null;
+    if (Math.abs(dx) >= 40 && Math.abs(dx) > Math.abs(dy)) show(current + (dx < 0 ? 1 : -1));
   };
 
   useEffect(() => {
@@ -64,7 +81,12 @@ export default function Gallery() {
 
   return (
     <section className={styles.gallery} aria-roledescription="carousel" aria-label="Photo gallery">
-      <div className={styles.frame} aria-live={autoplay ? 'off' : 'polite'}>
+      <div
+        className={styles.frame}
+        aria-live={autoplay ? 'off' : 'polite'}
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
+      >
         {layers.map((i) => (
           <Slide
             key={i}
@@ -97,6 +119,11 @@ export default function Gallery() {
             />
           ))}
         </div>
+        {/* Replaces the dots on phones. Hidden from screen readers: each photo's alt text
+            already says "N of total". */}
+        <span className={styles.counter} aria-hidden="true">
+          {current + 1} / {photos.length}
+        </span>
         <button
           type="button"
           className={styles.arrow}
