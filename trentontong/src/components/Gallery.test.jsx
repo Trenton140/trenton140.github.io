@@ -32,6 +32,23 @@ describe('Gallery', () => {
     expect(shownPhoto()).toBe(`Travel photography 3 of ${total}`);
   });
 
+  it('keeps the previous photo underneath until the new one has faded in', () => {
+    render(<Gallery />);
+    const framePhotos = () =>
+      screen.getAllByRole('img', { hidden: true, name: /^Travel photography/ });
+
+    fireEvent.click(screen.getByRole('button', { name: 'Next photo' }));
+    // Both photos are in the frame; only the incoming one is exposed to assistive tech.
+    expect(framePhotos()).toHaveLength(2);
+    expect(shownPhoto()).toBe(`Travel photography 2 of ${photoCount()}`);
+
+    const incoming = screen.getByRole('img');
+    fireEvent.load(incoming);
+    // jsdom has no AnimationEvent, so React listens for the prefixed event name there.
+    fireEvent(incoming.parentElement, new Event('webkitAnimationEnd', { bubbles: true }));
+    expect(framePhotos()).toHaveLength(1);
+  });
+
   it('advances on its own until a control is used', () => {
     vi.useFakeTimers();
     render(<Gallery />);

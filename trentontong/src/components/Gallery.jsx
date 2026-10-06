@@ -11,8 +11,34 @@ const photos = Object.entries(
 
 const AUTOPLAY_MS = 8000;
 
+/** One photo over a blurred copy of itself. Invisible until the photo loads, then fades in. */
+function Slide({ src, alt, outgoing, onShown }) {
+  const [loaded, setLoaded] = useState(false);
+
+  return (
+    <div
+      className={`${styles.slide} ${loaded ? styles.loaded : ''}`}
+      aria-hidden={outgoing || undefined}
+      onAnimationEnd={onShown}
+    >
+      <img className={styles.backdrop} src={src} alt="" />
+      <img
+        className={styles.photo}
+        src={src}
+        alt={alt}
+        decoding="async"
+        onLoad={() => setLoaded(true)}
+        onError={() => setLoaded(true)}
+      />
+    </div>
+  );
+}
+
 export default function Gallery() {
-  const [index, setIndex] = useState(0);
+  const [current, setCurrent] = useState(0);
+  // The last slide that finished fading in. It stays underneath the incoming slide so the
+  // crossfade goes photo-to-photo, never through the frame's background colour.
+  const [settled, setSettled] = useState(0);
   // Slides advance on their own until the visitor uses a control (or if they prefer reduced motion).
   const [autoplay, setAutoplay] = useState(
     () => !window.matchMedia?.('(prefers-reduced-motion: reduce)').matches,
@@ -20,32 +46,34 @@ export default function Gallery() {
 
   const show = (i) => {
     setAutoplay(false);
-    setIndex((i + photos.length) % photos.length);
+    setCurrent((i + photos.length) % photos.length);
   };
 
   useEffect(() => {
     if (!autoplay) return undefined;
-    const timer = setTimeout(() => setIndex((index + 1) % photos.length), AUTOPLAY_MS);
+    const timer = setTimeout(() => setCurrent((current + 1) % photos.length), AUTOPLAY_MS);
     return () => clearTimeout(timer);
-  }, [index, autoplay]);
+  }, [current, autoplay]);
 
   // Preload the next photo so it is ready before it is shown.
   useEffect(() => {
-    new Image().src = photos[(index + 1) % photos.length];
-  }, [index]);
+    new Image().src = photos[(current + 1) % photos.length];
+  }, [current]);
+
+  const layers = settled === current ? [current] : [settled, current];
 
   return (
     <section className={styles.gallery} aria-roledescription="carousel" aria-label="Photo gallery">
       <div className={styles.frame} aria-live={autoplay ? 'off' : 'polite'}>
-        {/* A blurred, zoomed copy fills the space around photos that don't match the frame's shape. */}
-        <img key={`backdrop-${index}`} className={styles.backdrop} src={photos[index]} alt="" />
-        <img
-          key={index}
-          className={styles.photo}
-          src={photos[index]}
-          alt={`Travel photography ${index + 1} of ${photos.length}`}
-          decoding="async"
-        />
+        {layers.map((i) => (
+          <Slide
+            key={i}
+            src={photos[i]}
+            alt={`Travel photography ${i + 1} of ${photos.length}`}
+            outgoing={i !== current}
+            onShown={() => setSettled(i)}
+          />
+        ))}
       </div>
 
       <div className={styles.controls}>
@@ -53,7 +81,7 @@ export default function Gallery() {
           type="button"
           className={styles.arrow}
           aria-label="Previous photo"
-          onClick={() => show(index - 1)}
+          onClick={() => show(current - 1)}
         >
           <FaChevronLeft aria-hidden="true" />
         </button>
@@ -64,7 +92,7 @@ export default function Gallery() {
               type="button"
               className={styles.dot}
               aria-label={`Show photo ${i + 1}`}
-              aria-current={i === index}
+              aria-current={i === current}
               onClick={() => show(i)}
             />
           ))}
@@ -73,7 +101,7 @@ export default function Gallery() {
           type="button"
           className={styles.arrow}
           aria-label="Next photo"
-          onClick={() => show(index + 1)}
+          onClick={() => show(current + 1)}
         >
           <FaChevronRight aria-hidden="true" />
         </button>
