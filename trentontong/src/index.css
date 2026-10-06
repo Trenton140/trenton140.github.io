@@ -1,20 +1,141 @@
+/* Theme tokens. Components use only these variables, so switching data-theme on <html>
+   restyles the whole page. */
+:root {
+  color-scheme: light;
+  --bg: #f0f7ff;
+  --surface: #ffffff;
+  --border: #d9e3ef;
+  --text: #212529;
+  --text-muted: #5c6670;
+  --heading: #0056b3;
+  --accent: #0d6efd;
+  --dot: #b8c2cf;
+  --scrim: rgb(255 255 255 / 0.5);
+  --hero-text: #111111;
+  --footer-bg: #2b2f36;
+  --footer-text: #e6e8eb;
+  --shadow-sm: 0 2px 6px rgb(15 23 42 / 0.08), 0 4px 12px rgb(15 23 42 / 0.06);
+  --shadow-md: 0 10px 24px rgb(15 23 42 / 0.14);
+  --radius: 12px;
+  --transition: 0.3s ease;
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --bg: #0f1115;
+  --surface: #1b1f27;
+  --border: #2d333d;
+  --text: #e6e8eb;
+  --text-muted: #a1aab6;
+  --heading: #8ab4f8;
+  --accent: #6ea8fe;
+  --dot: #4a5260;
+  --scrim: rgb(10 12 16 / 0.55);
+  --hero-text: #f5f7fa;
+  --footer-bg: #0a0c10;
+  --footer-text: #a1aab6;
+  --shadow-sm: 0 2px 8px rgb(0 0 0 / 0.45);
+  --shadow-md: 0 10px 24px rgb(0 0 0 / 0.6);
+}
+
+/* Base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
-  padding: 20px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  background-color: var(--bg);
+  color: var(--text);
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  transition: background-color var(--transition), color var(--transition);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h1,
+h2,
+h3 {
+  margin-top: 0;
+  line-height: 1.2;
 }
 
-@media (max-width: 768px) {
-  body {
-    padding: 10px;
+p {
+  margin: 0 0 1rem;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+button {
+  font: inherit;
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* Shared layout */
+.container {
+  width: min(100% - 2rem, 1140px);
+  margin-inline: auto;
+}
+
+.card {
+  padding: 1.25rem 1.5rem;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition),
+    background-color var(--transition),
+    border-color var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }

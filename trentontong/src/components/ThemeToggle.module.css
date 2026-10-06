@@ -1,0 +1,35 @@
+.toggle {
+  flex-shrink: 0;
+  width: 60px;
+  height: 32px;
+  padding: 3px;
+  background-color: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  cursor: pointer;
+  transition:
+    background-color var(--transition),
+    border-color var(--transition);
+}
+
+.knob {
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  font-size: 14px;
+  color: #6b4f00;
+  background-color: #ffe066;
+  border-radius: 50%;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 0.25);
+  transition:
+    transform var(--transition),
+    background-color var(--transition),
+    color var(--transition);
+}
+
+.toggle[aria-checked='true'] .knob {
+  transform: translateX(28px);
+  color: #f1f3f5;
+  background-color: #3b4252;
+}

@@ -1,0 +1,19 @@
+.list {
+  display: grid;
+  gap: 1rem;
+}
+
+.title {
+  margin-bottom: 0.25rem;
+  font-size: 1.2rem;
+  color: var(--heading);
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0 1rem;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}

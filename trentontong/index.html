@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trenton Tong</title>
+    <meta
+      name="description"
+      content="Trenton Tong's personal website. A Computer Science student based in Toronto, Canada."
+    />
+    <link rel="canonical" href="https://trentontong.com/" />
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/logo192.png" />
+    <meta name="theme-color" content="#f0f7ff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0f1115" media="(prefers-color-scheme: dark)" />
+
+    <meta property="og:title" content="Trenton Tong - Portfolio" />
+    <meta
+      property="og:description"
+      content="Trenton Tong's personal website. A Computer Science student based in Toronto, Canada."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://trentontong.com/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Trenton Tong - Portfolio" />
+    <meta
+      name="twitter:description"
+      content="Trenton Tong's personal website. A Computer Science student based in Toronto, Canada."
+    />
+
+    <script>
+      // Apply the saved theme (or the system preference) before first paint so dark mode
+      // never flashes light. The storage key must match src/hooks/useTheme.js.
+      (function () {
+        var theme;
+        try {
+          theme = localStorage.getItem('theme');
+        } catch (e) {}
+        if (theme !== 'light' && theme !== 'dark') {
+          theme = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+        document.documentElement.dataset.theme = theme;
+      })();
+    </script>
+    <script type="module" src="/src/main.jsx"></script>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to view this site.</noscript>
+    <div id="root"></div>
+  </body>
+</html>

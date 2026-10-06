@@ -35,8 +35,8 @@ jobs:
           cache-dependency-path: trentontong/package-lock.json
 
       - run: npm ci
-
-      # CI=true is set by Actions, so CRA treats ESLint warnings as errors.
+      - run: npm run lint
+      - run: npm test
       - run: npm run build
 
       - uses: actions/configure-pages@v6

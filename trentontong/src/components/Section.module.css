@@ -1,0 +1,12 @@
+.section {
+  padding-block: 3rem;
+  scroll-margin-top: 3rem; /* keeps the heading clear of the fixed header */
+}
+
+.title {
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.6rem;
+  font-size: clamp(1.6rem, 1.2rem + 1.5vw, 2rem);
+  color: var(--heading);
+  border-bottom: 2px solid var(--accent);
+}

@@ -1,0 +1,114 @@
+.gallery {
+  display: grid;
+  justify-items: center;
+  gap: 1rem;
+}
+
+.frame {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  height: clamp(300px, 60vw, 650px);
+  overflow: hidden;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: var(--shadow-sm);
+  transition:
+    background-color var(--transition),
+    border-color var(--transition);
+}
+
+.backdrop,
+.photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  animation: fade-in 0.8s ease;
+}
+
+.backdrop {
+  object-fit: cover;
+  opacity: 0.5;
+  filter: blur(32px) saturate(1.2);
+  transform: scale(1.15);
+}
+
+.photo {
+  object-fit: contain;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.arrow {
+  display: grid;
+  flex-shrink: 0;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  color: var(--text);
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  transition:
+    color var(--transition),
+    background-color var(--transition),
+    box-shadow var(--transition);
+}
+
+.arrow:hover {
+  color: var(--accent);
+  box-shadow: var(--shadow-md);
+}
+
+.dots {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* The button is the touch target; the visible dot is drawn inside it. */
+.dot {
+  display: grid;
+  place-items: center;
+  width: 18px;
+  height: 24px;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.dot::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background-color: var(--dot);
+  border-radius: 50%;
+  transition:
+    background-color var(--transition),
+    transform var(--transition);
+}
+
+.dot:hover::before {
+  background-color: var(--text-muted);
+}
+
+.dot[aria-current='true']::before {
+  background-color: var(--accent);
+  transform: scale(1.25);
+}

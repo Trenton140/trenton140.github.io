@@ -1,4 +1,4 @@
-# Builds the site on pull requests so a broken build is caught before merging to main.
+# Lints, tests and builds the site on pull requests so problems are caught before merging to main.
 # Does not deploy anything; deploys happen in deploy.yml on push to main.
 name: Build check
 
@@ -25,6 +25,6 @@ jobs:
           cache-dependency-path: trentontong/package-lock.json
 
       - run: npm ci
-
-      # CI=true is set by Actions, so CRA treats ESLint warnings as errors.
+      - run: npm run lint
+      - run: npm test
       - run: npm run build

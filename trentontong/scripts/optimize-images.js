@@ -1,57 +1,40 @@
-const sharp = require('sharp');
-const path = require('path');
-const fs = require('fs');
+// Converts the original photos in source-images/ into the WebP files the site uses in
+// src/assets/images/. Run with `npm run optimize-images` and commit the output; CI doesn't run it.
+import fs from 'node:fs';
+import path from 'node:path';
+import sharp from 'sharp';
 
-const IMAGES_DIR = path.join(__dirname, '..', 'src', 'assets', 'images');
-const GALLERY_DIR = path.join(IMAGES_DIR, 'gallery');
-const OUTPUT_DIR = path.join(IMAGES_DIR, 'optimized');
-const GALLERY_OUTPUT_DIR = path.join(OUTPUT_DIR, 'gallery');
-
+const ROOT = path.resolve(import.meta.dirname, '..');
+const SOURCE_DIR = path.join(ROOT, 'source-images');
+const OUTPUT_DIR = path.join(ROOT, 'src', 'assets', 'images');
 const QUALITY = 80;
 
-const configs = [
-  // Hero/profile images
-  { input: path.join(IMAGES_DIR, 'UKPhoto2.jpg'), output: 'UKPhoto2.webp', width: 1920 },
-  { input: path.join(IMAGES_DIR, 'PlaceMassena1.jpg'), output: 'PlaceMassena1.webp', width: 1920 },
-  { input: path.join(IMAGES_DIR, 'NiceFrance.JPG'), output: 'NiceFrance.webp', width: 500 },
+const namedImages = [
+  { input: 'UKPhoto2.jpg', output: 'hero-light.webp', maxWidth: 1920 },
+  { input: 'PlaceMassena1.jpg', output: 'hero-dark.webp', maxWidth: 1920 },
+  { input: 'NiceFrance.JPG', output: 'profile.webp', maxWidth: 500 },
 ];
 
-async function optimizeImage(inputPath, outputPath, maxWidth) {
-  const metadata = await sharp(inputPath).metadata();
-  const width = Math.min(metadata.width, maxWidth);
+const kb = (file) => `${Math.round(fs.statSync(file).size / 1024)} KB`;
 
-  await sharp(inputPath)
-    .resize(width)
+async function optimize(input, output, maxWidth) {
+  await sharp(input)
+    .resize({ width: maxWidth, withoutEnlargement: true })
     .webp({ quality: QUALITY })
-    .toFile(outputPath);
-
-  const inputStats = fs.statSync(inputPath);
-  const outputStats = fs.statSync(outputPath);
-  const reduction = ((1 - outputStats.size / inputStats.size) * 100).toFixed(1);
-  console.log(
-    `  ${path.basename(inputPath)} (${(inputStats.size / 1024).toFixed(0)}KB) -> ${path.basename(outputPath)} (${(outputStats.size / 1024).toFixed(0)}KB) [${reduction}% smaller]`
-  );
+    .toFile(output);
+  console.log(`  ${path.relative(ROOT, input)} (${kb(input)}) -> ${path.relative(ROOT, output)} (${kb(output)})`);
 }
 
-async function main() {
-  // Create output directories
-  fs.mkdirSync(OUTPUT_DIR, { recursive: true });
-  fs.mkdirSync(GALLERY_OUTPUT_DIR, { recursive: true });
+fs.mkdirSync(path.join(OUTPUT_DIR, 'gallery'), { recursive: true });
 
-  console.log('Optimizing hero/profile images...');
-  for (const config of configs) {
-    await optimizeImage(config.input, path.join(OUTPUT_DIR, config.output), config.width);
-  }
-
-  console.log('\nOptimizing gallery images...');
-  const galleryFiles = fs.readdirSync(GALLERY_DIR).filter(f => /\.(jpg|jpeg|png)$/i.test(f));
-  for (const file of galleryFiles) {
-    const inputPath = path.join(GALLERY_DIR, file);
-    const outputName = file.replace(/\.(jpg|jpeg|png)$/i, '.webp');
-    await optimizeImage(inputPath, path.join(GALLERY_OUTPUT_DIR, outputName), 1200);
-  }
-
-  console.log('\nDone! Optimized images saved to src/assets/images/optimized/');
+for (const { input, output, maxWidth } of namedImages) {
+  await optimize(path.join(SOURCE_DIR, input), path.join(OUTPUT_DIR, output), maxWidth);
 }
 
-main().catch(console.error);
+const galleryFiles = fs
+  .readdirSync(path.join(SOURCE_DIR, 'gallery'))
+  .filter((file) => /\.(jpe?g|png)$/i.test(file));
+for (const file of galleryFiles) {
+  const output = file.replace(/\.\w+$/, '.webp');
+  await optimize(path.join(SOURCE_DIR, 'gallery', file), path.join(OUTPUT_DIR, 'gallery', output), 1200);
+}
