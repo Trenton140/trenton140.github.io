@@ -18,16 +18,16 @@ export const navLinks = [
 export const greeting = "Hi, I'm Trenton";
 
 export const taglines = [
-  "I'm a computer science student.",
+  "I'm a Data Scientist Associate at TD.",
   "I'm passionate about fitness and travel.",
   'I thrive on tech challenges and new experiences!',
 ];
 
 export const about = [
-  "Welcome to my personal website! I'm Trenton Tong, currently pursuing a Bachelor of Computer Science Honours Degree at Carleton University with a focus on Cybersecurity and a minor in Business.",
-  "I have a diverse skill set that includes Java, C, C++, Python, HTML/CSS, JavaScript, and SQL, all of which I've utilized in various projects and coursework.",
+  "Welcome to my personal website! I'm Trenton Tong, a Data Scientist Associate at TD Bank on the Wealth AI2 team. I studied Computer Science (Honours) at Carleton University, with a focus on Cybersecurity and a minor in Business.",
+  "I have a diverse skill set that includes Python, SQL, Java, C, C++, JavaScript, and HTML/CSS, built up through my roles at TD, my projects, and my coursework.",
   "I'm passionate about solving complex problems and thrive on innovation and adaptability. Explore my website to learn more about my projects, experience, and interests.",
-  "Feel free to connect if you'd like to chat about tech, business, or potential collaborations. Thanks for visiting!",
+  "Feel free to connect if you'd like to chat about data science, tech, business, or potential collaborations. Thanks for visiting!",
 ];
 
 export const experience = [
