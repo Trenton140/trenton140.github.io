@@ -1,12 +1,26 @@
 .section {
-  padding-block: 3rem;
+  padding-block: 3.5rem;
   scroll-margin-top: 3rem; /* keeps the heading clear of the fixed header */
+  counter-increment: section;
 }
 
 .title {
-  margin-bottom: 1.5rem;
-  padding-bottom: 0.6rem;
-  font-size: clamp(1.6rem, 1.2rem + 1.5vw, 2rem);
-  color: var(--heading);
-  border-bottom: 2px solid var(--accent);
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+  padding-bottom: 0.75rem;
+  font-size: clamp(2.1rem, 1.6rem + 2vw, 2.9rem);
+  border-bottom: 1px solid var(--border);
+}
+
+/* Section number ("01", "02", …). The second declaration hides it from screen readers
+   in browsers that support alt text for generated content. */
+.title::before {
+  content: counter(section, decimal-leading-zero);
+  content: counter(section, decimal-leading-zero) / '';
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  color: var(--accent);
 }
