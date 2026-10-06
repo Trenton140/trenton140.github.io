@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Card, ListGroup } from 'react-bootstrap';
+import { Container, Card } from 'react-bootstrap';
 
 const Projects = () => {
   return (

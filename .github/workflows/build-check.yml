@@ -1,0 +1,30 @@
+# Builds the site on pull requests so a broken build is caught before merging to main.
+# Does not deploy anything; deploys happen in deploy.yml on push to main.
+name: Build check
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: trentontong
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: trentontong/package-lock.json
+
+      - run: npm ci
+
+      # CI=true is set by Actions, so CRA treats ESLint warnings as errors.
+      - run: npm run build
