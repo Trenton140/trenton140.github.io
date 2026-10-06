@@ -69,7 +69,7 @@ export const experience = [
   {
     title: 'Finance Intern',
     org: 'TD Bank (Corporate Finance)',
-    dates: 'May 2024 – May 2025',
+    dates: 'May 2024 – April 2025',
     logo: 'td',
     sections: [
       {
