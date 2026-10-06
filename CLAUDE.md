@@ -34,7 +34,8 @@ A single-page React 19 app built with Vite. Plain CSS (CSS Modules + theme varia
 
 - **Editing content**: change `src/content.js`. Components only handle layout. Experience/project
   entries are `{ title, org, dates, logo?, description?, points?, sections? }`: `points` renders
-  as bullets; `sections` (`[{ heading, dates, points? }]`, newest first) splits one role into teams;
+  as bullets; `sections` (`[{ heading, dates, points? }]`, newest first) splits one role into teams (dates
+  ending in "Present" get the accent marker);
   `logo` is a key (`'td'`, `'telus'`) mapped to an image in `EntryList.jsx`. The site is
   public: keep entries resume-level and leave out employer-internal names, figures, and contact details. A new section needs a `navLinks` entry in
   `content.js` and a matching `<Section id=…>` in `App.jsx`.

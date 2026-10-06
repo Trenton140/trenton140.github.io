@@ -37,7 +37,10 @@ export default function EntryList({ entries, twoColumn = false }) {
             {sections && (
               <div className={styles.sections}>
                 {sections.map((section) => (
-                  <div key={section.heading} className={styles.section}>
+                  <div
+                    key={section.heading}
+                    className={`${styles.section} ${section.dates.endsWith('Present') ? styles.current : ''}`}
+                  >
                     <h4 className={styles.sectionHeading}>
                       <span>{section.heading}</span>
                       <span className={styles.sectionDates}>{section.dates}</span>

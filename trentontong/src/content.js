@@ -67,10 +67,21 @@ export const experience = [
     ],
   },
   {
-    title: 'Financial Intern',
+    title: 'Finance Intern',
     org: 'TD Bank (Corporate Finance)',
     dates: 'May 2024 – May 2025',
     logo: 'td',
+    sections: [
+      {
+        heading: 'Reconciliation Automation',
+        dates: 'September 2024 – April 2025',
+        points: ['Built automated Alteryx workflows for reconciliation tasks.'],
+      },
+      {
+        heading: 'FRP Value Stream',
+        dates: 'May 2024 – August 2024',
+      },
+    ],
   },
   {
     title: 'Technology Solutions Intern',

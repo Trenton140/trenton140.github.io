@@ -101,7 +101,8 @@
   color: var(--accent);
 }
 
-/* Sub-sections (e.g. teams within one role), newest first; the current one is marked in accent. */
+/* Sub-sections (e.g. teams within one role), newest first. One whose dates end in "Present"
+   is marked in accent as the current team. */
 .sections {
   display: grid;
   gap: 1.25rem;
@@ -112,7 +113,7 @@
   border-left: 2px solid var(--border);
 }
 
-.section:first-child {
+.section.current {
   border-left-color: var(--accent);
 }
 
