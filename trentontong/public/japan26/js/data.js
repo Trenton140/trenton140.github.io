@@ -136,9 +136,9 @@ window.TRIP = {
     {
       id: 'd1', n: 1, date: '2026-12-10', tz: 'JST', from: '15:50',
       region: 'tokyo', place: 'tokyo', sleep: 'tokyo',
-      title: 'Land, eat, sleep', sub: 'Haneda → Shinjuku · yakitori alley',
-      tagline: 'Skewers and beer at a counter, then bed by 22:30.',
-      plan: 7000,
+      title: 'Land, eat, soak, sleep', sub: 'Haneda → Shinjuku · food hall · hot spring',
+      tagline: 'A neon food hall, then a hot spring five minutes from bed.',
+      plan: 8500,
       transit: {
         title: 'Haneda Terminal 3 → Shinjuku', meta: '45–70 min · ≈ ¥550–1,400',
         steps: [
@@ -149,25 +149,26 @@ window.TRIP = {
       items: [
         { t: '16:50', k: 'flight', ttl: 'Land at Haneda Terminal 3', txt: 'Immigration and customs with your Visit Japan Web QR codes; allow 45–75 min. Pull ¥30,000 each from the 7-Bank ATM in arrivals.', pl: { n: 'Haneda Airport Terminal 3', jp: '羽田空港 第3ターミナル', q: 'Haneda Airport Terminal 3' } },
         { t: '18:00', a: 1, k: 'bus', ttl: 'Suica, then into the city', txt: 'Moziah and AJ: Suica in Apple Wallet. Trenton: try adding Suica to Google Wallet; global Pixels usually can\'t, so buy a Welcome Suica card at T3. Then the Limousine Bus (≈ ¥1,400) or Keikyū + JR (≈ ¥550).', cost: '≈ ¥550–1,400' },
-        { t: '19:15', a: 1, k: 'stay', ttl: 'Check in at Hotel Gracery Shinjuku', txt: 'Lobby on 8F of the Godzilla-head building. Shower.', bk: 'tokyo1', pl: { n: 'Hotel Gracery Shinjuku', jp: 'ホテルグレイスリー新宿', q: 'Hotel Gracery Shinjuku' } },
-        { t: '20:00', k: 'food', ttl: 'Omoide Yokochō', txt: 'The smoky yakitori alley by the West Exit. Skewers and beers at a counter. Cash is easiest; small places add a seating charge.', cost: '≈ ¥3,000–4,500', pl: { n: 'Omoide Yokochō', jp: '思い出横丁', q: 'Omoide Yokocho Shinjuku' } },
-        { t: '21:30', k: 'food', ttl: 'Ramen, konbini run, bed', txt: 'Ichiran is 24 h and painless for a first night. Grab tomorrow\'s breakfast at a 7-Eleven. Bed by 22:30 to beat jet lag.', cost: '≈ ¥1,100–1,500', pl: { n: 'Ichiran Shinjuku', jp: '一蘭 新宿', q: 'Ichiran Shinjuku' } }
+        { t: '19:15', a: 1, k: 'stay', ttl: 'Check in at Hotel Gracery Shinjuku', txt: 'Lobby on 8F of the Godzilla-head building. Drop bags.', bk: 'tokyo1', pl: { n: 'Hotel Gracery Shinjuku', jp: 'ホテルグレイスリー新宿', q: 'Hotel Gracery Shinjuku' } },
+        { t: '20:00', k: 'food', ttl: 'Shinjuku Kabuki Hall', txt: 'New for you: a loud, neon, festival-themed food hall on 2F of the Tokyu Kabukichō Tower, two minutes from the hotel. Ten stalls of regional food: Hokkaido yakitori, Kyushu spicy noodles, Korean barbecue. Open most of the night.', cost: '≈ ¥3,000–4,500', pl: { n: 'Shinjuku Kabuki Hall', jp: '新宿カブキhall 歌舞伎横丁', q: 'Shinjuku Kabuki Hall Kabukicho Yokocho' } },
+        { t: '21:15', k: 'onsen', ttl: 'Thermae-Yu hot spring', txt: 'New for you: a hot-spring bathhouse 5 min from the hotel. Outdoor bath, carbonated bath, two saunas. Be out before midnight, when a late-night surcharge starts. No tattoos. Bed by 23:00.', cost: '¥3,100 (Mon–Thu rate)', pl: { n: 'Thermae-Yu', jp: 'テルマー湯', q: 'Thermae-Yu Shinjuku' } }
       ],
       go: [
-        { n: 'Omoide Yokochō', jp: '思い出横丁', q: 'Omoide Yokocho Shinjuku', why: 'Tiny yakitori counters under the tracks, two minutes from the West Exit.' },
-        { n: 'Ichiran Shinjuku', jp: '一蘭 新宿', q: 'Ichiran Shinjuku', why: 'Solo-booth tonkotsu ramen, open 24 hours.' },
-        { n: 'Kabukichō', jp: '歌舞伎町', q: 'Kabukicho Shinjuku', why: 'Your neighbourhood: neon, the Godzilla head, late food.' }
+        { n: 'Shinjuku Kabuki Hall', jp: '新宿カブキhall', q: 'Shinjuku Kabuki Hall Kabukicho Yokocho', why: 'Festival-themed food hall in the Tokyu Kabukichō Tower, 2 min from the hotel.' },
+        { n: 'Thermae-Yu', jp: 'テルマー湯', q: 'Thermae-Yu Shinjuku', why: 'Hot-spring baths and saunas, 5 min from the hotel. Open through the night.' },
+        { n: 'Shinjuku Batting Center', jp: '新宿バッティングセンター', q: 'Shinjuku Batting Center', why: 'Batting cages in Kabukichō, open late. A few hundred yen a round.' }
       ],
       buy: [
-        { w: 'Cash at the 7-Bank ATM in arrivals', p: '¥30,000 each', note: 'Takes Canadian cards. Cash-only places are common in bars and alleys.' },
+        { w: 'Cash at the 7-Bank ATM in arrivals', p: '¥30,000 each', note: 'Takes Canadian cards. Small bars and stalls are often cash-only.' },
         { w: 'Welcome Suica (Trenton, if Google Wallet won\'t take Suica)', p: 'load ¥3,000–5,000', note: 'Sold at Haneda. No deposit; valid 28 days.' },
         { w: 'Limousine Bus or Keikyū + JR', p: '≈ ¥1,400 / ≈ ¥550' },
-        { w: 'Yakitori and beers', p: '≈ ¥3,000–4,500' },
+        { w: 'Dinner at Kabuki Hall', p: '≈ ¥3,000–4,500' },
+        { w: 'Thermae-Yu entry', p: '¥3,100', note: 'Towels included. After midnight there\'s a ¥2,000 surcharge.' },
         { w: 'Konbini breakfast for tomorrow', p: '≈ ¥500', note: 'Egg sandwich, onigiri, canned coffee.' }
       ],
       do: [
-        { ttl: 'First night rules', txt: 'One alley, one ramen, then bed. Staying up until about 22:00 resets you fastest.' },
-        { ttl: 'Yakitori order', txt: 'Ask for omakase (chef\'s choice) or point: negima (chicken and leek), tsukune (meatball), kawa (skin). "Shio" is salt, "tare" is sauce.' }
+        { ttl: 'First night rules', txt: 'One food hall, one soak, then bed. Staying up until about 22:30 resets you fastest.' },
+        { ttl: 'New since June', txt: 'You did Omoide Yokochō and Golden Gai last time. Kabuki Hall and Thermae-Yu are both a short walk from the hotel and both new.' }
       ],
       prep: ['Visit Japan Web QR on screen', 'Find the 7-Bank ATM before the bus counter'],
       regroup: { n: 'Hotel lobby, 8F', jp: 'ホテルグレイスリー新宿 8階ロビー', note: 'The Godzilla-head building in Kabukichō.' }
@@ -176,83 +177,93 @@ window.TRIP = {
     {
       id: 'd2', n: 2, date: '2026-12-11', tz: 'JST', from: '04:00',
       region: 'tokyo', place: 'tokyo', sleep: 'tokyo', night: 1,
-      title: 'Market, digital art, Shibuya from above', sub: 'Tsukiji · teamLab · Shibuya Sky · Golden Gai',
-      tagline: 'Sunset at 16:28 from the roof of Shibuya.',
-      plan: 23700,
+      title: 'Yokohama: noodles, harbour, Chinatown, Noge', sub: 'Cup Noodles · Christmas market · sunset pier · bar alleys',
+      tagline: 'Japan\'s second city, half an hour away, and you\'ve never been.',
+      plan: 12500,
+      transit: {
+        title: 'Shinjuku → Yokohama (Sakuragichō)', meta: 'about 40 min · ≈ ¥600–700 each way',
+        steps: [
+          'JR Shōnan-Shinjuku Line, Shinjuku → Yokohama, about 30 min.',
+          'Change to the JR Negishi Line for one stop to Sakuragichō (3 min). Tap Suica.',
+          'Everything today is walkable from Sakuragichō. Coming home, leave Noge by 22:50.'
+        ]
+      },
       items: [
-        { t: '07:30', k: 'train', ttl: 'Subway to Tsukiji', txt: 'Toei Ōedo Line, Shinjuku → Tsukijishijō, 20 min.', cost: '≈ ¥280', leave: '07:20' },
-        { t: '07:55', k: 'food', ttl: 'Graze Tsukiji Outer Market', txt: 'Tuna bowls, grilled scallops, tamagoyaki, wagyu skewers. Most stalls wind down by 13:00.', cost: '≈ ¥2,500–4,000', pl: { n: 'Tsukiji Outer Market', jp: '築地場外市場', q: 'Tsukiji Outer Market' } },
-        { t: '10:30', k: 'see', ttl: 'teamLab Borderless', txt: 'Azabudai Hills. Hibiya Line Tsukiji → Kamiyachō, 10 min. Allow 2 hours. Dynamic pricing; a Friday sits above the base price.', cost: 'from ¥3,400', fix: 1, leave: '10:10', bk: 'teamlab', pl: { n: 'teamLab Borderless', jp: 'チームラボボーダレス 麻布台ヒルズ', q: 'teamLab Borderless Azabudai Hills' } },
-        { t: '13:00', k: 'food', ttl: 'Lunch, Tokyo Tower', txt: 'Eat in Azabudai Hills or walk 10 min to Tokyo Tower for photos from below.', cost: '≈ ¥1,500–2,500', pl: { n: 'Tokyo Tower', jp: '東京タワー', q: 'Tokyo Tower' } },
-        { t: '14:15', k: 'see', ttl: 'Shibuya', txt: 'Hibiya Line to Ebisu, JR one stop (20 min). Scramble crossing, Miyashita Park, Parco, Don Quijote.', cost: '≈ ¥400', pl: { n: 'Shibuya Scramble Crossing', jp: '渋谷スクランブル交差点', q: 'Shibuya Scramble Crossing' } },
-        { t: '15:40', k: 'see', ttl: 'Shibuya Sky at sunset', txt: 'Enter before sunset, watch the city light up, look for Mt Fuji to the west. No time limit once in. No bags, hats or tripods on the roof (lockers on floor 46).', cost: '¥3,400 online', fix: 1, leave: '15:30', bk: 'shibuyasky', sun: 1, pl: { n: 'Shibuya Sky', jp: '渋谷スカイ', q: 'Shibuya Sky' } },
-        { t: '18:30', k: 'food', ttl: 'Yakiniku in Shibuya', txt: 'Grill-it-yourself wagyu. All-you-can-eat courses are good value for three hungry people.', cost: '≈ ¥5,000–9,000' },
-        { t: '20:30', k: 'night', ttl: 'Friday night out', txt: 'Nonbei Yokochō (tiny bars by Shibuya Station), then stay in Shibuya or JR back (7 min) to Golden Gai: about 200 six-seat bars. Most charge a cover.', cost: 'cover ≈ ¥500–1,000 · drinks ≈ ¥800–1,200', pl: { n: 'Golden Gai', jp: 'ゴールデン街', q: 'Shinjuku Golden Gai' } },
-        { t: '00:15', nd: 1, k: 'train', ttl: 'Last trains', txt: 'Last trains leave around 00:15–00:45. After that: taxi (Shibuya → Shinjuku ≈ ¥2,500–3,500 total) or karaoke until the first train at 05:00. Golden Gai is a 5-min walk from the hotel.' }
+        { t: '09:00', k: 'train', ttl: 'Train to Sakuragichō', txt: 'JR Shōnan-Shinjuku Line to Yokohama, then one stop on the Negishi Line.', cost: '≈ ¥600–700', leave: '08:45' },
+        { t: '09:45', k: 'see', ttl: 'Yokohama Air Cabin', txt: 'A gondola from Sakuragichō Station over the harbour to the Shinkō pier, 5 min. One cabin fits the three of you.', cost: '¥1,000', pl: { n: 'Yokohama Air Cabin', jp: 'ヨコハマ エア キャビン 桜木町駅', q: 'Yokohama Air Cabin Sakuragicho Station' } },
+        { t: '10:00', k: 'see', ttl: 'Cup Noodles Museum', txt: 'Take a numbered ticket for the My Cupnoodles Factory as you walk in: draw on your own cup, pick the soup and four toppings, take it home sealed. Open 10:00–18:00. Allow 90 min.', cost: '¥500 entry · ¥500 your cup', pl: { n: 'Cup Noodles Museum Yokohama', jp: 'カップヌードルミュージアム 横浜', q: 'Cupnoodles Museum Yokohama' } },
+        { t: '12:00', k: 'food', ttl: 'Red Brick Warehouse Christmas Market', txt: 'Runs Nov 20 – Dec 25. About 60 stalls, an 11 m real tree, mulled wine and sausages with the harbour behind. First lunch. Check the hours that week.', cost: 'entry from ¥500 · food ≈ ¥1,500–2,500', pl: { n: 'Yokohama Red Brick Warehouse', jp: '横浜赤レンガ倉庫', q: 'Yokohama Red Brick Warehouse' } },
+        { t: '13:45', k: 'food', ttl: 'Yamashita Park → Chinatown', txt: 'Walk the waterfront (20 min) to Japan\'s biggest Chinatown. Second lunch on foot: pork buns, soup dumplings, sesame balls.', cost: '≈ ¥1,500–2,500', pl: { n: 'Yokohama Chinatown', jp: '横浜中華街', q: 'Yokohama Chinatown' } },
+        { t: '15:45', k: 'see', ttl: 'Sunset from Ōsanbashi Pier', txt: 'A wooden rooftop deck with the whole Minato Mirai skyline across the water, and Mt Fuji behind it on a clear day. From 17:00 the Yorunoyo harbour light show runs every half hour.', cost: 'free', sun: 1, leave: '15:30', pl: { n: 'Ōsanbashi Pier', jp: '大さん橋', q: 'Osanbashi Pier Yokohama' } },
+        { t: '18:00', k: 'night', ttl: 'Noge bar-hopping', txt: 'About 600 small bars and izakaya in a few blocks by Sakuragichō, mostly locals. Start at a standing bar, then the curved two-storey Miyakobashi "Harmonica Alley" on the river.', cost: '≈ ¥4,000–6,000', pl: { n: 'Noge', jp: '野毛', q: 'Noge Yokohama' } },
+        { t: '23:00', k: 'train', ttl: 'Train back to Shinjuku', txt: 'From Sakuragichō. Don\'t push it: a taxi from Yokohama to Shinjuku is ≈ ¥12,000–15,000.', cost: '≈ ¥600–700', fix: 1, leave: '22:50' }
       ],
+      warn: 'The Landmark Tower observation deck is closed for renovation until 2028, so sunset is at the pier. For height, the Cosmo Clock 21 Ferris wheel is the alternative (combo with the Air Cabin ¥1,700).',
       go: [
-        { n: 'Tsukiji Outer Market', jp: '築地場外市場', q: 'Tsukiji Outer Market', why: 'Breakfast grazing; go early, it winds down by 13:00.' },
-        { n: 'teamLab Borderless', jp: 'チームラボボーダレス', q: 'teamLab Borderless Azabudai Hills', why: 'Walk-through digital art. Timed entry.' },
-        { n: 'Tokyo Tower', jp: '東京タワー', q: 'Tokyo Tower', why: 'Photos from below, 10 min walk from Azabudai Hills.' },
-        { n: 'Shibuya Sky', jp: '渋谷スカイ', q: 'Shibuya Sky', why: 'Open-air rooftop. Sunset around 16:28.' },
-        { n: 'Nonbei Yokochō', jp: 'のんべい横丁', q: 'Nonbei Yokocho Shibuya', why: 'Lantern-lit alley of tiny bars by Shibuya Station.' },
-        { n: 'Golden Gai', jp: 'ゴールデン街', q: 'Shinjuku Golden Gai', why: 'Six-seat bars, five minutes from the hotel.' }
+        { n: 'Yokohama Air Cabin', jp: 'ヨコハマ エア キャビン', q: 'Yokohama Air Cabin Sakuragicho Station', why: 'Gondola over the harbour from Sakuragichō Station.' },
+        { n: 'Cup Noodles Museum', jp: 'カップヌードルミュージアム 横浜', q: 'Cupnoodles Museum Yokohama', why: 'Make your own Cup Noodles. Closed Tuesdays.' },
+        { n: 'Red Brick Warehouse', jp: '横浜赤レンガ倉庫', q: 'Yokohama Red Brick Warehouse', why: 'Christmas market, Nov 20 – Dec 25.' },
+        { n: 'Yokohama Chinatown', jp: '横浜中華街', q: 'Yokohama Chinatown', why: 'Street food through the painted gates.' },
+        { n: 'Ōsanbashi Pier', jp: '大さん橋', q: 'Osanbashi Pier Yokohama', why: 'Free rooftop deck: skyline, sunset, maybe Fuji.' },
+        { n: 'Noge', jp: '野毛', q: 'Noge Yokohama', why: 'Hundreds of tiny bars, mostly locals.' },
+        { n: 'Miyakobashi Harmonica Alley', jp: '都橋商店街', q: 'Miyakobashi Shotengai Yokohama', why: 'Curved two-storey row of about 60 bars on the river.' },
+        { n: 'Sakuragichō Station', jp: '桜木町駅', q: 'Sakuragicho Station', why: 'Your way home. Be here by 22:55.' }
       ],
       buy: [
-        { w: 'Tsukiji grazing', p: '≈ ¥2,500–4,000', note: 'Bring cash; tamagoyaki on a stick is about ¥200.' },
-        { w: 'teamLab Borderless ticket', p: 'from ¥3,400', note: 'Pre-booked, dynamic price.' },
-        { w: 'Shibuya Sky ticket', p: '¥3,400 online (¥2,700 before 15:00)' },
-        { w: 'Don Quijote Shibuya', p: 'browse', note: 'Snacks and gifts now; buy whisky on the last day so you only carry it once.' },
-        { w: 'Yakiniku dinner', p: '≈ ¥5,000–9,000' },
-        { w: 'Golden Gai covers and drinks', p: 'cover ≈ ¥500–1,000 · drinks ≈ ¥800–1,200', note: 'Cash only in most bars.' }
+        { w: 'Train to Yokohama and back', p: '≈ ¥1,200–1,400' },
+        { w: 'Air Cabin', p: '¥1,000', note: 'Combo with the Cosmo Clock 21 Ferris wheel: ¥1,700.' },
+        { w: 'Cup Noodles Museum + your own cup', p: '¥500 + ¥500' },
+        { w: 'Christmas market entry and a mug of mulled wine', p: 'from ¥500 + ≈ ¥1,000', note: 'The souvenir mug changes every year.' },
+        { w: 'Chinatown street food', p: '≈ ¥1,500–2,500', note: 'Cash is quickest.' },
+        { w: 'Noge bars', p: '≈ ¥4,000–6,000', note: 'Many are cash-only and add a small seating charge.' }
       ],
       do: [
-        { ttl: 'Tsukiji, the right way', txt: 'Eat standing at the stall where you bought it; walking and eating is frowned on. Start at the tamagoyaki shops, finish with a tuna bowl.' },
-        { ttl: 'Shibuya Sky timing', txt: 'Get in by about 15:55 so you see daylight, the sunset and the lights coming on. Lockers on 46F; nothing loose goes on the roof.' },
-        { ttl: 'Golden Gai etiquette', txt: 'Look for English signs or "no cover" signs. Some bars are regulars-only; if they wave you off, move on. One drink per bar is normal.' }
+        { ttl: 'My Cupnoodles Factory', txt: 'Tickets are numbered and can run out on busy days, so take one the moment you arrive, then do the museum while you wait.' },
+        { ttl: 'Sunset timing', txt: 'Be on the pier roof by 16:00. Sunset is about 16:29; the towers light up over the next half hour.' },
+        { ttl: 'Noge etiquette', txt: 'One or two drinks and a dish per bar, then move. If a place is full or regulars-only, the next door is three steps away.' }
       ],
-      prep: ['Suica topped up (≈ ¥3,000)', 'teamLab and Shibuya Sky QR codes saved', 'Cash for Tsukiji and Golden Gai'],
-      regroup: { n: 'Hachikō statue, Shibuya Station', jp: 'ハチ公像', note: 'Morning: Tsukiji Hongan-ji main gate. Late night: hotel lobby, 8F.' },
-      nightKit: { last: '≈ 00:15–00:45', taxi: 'Shibuya → Shinjuku ≈ ¥2,500–3,500 total', first: 'First trains about 05:00' }
+      prep: ['Suica topped up (≈ ¥3,000)', 'Cash for Chinatown and Noge', 'Warm layers: the harbour is windy'],
+      regroup: { n: 'Sakuragichō Station ticket gates', jp: '桜木町駅 改札', note: 'Daytime: the big tree at the Red Brick Warehouse.' },
+      nightKit: { last: 'Leave Noge by 22:50 for the 23:00 train', taxi: 'Yokohama → Shinjuku by taxi ≈ ¥12,000–15,000: catch the train', first: 'Last through trains to Shinjuku leave around 23:30; check Maps that night' }
     },
 
     {
       id: 'd3', n: 3, date: '2026-12-12', tz: 'JST', from: '04:00',
       region: 'tokyo', place: 'tokyo', sleep: 'tokyo', night: 1,
-      title: 'Send the bags, old Tokyo, big night', sub: 'Ameyoko · Akihabara · ski shops · karaoke',
+      title: 'Send the bags, ski shops, monjayaki, Ebisu', sub: 'Ameyoko · Kanda ski street · Tsukishima · Ebisu Yokochō',
       tagline: 'Suitcases go north today; you follow tomorrow.',
-      plan: 14000,
+      plan: 13000,
       items: [
         { t: '09:30', k: 'admin', ttl: 'Ship suitcases to Niseko', txt: 'Yamato takkyūbin from the front desk to the Mercure Niseko Resort. Tokyo → Hokkaido takes 2 days, so they land Dec 14, ahead of you. Keep a daypack with 3 days of clothes, onsen kit and warm layers.', cost: '≈ ¥3,000–3,700 per bag', bag: 'ship' },
         { t: '10:30', k: 'food', ttl: 'Ueno → Ameyoko', txt: 'JR Yamanote, Shinjuku → Ueno, 25 min. Market street under the tracks: street food, sneakers, cheap sashimi bowls, standing bars open from late morning.', cost: 'train ≈ ¥210–230 · food ≈ ¥1,500–2,500', pl: { n: 'Ameyoko', jp: 'アメ横', q: 'Ameyoko Shopping Street' } },
-        { t: '13:00', k: 'see', ttl: 'Akihabara', txt: 'Two stops. Arcades, retro games, multi-floor electronics. Give AJ and Moziah an hour to disappear.', pl: { n: 'Akihabara Electric Town', jp: '秋葉原電気街', q: 'Akihabara Electric Town' } },
-        { t: '15:00', k: 'shop', o: 1, ttl: 'Option: Kanda-Ogawamachi ski street', txt: 'About 60 ski and board shops in 400 m. Gloves, goggles and base layers before Niseko, and Trenton\'s boot hunt. Tax refunds now happen at the airport.', pl: { n: 'Kanda Ogawamachi ski shops', jp: '神田小川町 スキー街', q: 'Kanda Ogawamachi ski shops' } },
-        { t: '17:00', k: 'see', ttl: 'Marunouchi illuminations', txt: 'Walk Naka-dōri from Tokyo Station; the restored station building is lit at night.', cost: 'free', pl: { n: 'Marunouchi Naka-dori', jp: '丸の内仲通り', q: 'Marunouchi Naka-dori' } },
-        { t: '19:00', k: 'food', ttl: 'Izakaya dinner', txt: 'Torikizoku (every item about ¥390) for cheap and loud, or a kushikatsu or sashimi place. Then Ebisu Yokochō or back to Kabukichō.', cost: '≈ ¥3,500–6,000', pl: { n: 'Ebisu Yokochō', jp: '恵比寿横丁', q: 'Ebisu Yokocho' } },
-        { t: '22:00', k: 'night', ttl: 'Karaoke', txt: 'Karaoke Kan or Big Echo: private room with all-you-can-drink.', cost: '≈ ¥2,500–4,000' },
+        { t: '13:00', k: 'shop', ttl: 'Kanda-Ogawamachi ski street', txt: 'JR to Ochanomizu (2 stops), then 5 min walk. About 60 ski and board shops in 400 m: gloves, goggles and base layers before Niseko, and Trenton\'s boot hunt. Tax refunds now happen at the airport.', pl: { n: 'Kanda Ogawamachi ski shops', jp: '神田小川町 スキー街', q: 'Kanda Ogawamachi ski shops' } },
+        { t: '16:30', k: 'see', ttl: 'Marunouchi illuminations', txt: 'One stop to Tokyo Station, then walk Naka-dōri under the lit trees. The restored station building is lit too.', cost: 'free', pl: { n: 'Marunouchi Naka-dori', jp: '丸の内仲通り', q: 'Marunouchi Naka-dori' } },
+        { t: '18:00', k: 'food', ttl: 'Monjayaki on Tsukishima Monja Street', txt: 'Yūrakuchō Line, Yūrakuchō → Tsukishima, 5 min. Tokyo\'s own runny, crispy-edged griddle pancake: you cook it at the table and eat it off tiny spatulas. Dozens of shops on one street.', cost: '≈ ¥2,500–4,000', pl: { n: 'Tsukishima Monja Street', jp: '月島もんじゃストリート', q: 'Tsukishima Monja Street' } },
+        { t: '20:30', k: 'night', ttl: 'Ebisu Yokochō and Ebisu bars', txt: 'Ōedo Line to Roppongi, Hibiya Line to Ebisu, 25 min. A covered alley of loud, friendly counters, then the bars around the station.', cost: '≈ ¥3,000–5,000', pl: { n: 'Ebisu Yokochō', jp: '恵比寿横丁', q: 'Ebisu Yokocho' } },
         { t: '00:15', nd: 1, k: 'train', ttl: 'Last trains · pack tonight', txt: 'Last trains about 00:15–00:45. Tomorrow you check out at 07:45: pack the daypack before you go out, not after.' }
       ],
       go: [
         { n: 'Ameyoko', jp: 'アメ横', q: 'Ameyoko Shopping Street', why: 'Street food and standing bars under the tracks.' },
-        { n: 'Akihabara', jp: '秋葉原', q: 'Akihabara Electric Town', why: 'Arcades (try a SEGA or GiGO), retro game shops.' },
         { n: 'Kanda-Ogawamachi ski street', jp: '神田小川町', q: 'Kanda Ogawamachi ski shops', why: 'Best ski-gear prices in Tokyo.' },
         { n: 'Tokyo Station · Marunouchi', jp: '東京駅 丸の内', q: 'Tokyo Station Marunouchi', why: 'Lit station building and the Naka-dōri lights.' },
-        { n: 'Ebisu Yokochō', jp: '恵比寿横丁', q: 'Ebisu Yokocho', why: 'Covered alley of loud, friendly izakaya.' }
+        { n: 'Tsukishima Monja Street', jp: '月島もんじゃストリート', q: 'Tsukishima Monja Street', why: 'Dozens of monjayaki shops on one street.' },
+        { n: 'Ebisu Yokochō', jp: '恵比寿横丁', q: 'Ebisu Yokocho', why: 'Covered alley of loud, friendly izakaya.' },
+        { n: 'Shinjuku Batting Center', jp: '新宿バッティングセンター', q: 'Shinjuku Batting Center', why: 'If you\'re still awake near the hotel.' }
       ],
       buy: [
         { w: 'Luggage forwarding (Yamato)', p: '≈ ¥3,000–3,700 per bag', note: 'Front desk fills the form. Keep the receipt with the tracking number.' },
         { w: 'Ski gloves, goggles, base layers', p: '≈ ¥3,000–15,000', note: 'Kanda-Ogawamachi. Show your passport; refund at the airport.' },
         { w: 'Hand warmers (kairo)', p: '≈ ¥300–600 a pack', note: 'Any konbini or drugstore. You\'ll want them in Niseko.' },
-        { w: 'Izakaya dinner', p: '≈ ¥3,500–6,000' },
-        { w: 'Karaoke with all-you-can-drink', p: '≈ ¥2,500–4,000' }
+        { w: 'Monjayaki dinner', p: '≈ ¥2,500–4,000' },
+        { w: 'Ebisu Yokochō', p: '≈ ¥3,000–5,000' }
       ],
       do: [
+        { ttl: 'How to monja', txt: 'Fry the solids, shape them into a ring, pour the batter in the middle, mix when it bubbles, then press thin and scrape the crispy bits off with the little spatula. Staff will show you the first one. Mentaiko-mochi-cheese is the classic.' },
         { ttl: 'Ameyoko lunch', txt: 'Look for kaisendon (seafood rice bowls) under ¥1,500 and a standing-bar highball.' },
-        { ttl: 'Akihabara', txt: 'Claw machines, rhythm games, Super Potato for retro consoles. Set a meet-up time before splitting.' },
-        { ttl: 'Swap-ins', txt: 'Fuji day (bus to Kawaguchiko, 1 h 45, ≈ ¥2,200 each way) if the morning is crystal clear; Thermae-Yu city onsen in Kabukichō (≈ ¥2,900–3,500) for tired legs.' }
+        { ttl: 'Swap-ins', txt: 'Kamakura instead of Yokohama or today (JR about 1 h, ≈ ¥950 each way): Great Buddha, Hase-dera, Enoden tram. Rain: teamLab Borderless in Azabudai Hills, a different museum from the Planets you did in June.' }
       ],
       prep: ['Suitcases to the front desk before 10:00', 'Daypack: 3 days of clothes, warm layers, chargers', 'Passport for tax-free shopping', 'Tracking number saved in Kit → Notes'],
-      regroup: { n: 'Akihabara Station, Electric Town exit', jp: '秋葉原駅 電気街口', note: 'Late night: hotel lobby, 8F.' },
+      regroup: { n: 'Tsukishima Station, exit 7', jp: '月島駅 7番出口', note: 'Late night: hotel lobby, 8F.' },
       nightKit: { last: '≈ 00:15–00:45', taxi: 'Ebisu → Shinjuku ≈ ¥2,500–3,500 total', first: 'First trains about 05:00' }
     },
 
@@ -543,13 +554,14 @@ window.TRIP = {
         { t: '16:50', k: 'admin', ttl: 'United check-in opens for UA 804', txt: 'Check in all three in the app and add passports.' },
         { t: '17:15', k: 'see', ttl: 'Hagoita-ichi at Sensō-ji', txt: 'Year-end fair (Dec 17–19 only, 09:00–20:00) selling decorated good-luck paddles; sellers clap out a rhythm for each sale. The temple is lit up. JR Chūō rapid to Kanda, Ginza Line to Asakusa, about 35 min.', cost: 'free · train ≈ ¥400', pl: { n: 'Sensō-ji', jp: '浅草寺', q: 'Sensoji Temple Asakusa' } },
         { t: '18:45', k: 'food', ttl: 'Hoppy Street', txt: '5 min from the temple: open-fronted izakaya with stewed beef and cheap drinks.', cost: '≈ ¥3,000–4,500', pl: { n: 'Hoppy Street', jp: 'ホッピー通り', q: 'Hoppy Street Asakusa' } },
-        { t: '21:00', k: 'night', ttl: 'Last night out', txt: 'Shinjuku or Shibuya. Your call.' },
+        { t: '21:00', k: 'night', ttl: 'Last night out in Sangenjaya', txt: 'Ginza Line to Shibuya, then 2 stops on the Den-en-toshi Line; 45 min. The "Sankaku Chitai" triangle of tiny alley bars, mostly locals. Back to Shinjuku in 20 min.', cost: '≈ ¥3,000–5,000', pl: { n: 'Sangenjaya Sankaku Chitai', jp: '三軒茶屋 三角地帯', q: 'Sangenjaya Sankaku Chitai' } },
         { t: '00:15', nd: 1, k: 'train', ttl: 'Last trains', txt: 'About 00:15–00:45. Flight home is at 16:50 tomorrow; checkout is 11:00.' }
       ],
       go: [
         { n: 'Nijō Market', jp: '二条市場', q: 'Nijo Market Sapporo', why: 'Crab, uni and ikura bowls from 7am.' },
         { n: 'New Chitose domestic terminal', jp: '新千歳空港 国内線', q: 'New Chitose Airport Domestic Terminal', why: 'Ramen Dojo, Royce, Shiroi Koibito.' },
-        { n: 'Sensō-ji', jp: '浅草寺', q: 'Sensoji Temple Asakusa', why: 'Hagoita-ichi paddle fair, Dec 17–19.' },
+        { n: 'Sensō-ji', jp: '浅草寺', q: 'Sensoji Temple Asakusa', why: 'You\'ve seen the temple; the Hagoita-ichi paddle fair (Dec 17–19 only) is new.' },
+        { n: 'Sangenjaya Sankaku Chitai', jp: '三軒茶屋 三角地帯', q: 'Sangenjaya Sankaku Chitai', why: 'Triangle of tiny alley bars for the last night.' },
         { n: 'Kaminarimon', jp: '雷門', q: 'Kaminarimon Gate', why: 'The giant lantern gate; meet here.' },
         { n: 'Hoppy Street', jp: 'ホッピー通り', q: 'Hoppy Street Asakusa', why: 'Stewed beef, cheap beer, plastic stools.' }
       ],
@@ -563,11 +575,11 @@ window.TRIP = {
       ],
       do: [
         { ttl: 'Hagoita-ichi', txt: 'When someone buys a paddle, the stall claps a rhythm (tejime). Watch a few, then buy a small one for the clap.' },
-        { ttl: 'Last night', txt: 'Pick the bars you liked on Friday. Set a hard "home by" time: you fly at 16:50 tomorrow.' }
+        { ttl: 'Last night', txt: 'Sangenjaya is two stops past Shibuya and feels nothing like it. Set a hard "home by" time: you fly at 16:50 tomorrow.' }
       ],
       prep: ['Check out by 09:30', 'Flight booking code', 'United check-in at 16:50'],
       regroup: { n: 'Kaminarimon (the big lantern gate)', jp: '雷門', note: 'Late night: hotel lobby, 8F.' },
-      nightKit: { last: '≈ 00:15–00:45', taxi: 'Asakusa → Shinjuku ≈ ¥5,000–7,000 total; Shibuya → Shinjuku ≈ ¥2,500–3,500', first: 'First trains about 05:00' }
+      nightKit: { last: '≈ 00:15–00:45', taxi: 'Sangenjaya → Shinjuku ≈ ¥3,500–4,500 total', first: 'First trains about 05:00' }
     },
 
     {
@@ -579,8 +591,8 @@ window.TRIP = {
       flight: { code: 'UA 804', from: 'HND', to: 'IAD', dep: { d: '2026-12-20', t: '16:50', tz: 'JST' }, arr: { d: '2026-12-20', t: '15:40', tz: 'ET' } },
       items: [
         { t: '09:00', k: 'food', ttl: 'Slow breakfast, pack', txt: 'Pack tax-refund goods where you can show them at the airport.' },
-        { t: '11:00', k: 'shop', ttl: 'Check out, last shopping', txt: 'Leave bags at the desk. Don Quijote for whisky and snacks, Bic Camera, the department-store food halls.', pl: { n: 'Don Quijote Shinjuku', jp: 'ドン・キホーテ 新宿', q: 'Don Quijote Shinjuku' } },
-        { t: '12:00', k: 'food', ttl: 'Last lunch', txt: 'Conveyor sushi or tonkatsu.', cost: '≈ ¥1,500–3,000' },
+        { t: '11:00', k: 'shop', ttl: 'Check out, last shopping', txt: 'Leave bags at the desk. Don Quijote for whisky and snacks, Bic Camera for electronics.', pl: { n: 'Don Quijote Shinjuku', jp: 'ドン・キホーテ 新宿', q: 'Don Quijote Shinjuku' } },
+        { t: '12:00', k: 'food', ttl: 'Last lunch: tsukemen', txt: 'Dipping ramen. Fūunji, near the South Exit, is the famous one; expect a queue.', cost: '≈ ¥1,200–1,500', pl: { n: 'Fūunji', jp: '風雲児 新宿', q: 'Fuunji Shinjuku' } },
         { t: '13:00', k: 'bus', ttl: 'Leave for Haneda Terminal 3', txt: 'Limousine Bus from Shinjuku (45–70 min, ≈ ¥1,400) or JR + Keikyū (50 min, ≈ ¥550).', cost: '≈ ¥550–1,400', fix: 1, leave: '13:00' },
         { t: '14:00', k: 'admin', ttl: 'T3: tax refund FIRST', txt: 'Do the tax-refund step before you check bags (customs may ask to see the goods), then United check-in, security, immigration.', taxfree: 1 },
         { t: '16:50', k: 'flight', ttl: 'UA 804 Haneda → Dulles', txt: 'Arrives 15:40 the same day, 12 h 50.', fix: 1, bk: 'united', dur: 770 },
@@ -591,13 +603,13 @@ window.TRIP = {
       go: [
         { n: 'Don Quijote Shinjuku', jp: 'ドン・キホーテ 新宿東南口', q: 'Don Quijote Shinjuku', why: 'Whisky, snacks, everything else. Open late.' },
         { n: 'Bic Camera Shinjuku', jp: 'ビックカメラ 新宿', q: 'Bic Camera Shinjuku East', why: 'Electronics and camera gear.' },
-        { n: 'Isetan Shinjuku food hall', jp: '伊勢丹新宿店 デパ地下', q: 'Isetan Shinjuku', why: 'Department-store basement food hall.' },
+        { n: 'Fūunji', jp: '風雲児', q: 'Fuunji Shinjuku', why: 'Tsukemen for the last lunch.' },
         { n: 'Haneda Terminal 3', jp: '羽田空港 第3ターミナル', q: 'Haneda Airport Terminal 3', why: 'Tax refund before bag drop.' }
       ],
       buy: [
         { w: 'Whisky at Don Quijote', p: '≈ ¥2,000–6,000 a bottle for common bottles', note: 'Duty-free home: 1.14 L of spirits each, so one 700 ml bottle per person. A second bottle is taxed.' },
         { w: 'Snacks (KitKat flavours, Jagariko, senbei)', p: '≈ ¥200–600 each' },
-        { w: 'Last lunch', p: '≈ ¥1,500–3,000' },
+        { w: 'Tsukemen', p: '≈ ¥1,200–1,500' },
         { w: 'Limousine Bus to Haneda', p: '≈ ¥1,400' },
         { w: 'UP Express home', p: '≈ C$12.35' }
       ],
@@ -618,13 +630,12 @@ window.TRIP = {
     { id: 'p5', due: '2026-11-15', who: [0], t: 'Tokyo hotel Dec 10–13 and Dec 19–20; Sapporo hotel Dec 14 and Dec 18' },
     { id: 'p6', due: '2026-11-15', who: [0], t: 'Flights HND → CTS Mon Dec 14 (17:30–18:30) and CTS → HND Sat Dec 19 (12:00–13:00)' },
     { id: 'p7', due: '2026-11-15', who: [1], t: 'Snow Monkey Park dated web ticket for Dec 13' },
-    { id: 'p8', due: '2026-11-15', who: [1], t: 'Shibuya Sky, Fri Dec 11, ~15:40 entry' },
+    { id: 'p8', due: '2026-12-07', who: [1], t: 'Check the Yokohama Red Brick Christmas Market hours for Fri Dec 11' },
     { id: 'p9', due: '2026-11-15', who: [0], t: 'Shinkansen seats Tokyo → Nagano Dec 13 and Nagano → Tokyo Dec 14' },
     { id: 'p10', due: '2026-11-15', who: [2], t: 'Buffalo: OurBus for Tue Dec 8 and one airport-hotel room' },
     { id: 'p11', due: '2026-11-22', who: [1], t: 'Nikka Yoichi guided tour, Fri Dec 18 (bookings open ~Nov 20)' },
     { id: 'p12', due: '2026-11-25', who: [2], t: 'Sapporo → Niseko Resort Liner, Tue Dec 15 morning' },
     { id: 'p13', due: '2026-11-25', who: [2], t: 'Niseko lift tickets (online) and ski rental pre-booking' },
-    { id: 'p14', due: '2026-11-25', who: [1], t: 'teamLab Borderless, Fri Dec 11, late-morning slot' },
     { id: 'p15', due: '2026-11-25', who: [0, 1, 2], t: 'Travel insurance that covers skiing (check credit-card coverage first)' },
     { id: 'p16', due: '2026-12-07', who: [0, 1, 2], t: 'Visit Japan Web: register and save the QR code' },
     { id: 'p17', due: '2026-12-07', who: [0, 1, 2], t: 'Suica: Apple Wallet (Moziah, AJ). Trenton: try Google Wallet; else Welcome Suica at Haneda' },
@@ -646,8 +657,6 @@ window.TRIP = {
     { k: 'ourbus', n: 'OurBus Toronto → Buffalo', d: 'd-2' },
     { k: 'buffalo', n: 'Buffalo airport hotel', d: 'd-2' },
     { k: 'tokyo1', n: 'Tokyo hotel, Dec 10–13', d: 'd1' },
-    { k: 'teamlab', n: 'teamLab Borderless', d: 'd2' },
-    { k: 'shibuyasky', n: 'Shibuya Sky', d: 'd2' },
     { k: 'shink1', n: 'Shinkansen Tokyo → Nagano', d: 'd4' },
     { k: 'monkey', n: 'Snow Monkey Park ticket', d: 'd4' },
     { k: 'ryokan', n: 'Shibu Onsen ryokan', d: 'd4' },
@@ -666,13 +675,13 @@ window.TRIP = {
   ],
 
   food: [
-    { id: 'f1', n: 'Yakitori in Omoide Yokochō', r: 'tokyo', d: 'd1' },
-    { id: 'f2', n: 'Ichiran ramen', r: 'tokyo', d: 'd1' },
-    { id: 'f3', n: 'Tuna bowl at Tsukiji', r: 'tokyo', d: 'd2' },
-    { id: 'f4', n: 'Tamagoyaki on a stick', r: 'tokyo', d: 'd2' },
-    { id: 'f5', n: 'Wagyu yakiniku', r: 'tokyo', d: 'd2' },
+    { id: 'f1', n: 'Regional plates at Kabuki Hall', r: 'tokyo', d: 'd1' },
+    { id: 'f2', n: 'Your own Cup Noodles', r: 'tokyo', d: 'd2' },
+    { id: 'f3', n: 'Mulled wine at the Red Brick market', r: 'tokyo', d: 'd2' },
+    { id: 'f4', n: 'Chinatown pork bun and soup dumplings', r: 'tokyo', d: 'd2' },
+    { id: 'f5', n: 'Standing bar in Noge', r: 'tokyo', d: 'd2' },
     { id: 'f6', n: 'Konbini egg sandwich', r: 'tokyo', d: 'd2' },
-    { id: 'f7', n: 'Torikizoku, everything ¥390', r: 'tokyo', d: 'd3' },
+    { id: 'f7', n: 'Monjayaki at Tsukishima', r: 'tokyo', d: 'd3' },
     { id: 'f8', n: 'Ekiben on the Shinkansen', r: 'nagano', d: 'd4' },
     { id: 'f9', n: 'Shinshū soba', r: 'nagano', d: 'd4' },
     { id: 'f10', n: 'Ryokan kaiseki', r: 'nagano', d: 'd4' },
@@ -688,8 +697,8 @@ window.TRIP = {
     { id: 'f20', n: 'Shime parfait', r: 'hokkaido', d: 'd9' },
     { id: 'f21', n: 'Kaisendon at Nijō Market', r: 'hokkaido', d: 'd10' },
     { id: 'f22', n: 'Hoppy Street stewed beef', r: 'tokyo', d: 'd10' },
-    { id: 'f23', n: 'Conveyor-belt sushi', r: 'tokyo', d: 'd11' },
-    { id: 'f24', n: 'Tonkatsu', r: 'tokyo', d: 'd11' }
+    { id: 'f23', n: 'Tsukemen at Fūunji', r: 'tokyo', d: 'd11' },
+    { id: 'f24', n: 'Sangenjaya alley bar', r: 'tokyo', d: 'd10' }
   ],
 
   baths: [
@@ -783,13 +792,13 @@ window.TRIP = {
 
   // Demo "pretend I'm here" spots for the Find Home compass
   demoSpots: [
-    { n: 'Shibuya Crossing', lat: 35.6595, lng: 139.7005, area: 'tokyo' },
-    { n: 'Golden Gai', lat: 35.6938, lng: 139.7046, area: 'tokyo' },
+    { n: 'Noge, Yokohama', lat: 35.4466, lng: 139.6306, area: 'tokyo' },
+    { n: 'Ebisu Yokochō', lat: 35.6477, lng: 139.7107, area: 'tokyo' },
     { n: 'Sensō-ji', lat: 35.7148, lng: 139.7967, area: 'tokyo' },
     { n: 'Susukino crossing', lat: 43.0553, lng: 141.3530, area: 'hokkaido' },
     { n: 'Hirafu Welcome Centre', lat: 42.8607, lng: 140.6976, area: 'hokkaido' },
     { n: 'Jigokudani trailhead', lat: 36.7313, lng: 138.4442, area: 'nagano' }
   ],
 
-  sources: 'Plan checked Nov 12–13, 2026: United itinerary email, Niseko United and Grand Hirafu, Japan Ski Experience, Niseko Central, Skye Niseko, White Liner, Go Nagano, Snow Monkey Guide, Ekitan, Selected Ryokan, Gracery Shinjuku, ikyu, Accor, NISADE, Skyscanner, GO TOKYO, Japan Travel Kit, sapporo.travel, japan-guide, Tokyo Cheapo. Hotel addresses from Jalan, KNT, NTA, Mapple and Accor (Nov 13, 2026).'
+  sources: 'Plan checked Nov 12–13, 2026: United itinerary email, Niseko United and Grand Hirafu, Japan Ski Experience, Niseko Central, Skye Niseko, White Liner, Go Nagano, Snow Monkey Guide, Ekitan, Selected Ryokan, Gracery Shinjuku, ikyu, Accor, NISADE, Skyscanner, Jorudan (Yokohama Christmas market), Kanagawa tourism (Cup Noodles Museum), Japan Activity (Air Cabin), Time Out (Kabuki Hall), Nifty Onsen (Thermae-Yu), sapporo.travel, japan-guide, Tokyo Cheapo. Hotel addresses from Jalan, KNT, NTA, Mapple and Accor (Nov 13, 2026).'
 };

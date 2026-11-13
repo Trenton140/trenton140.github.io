@@ -6,7 +6,7 @@ METHOD:PUBLISH
 X-WR-CALNAME:Japan '26
 BEGIN:VEVENT
 UID:jt26-d-2-0@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART:20261208T214000Z
 DTEND:20261208T220000Z
 SUMMARY:Meet at Union Station
@@ -16,7 +16,7 @@ DESCRIPTION:With bags. Checked bags ride under the bus.\nAfter work\, to B
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d-2-1@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART:20261208T220000Z
 DTEND:20261208T234500Z
 SUMMARY:OurBus to Buffalo Airport
@@ -33,7 +33,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d-2-2@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART:20261208T234500Z
 DTEND:20261209T011500Z
 SUMMARY:US border
@@ -47,7 +47,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d-2-3@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART:20261209T011500Z
 DTEND:20261209T030000Z
 SUMMARY:Hotel shuttle\, dinner\, early night
@@ -57,7 +57,7 @@ DESCRIPTION:Call the hotel for the free shuttle. Ask for two queens plus a
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d-2-4@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART:20261209T030000Z
 DTEND:20261209T043000Z
 SUMMARY:Lights out
@@ -66,7 +66,7 @@ DESCRIPTION:Alarms for 06:45. The shuttle to the terminal is at 07:30.\nAf
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d-1-0@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART:20261209T123000Z
 DTEND:20261209T150000Z
 SUMMARY:Hotel shuttle to BUF
@@ -81,7 +81,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d-1-1@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART:20261209T150000Z
 DTEND:20261209T162800Z
 SUMMARY:UA 6157 Buffalo → Dulles
@@ -95,7 +95,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d-1-2@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART:20261209T162800Z
 DTEND:20261209T172000Z
 SUMMARY:Dulles: 52-minute connection
@@ -105,7 +105,7 @@ DESCRIPTION:No customs here. Walk or take the AeroTrain to the UA 803 gate
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d-1-3@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART:20261209T172000Z
 DTEND:20261210T075000Z
 SUMMARY:UA 803 Dulles → Haneda
@@ -119,182 +119,167 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d1-0@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART:20261210T075000Z
 DTEND:20261210T090000Z
 SUMMARY:Land at Haneda Terminal 3
 LOCATION:Haneda Airport Terminal 3
 DESCRIPTION:Immigration and customs with your Visit Japan Web QR codes; al
  low 45–75 min. Pull ¥30\,000 each from the 7-Bank ATM in arrivals.\nDa
- y 1: Land\, eat\, sleep
+ y 1: Land\, eat\, soak\, sleep
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d1-1@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART:20261210T090000Z
 DTEND:20261210T101500Z
 SUMMARY:Suica\, then into the city
 DESCRIPTION:Moziah and AJ: Suica in Apple Wallet. Trenton: try adding Suic
  a to Google Wallet; global Pixels usually can't\, so buy a Welcome Suica 
  card at T3. Then the Limousine Bus (≈ ¥1\,400) or Keikyū + JR (≈ ¥
- 550).\n≈ ¥550–1\,400\nDay 1: Land\, eat\, sleep
+ 550).\n≈ ¥550–1\,400\nDay 1: Land\, eat\, soak\, sleep
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d1-2@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART:20261210T101500Z
 DTEND:20261210T110000Z
 SUMMARY:Check in at Hotel Gracery Shinjuku
 LOCATION:Hotel Gracery Shinjuku
-DESCRIPTION:Lobby on 8F of the Godzilla-head building. Shower.\nDay 1: Lan
- d\, eat\, sleep
+DESCRIPTION:Lobby on 8F of the Godzilla-head building. Drop bags.\nDay 1: 
+ Land\, eat\, soak\, sleep
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d1-3@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART:20261210T110000Z
-DTEND:20261210T123000Z
-SUMMARY:Omoide Yokochō
-LOCATION:Omoide Yokochō
-DESCRIPTION:The smoky yakitori alley by the West Exit. Skewers and beers a
- t a counter. Cash is easiest; small places add a seating charge.\n≈ ¥3
- \,000–4\,500\nDay 1: Land\, eat\, sleep
+DTEND:20261210T121500Z
+SUMMARY:Shinjuku Kabuki Hall
+LOCATION:Shinjuku Kabuki Hall
+DESCRIPTION:New for you: a loud\, neon\, festival-themed food hall on 2F o
+ f the Tokyu Kabukichō Tower\, two minutes from the hotel. Ten stalls of 
+ regional food: Hokkaido yakitori\, Kyushu spicy noodles\, Korean barbecue
+ . Open most of the night.\n≈ ¥3\,000–4\,500\nDay 1: Land\, eat\, soa
+ k\, sleep
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d1-4@japan26-trip
-DTSTAMP:20261113T174614Z
-DTSTART:20261210T123000Z
-DTEND:20261210T140000Z
-SUMMARY:Ramen\, konbini run\, bed
-LOCATION:Ichiran Shinjuku
-DESCRIPTION:Ichiran is 24 h and painless for a first night. Grab tomorrow'
- s breakfast at a 7-Eleven. Bed by 22:30 to beat jet lag.\n≈ ¥1\,100–
- 1\,500\nDay 1: Land\, eat\, sleep
+DTSTAMP:20261113T175817Z
+DTSTART:20261210T121500Z
+DTEND:20261210T134500Z
+SUMMARY:Thermae-Yu hot spring
+LOCATION:Thermae-Yu
+DESCRIPTION:New for you: a hot-spring bathhouse 5 min from the hotel. Outd
+ oor bath\, carbonated bath\, two saunas. Be out before midnight\, when a 
+ late-night surcharge starts. No tattoos. Bed by 23:00.\n¥3\,100 (Mon–T
+ hu rate)\nDay 1: Land\, eat\, soak\, sleep
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d2-0@japan26-trip
-DTSTAMP:20261113T174614Z
-DTSTART:20261210T223000Z
-DTEND:20261210T225500Z
-SUMMARY:Subway to Tsukiji
-DESCRIPTION:Toei Ōedo Line\, Shinjuku → Tsukijishijō\, 20 min.\n≈ ¥
- 280\nDay 2: Market\, digital art\, Shibuya from above
+DTSTAMP:20261113T175817Z
+DTSTART:20261211T000000Z
+DTEND:20261211T004500Z
+SUMMARY:Train to Sakuragichō
+DESCRIPTION:JR Shōnan-Shinjuku Line to Yokohama\, then one stop on the Ne
+ gishi Line.\n≈ ¥600–700\nDay 2: Yokohama: noodles\, harbour\, Chinat
+ own\, Noge
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d2-1@japan26-trip
-DTSTAMP:20261113T174614Z
-DTSTART:20261210T225500Z
-DTEND:20261211T013000Z
-SUMMARY:Graze Tsukiji Outer Market
-LOCATION:Tsukiji Outer Market
-DESCRIPTION:Tuna bowls\, grilled scallops\, tamagoyaki\, wagyu skewers. Mo
- st stalls wind down by 13:00.\n≈ ¥2\,500–4\,000\nDay 2: Market\, dig
- ital art\, Shibuya from above
+DTSTAMP:20261113T175817Z
+DTSTART:20261211T004500Z
+DTEND:20261211T010000Z
+SUMMARY:Yokohama Air Cabin
+LOCATION:Yokohama Air Cabin
+DESCRIPTION:A gondola from Sakuragichō Station over the harbour to the Sh
+ inkō pier\, 5 min. One cabin fits the three of you.\n¥1\,000\nDay 2: Yo
+ kohama: noodles\, harbour\, Chinatown\, Noge
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d2-2@japan26-trip
-DTSTAMP:20261113T174614Z
-DTSTART:20261211T013000Z
-DTEND:20261211T040000Z
-SUMMARY:teamLab Borderless
-LOCATION:teamLab Borderless
-DESCRIPTION:Azabudai Hills. Hibiya Line Tsukiji → Kamiyachō\, 10 min. A
- llow 2 hours. Dynamic pricing; a Friday sits above the base price.\nfrom 
- ¥3\,400\nDay 2: Market\, digital art\, Shibuya from above
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:Leave in 20 min: teamLab Borderless
-TRIGGER:-PT40M
-END:VALARM
+DTSTAMP:20261113T175817Z
+DTSTART:20261211T010000Z
+DTEND:20261211T030000Z
+SUMMARY:Cup Noodles Museum
+LOCATION:Cup Noodles Museum Yokohama
+DESCRIPTION:Take a numbered ticket for the My Cupnoodles Factory as you wa
+ lk in: draw on your own cup\, pick the soup and four toppings\, take it h
+ ome sealed. Open 10:00–18:00. Allow 90 min.\n¥500 entry · ¥500 your 
+ cup\nDay 2: Yokohama: noodles\, harbour\, Chinatown\, Noge
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d2-3@japan26-trip
-DTSTAMP:20261113T174614Z
-DTSTART:20261211T040000Z
-DTEND:20261211T051500Z
-SUMMARY:Lunch\, Tokyo Tower
-LOCATION:Tokyo Tower
-DESCRIPTION:Eat in Azabudai Hills or walk 10 min to Tokyo Tower for photos
-  from below.\n≈ ¥1\,500–2\,500\nDay 2: Market\, digital art\, Shibuy
- a from above
+DTSTAMP:20261113T175817Z
+DTSTART:20261211T030000Z
+DTEND:20261211T044500Z
+SUMMARY:Red Brick Warehouse Christmas Market
+LOCATION:Yokohama Red Brick Warehouse
+DESCRIPTION:Runs Nov 20 – Dec 25. About 60 stalls\, an 11 m real tree\, 
+ mulled wine and sausages with the harbour behind. First lunch. Check the 
+ hours that week.\nentry from ¥500 · food ≈ ¥1\,500–2\,500\nDay 2: 
+ Yokohama: noodles\, harbour\, Chinatown\, Noge
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d2-4@japan26-trip
-DTSTAMP:20261113T174614Z
-DTSTART:20261211T051500Z
-DTEND:20261211T064000Z
-SUMMARY:Shibuya
-LOCATION:Shibuya Scramble Crossing
-DESCRIPTION:Hibiya Line to Ebisu\, JR one stop (20 min). Scramble crossing
- \, Miyashita Park\, Parco\, Don Quijote.\n≈ ¥400\nDay 2: Market\, digi
- tal art\, Shibuya from above
+DTSTAMP:20261113T175817Z
+DTSTART:20261211T044500Z
+DTEND:20261211T064500Z
+SUMMARY:Yamashita Park → Chinatown
+LOCATION:Yokohama Chinatown
+DESCRIPTION:Walk the waterfront (20 min) to Japan's biggest Chinatown. Sec
+ ond lunch on foot: pork buns\, soup dumplings\, sesame balls.\n≈ ¥1\,5
+ 00–2\,500\nDay 2: Yokohama: noodles\, harbour\, Chinatown\, Noge
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d2-5@japan26-trip
-DTSTAMP:20261113T174614Z
-DTSTART:20261211T064000Z
-DTEND:20261211T093000Z
-SUMMARY:Shibuya Sky at sunset
-LOCATION:Shibuya Sky
-DESCRIPTION:Enter before sunset\, watch the city light up\, look for Mt Fu
- ji to the west. No time limit once in. No bags\, hats or tripods on the r
- oof (lockers on floor 46).\n¥3\,400 online\nDay 2: Market\, digital art\
- , Shibuya from above
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:Leave in 20 min: Shibuya Sky at sunset
-TRIGGER:-PT30M
-END:VALARM
+DTSTAMP:20261113T175817Z
+DTSTART:20261211T064500Z
+DTEND:20261211T090000Z
+SUMMARY:Sunset from Ōsanbashi Pier
+LOCATION:Ōsanbashi Pier
+DESCRIPTION:A wooden rooftop deck with the whole Minato Mirai skyline acro
+ ss the water\, and Mt Fuji behind it on a clear day. From 17:00 the Yorun
+ oyo harbour light show runs every half hour.\nfree\nDay 2: Yokohama: nood
+ les\, harbour\, Chinatown\, Noge
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d2-6@japan26-trip
-DTSTAMP:20261113T174614Z
-DTSTART:20261211T093000Z
-DTEND:20261211T113000Z
-SUMMARY:Yakiniku in Shibuya
-DESCRIPTION:Grill-it-yourself wagyu. All-you-can-eat courses are good valu
- e for three hungry people.\n≈ ¥5\,000–9\,000\nDay 2: Market\, digita
- l art\, Shibuya from above
+DTSTAMP:20261113T175817Z
+DTSTART:20261211T090000Z
+DTEND:20261211T120000Z
+SUMMARY:Noge bar-hopping
+LOCATION:Noge
+DESCRIPTION:About 600 small bars and izakaya in a few blocks by Sakuragich
+ ō\, mostly locals. Start at a standing bar\, then the curved two-storey 
+ Miyakobashi "Harmonica Alley" on the river.\n≈ ¥4\,000–6\,000\nDay 2
+ : Yokohama: noodles\, harbour\, Chinatown\, Noge
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d2-7@japan26-trip
-DTSTAMP:20261113T174614Z
-DTSTART:20261211T113000Z
-DTEND:20261211T143000Z
-SUMMARY:Friday night out
-LOCATION:Golden Gai
-DESCRIPTION:Nonbei Yokochō (tiny bars by Shibuya Station)\, then stay in 
- Shibuya or JR back (7 min) to Golden Gai: about 200 six-seat bars. Most c
- harge a cover.\ncover ≈ ¥500–1\,000 · drinks ≈ ¥800–1\,200\nDa
- y 2: Market\, digital art\, Shibuya from above
-END:VEVENT
-BEGIN:VEVENT
-UID:jt26-d2-8@japan26-trip
-DTSTAMP:20261113T174614Z
-DTSTART:20261211T151500Z
-DTEND:20261211T164500Z
-SUMMARY:Last trains
-DESCRIPTION:Last trains leave around 00:15–00:45. After that: taxi (Shib
- uya → Shinjuku ≈ ¥2\,500–3\,500 total) or karaoke until the first 
- train at 05:00. Golden Gai is a 5-min walk from the hotel.\nDay 2: Market
- \, digital art\, Shibuya from above
+DTSTAMP:20261113T175817Z
+DTSTART:20261211T140000Z
+DTEND:20261211T153000Z
+SUMMARY:Train back to Shinjuku
+DESCRIPTION:From Sakuragichō. Don't push it: a taxi from Yokohama to Shin
+ juku is ≈ ¥12\,000–15\,000.\n≈ ¥600–700\nDay 2: Yokohama: noodl
+ es\, harbour\, Chinatown\, Noge
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Last trains leave in about 30 min
+DESCRIPTION:Leave in 20 min: Train back to Shinjuku
 TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d3-0@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART:20261212T003000Z
 DTEND:20261212T013000Z
 SUMMARY:Ship suitcases to Niseko
 DESCRIPTION:Yamato takkyūbin from the front desk to the Mercure Niseko Re
  sort. Tokyo → Hokkaido takes 2 days\, so they land Dec 14\, ahead of yo
  u. Keep a daypack with 3 days of clothes\, onsen kit and warm layers.\n
- ≈ ¥3\,000–3\,700 per bag\nDay 3: Send the bags\, old Tokyo\, big nig
- ht
+ ≈ ¥3\,000–3\,700 per bag\nDay 3: Send the bags\, ski shops\, monjaya
+ ki\, Ebisu
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Ship suitcases to Niseko
@@ -303,7 +288,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d3-1@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART:20261212T013000Z
 DTEND:20261212T040000Z
 SUMMARY:Ueno → Ameyoko
@@ -311,58 +296,64 @@ LOCATION:Ameyoko
 DESCRIPTION:JR Yamanote\, Shinjuku → Ueno\, 25 min. Market street under 
  the tracks: street food\, sneakers\, cheap sashimi bowls\, standing bars 
  open from late morning.\ntrain ≈ ¥210–230 · food ≈ ¥1\,500–2\,
- 500\nDay 3: Send the bags\, old Tokyo\, big night
+ 500\nDay 3: Send the bags\, ski shops\, monjayaki\, Ebisu
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d3-2@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART:20261212T040000Z
 DTEND:20261212T070000Z
-SUMMARY:Akihabara
-LOCATION:Akihabara Electric Town
-DESCRIPTION:Two stops. Arcades\, retro games\, multi-floor electronics. Gi
- ve AJ and Moziah an hour to disappear.\nDay 3: Send the bags\, old Tokyo\
- , big night
+SUMMARY:Kanda-Ogawamachi ski street
+LOCATION:Kanda Ogawamachi ski shops
+DESCRIPTION:JR to Ochanomizu (2 stops)\, then 5 min walk. About 60 ski and
+  board shops in 400 m: gloves\, goggles and base layers before Niseko\, a
+ nd Trenton's boot hunt. Tax refunds now happen at the airport.\nDay 3: Se
+ nd the bags\, ski shops\, monjayaki\, Ebisu
+END:VEVENT
+BEGIN:VEVENT
+UID:jt26-d3-3@japan26-trip
+DTSTAMP:20261113T175817Z
+DTSTART:20261212T073000Z
+DTEND:20261212T090000Z
+SUMMARY:Marunouchi illuminations
+LOCATION:Marunouchi Naka-dori
+DESCRIPTION:One stop to Tokyo Station\, then walk Naka-dōri under the lit
+  trees. The restored station building is lit too.\nfree\nDay 3: Send the 
+ bags\, ski shops\, monjayaki\, Ebisu
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d3-4@japan26-trip
-DTSTAMP:20261113T174614Z
-DTSTART:20261212T080000Z
-DTEND:20261212T100000Z
-SUMMARY:Marunouchi illuminations
-LOCATION:Marunouchi Naka-dori
-DESCRIPTION:Walk Naka-dōri from Tokyo Station; the restored station build
- ing is lit at night.\nfree\nDay 3: Send the bags\, old Tokyo\, big night
+DTSTAMP:20261113T175817Z
+DTSTART:20261212T090000Z
+DTEND:20261212T113000Z
+SUMMARY:Monjayaki on Tsukishima Monja Street
+LOCATION:Tsukishima Monja Street
+DESCRIPTION:Yūrakuchō Line\, Yūrakuchō → Tsukishima\, 5 min. Tokyo's
+  own runny\, crispy-edged griddle pancake: you cook it at the table and e
+ at it off tiny spatulas. Dozens of shops on one street.\n≈ ¥2\,500–4
+ \,000\nDay 3: Send the bags\, ski shops\, monjayaki\, Ebisu
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d3-5@japan26-trip
-DTSTAMP:20261113T174614Z
-DTSTART:20261212T100000Z
-DTEND:20261212T130000Z
-SUMMARY:Izakaya dinner
+DTSTAMP:20261113T175817Z
+DTSTART:20261212T113000Z
+DTEND:20261212T143000Z
+SUMMARY:Ebisu Yokochō and Ebisu bars
 LOCATION:Ebisu Yokochō
-DESCRIPTION:Torikizoku (every item about ¥390) for cheap and loud\, or a 
- kushikatsu or sashimi place. Then Ebisu Yokochō or back to Kabukichō.\n
- ≈ ¥3\,500–6\,000\nDay 3: Send the bags\, old Tokyo\, big night
+DESCRIPTION:Ōedo Line to Roppongi\, Hibiya Line to Ebisu\, 25 min. A cove
+ red alley of loud\, friendly counters\, then the bars around the station.
+ \n≈ ¥3\,000–5\,000\nDay 3: Send the bags\, ski shops\, monjayaki\, E
+ bisu
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d3-6@japan26-trip
-DTSTAMP:20261113T174614Z
-DTSTART:20261212T130000Z
-DTEND:20261212T151500Z
-SUMMARY:Karaoke
-DESCRIPTION:Karaoke Kan or Big Echo: private room with all-you-can-drink.\
- n≈ ¥2\,500–4\,000\nDay 3: Send the bags\, old Tokyo\, big night
-END:VEVENT
-BEGIN:VEVENT
-UID:jt26-d3-7@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART:20261212T151500Z
 DTEND:20261212T164500Z
 SUMMARY:Last trains · pack tonight
 DESCRIPTION:Last trains about 00:15–00:45. Tomorrow you check out at 07:
  45: pack the daypack before you go out\, not after.\nDay 3: Send the bags
- \, old Tokyo\, big night
+ \, ski shops\, monjayaki\, Ebisu
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Last trains leave in about 30 min
@@ -371,7 +362,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d4-0@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART:20261212T224500Z
 DTEND:20261212T230000Z
 SUMMARY:Check out
@@ -380,7 +371,7 @@ DESCRIPTION:Leave any shopping bag with the front desk for your return on
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d4-1@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART:20261212T230000Z
 DTEND:20261212T233000Z
 SUMMARY:JR to Tokyo Station
@@ -394,7 +385,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d4-2@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART:20261212T233000Z
 DTEND:20261213T011500Z
 SUMMARY:Hokuriku Shinkansen → Nagano
@@ -409,7 +400,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d4-3@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART:20261213T011500Z
 DTEND:20261213T023000Z
 SUMMARY:Nagano → Yudanaka
@@ -420,7 +411,7 @@ DESCRIPTION:Down to the Nagaden station. Buy the Snow Monkey Pass (train /
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d4-4@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART:20261213T023000Z
 DTEND:20261213T040000Z
 SUMMARY:Drop bags\, soba lunch
@@ -430,7 +421,7 @@ DESCRIPTION:Bags at the ryokan\, then soba or a set meal in Shibu.\n≈ ¥
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d4-5@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART:20261213T040000Z
 DTEND:20261213T044500Z
 SUMMARY:Bus + forest trail to the park
@@ -446,7 +437,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d4-6@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART:20261213T044500Z
 DTEND:20261213T061500Z
 SUMMARY:Jigokudani Monkey Park
@@ -458,7 +449,7 @@ DESCRIPTION:Wild macaques around and in a steaming pool. Show your dated w
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d4-7@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART:20261213T061500Z
 DTEND:20261213T070000Z
 SUMMARY:Walk out\, bus back to Shibu
@@ -466,7 +457,7 @@ DESCRIPTION:Day 4: Monkeys in the hot spring\, then your own
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d4-8@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART:20261213T070000Z
 DTEND:20261213T090000Z
 SUMMARY:Yukata\, bath key\, nine-bath circuit
@@ -477,7 +468,7 @@ DESCRIPTION:Check in\, change into yukata\, get the bath key and start the
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d4-9@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART:20261213T090000Z
 DTEND:20261213T110000Z
 SUMMARY:Kaiseki dinner
@@ -487,7 +478,7 @@ DESCRIPTION:Ten or so small courses\, usually with Shinshū beef\, river f
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d4-10@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART:20261213T110000Z
 DTEND:20261213T123000Z
 SUMMARY:More baths\, lanterns\, sake
@@ -498,7 +489,7 @@ DESCRIPTION:The lantern-lit lane\, sake\, and the retro shooting gallery i
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d5-0@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART:20261213T220000Z
 DTEND:20261214T004500Z
 SUMMARY:Morning bath\, ryokan breakfast
@@ -506,7 +497,7 @@ DESCRIPTION:included\nDay 5: Temple\, then all the way north
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d5-1@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART:20261214T004500Z
 DTEND:20261214T020000Z
 SUMMARY:Check out\, Nagaden from Yudanaka
@@ -520,7 +511,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d5-2@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART:20261214T020000Z
 DTEND:20261214T041500Z
 SUMMARY:Zenkō-ji
@@ -532,7 +523,7 @@ DESCRIPTION:10 min walk from Gondō. A 1\,400-year-old temple with a pitch
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d5-3@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART:20261214T041500Z
 DTEND:20261214T060000Z
 SUMMARY:Shinkansen Nagano → Tokyo
@@ -546,7 +537,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d5-4@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART:20261214T060000Z
 DTEND:20261214T083000Z
 SUMMARY:Tokyo Station → Haneda
@@ -555,7 +546,7 @@ DESCRIPTION:Yamanote to Hamamatsuchō\, then the monorail. At the airport
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d5-5@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART:20261214T083000Z
 DTEND:20261214T113000Z
 SUMMARY:Fly to Sapporo
@@ -570,7 +561,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d5-6@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART:20261214T114500Z
 DTEND:20261214T121500Z
 SUMMARY:Check in at La'gent Stay
@@ -581,7 +572,7 @@ DESCRIPTION:JR Rapid Airport from New Chitose\, 37 min. Outside it's aroun
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d5-7@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART:20261214T121500Z
 DTEND:20261214T140000Z
 SUMMARY:Jingisukan at Daruma
@@ -593,7 +584,7 @@ DESCRIPTION:Grilled lamb on a dome-shaped skillet\, Sapporo's signature. S
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d5-8@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART:20261214T140000Z
 DTEND:20261214T153000Z
 SUMMARY:One drink\, or the hotel hot-spring bath
@@ -602,7 +593,7 @@ DESCRIPTION:The bus leaves early tomorrow.\nDay 5: Temple\, then all the w
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d6-0@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART:20261214T221500Z
 DTEND:20261214T231500Z
 SUMMARY:Check out with daypacks
@@ -611,7 +602,7 @@ DESCRIPTION:Konbini breakfast\, walk to the Tokyu REI stop (about 8 min).\
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d6-1@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART:20261214T231500Z
 DTEND:20261215T021000Z
 SUMMARY:Resort Liner RL501 to Hirafu
@@ -626,7 +617,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d6-2@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART:20261215T021000Z
 DTEND:20261215T030000Z
 SUMMARY:Hirafu Welcome Centre
@@ -636,7 +627,7 @@ DESCRIPTION:Call or message the hotel for its shuttle. Your suitcases shou
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d6-3@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART:20261215T030000Z
 DTEND:20261215T043000Z
 SUMMARY:Lunch in the village
@@ -645,7 +636,7 @@ DESCRIPTION:Ramen\, katsu curry\, or the food trucks.\n≈ ¥1\,500–2\,5
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d6-4@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART:20261215T043000Z
 DTEND:20261215T063000Z
 SUMMARY:Rental fitting
@@ -655,7 +646,7 @@ DESCRIPTION:Do it now so tomorrow starts on snow\, not in a queue. Buy lif
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d6-5@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART:20261215T063000Z
 DTEND:20261215T093000Z
 SUMMARY:Onsen
@@ -666,7 +657,7 @@ DESCRIPTION:Yukoro in lower Hirafu is the locals' bath; Yumoto Niseko Prin
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d6-7@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART:20261215T100000Z
 DTEND:20261215T113000Z
 SUMMARY:Izakaya\, then Bar Gyu+
@@ -677,7 +668,7 @@ DESCRIPTION:Mid-December is before the crowds\, but reserve dinner anyway.
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d7-0@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART:20261215T233000Z
 DTEND:20261216T023000Z
 SUMMARY:First lifts at Hirafu
@@ -689,7 +680,7 @@ DESCRIPTION:Start on the groomed greens and blues off the Ace and King are
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d7-1@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART:20261216T030000Z
 DTEND:20261216T060000Z
 SUMMARY:Lunch on the mountain
@@ -697,7 +688,7 @@ DESCRIPTION:≈ ¥1\,800–2\,800\nDay 7: Ski day one
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d7-2@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART:20261216T063000Z
 DTEND:20261216T070000Z
 SUMMARY:Mt Yōtei sunset
@@ -706,7 +697,7 @@ DESCRIPTION:From the top of the Hirafu gondola\, sunset about 16:00. Best
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d7-3@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART:20261216T070000Z
 DTEND:20261216T100000Z
 SUMMARY:Night skiing until 19:00
@@ -715,7 +706,7 @@ DESCRIPTION:Same ticket. Not every lift runs after dark.\nincluded\nDay 7:
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d7-4@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART:20261216T103000Z
 DTEND:20261216T120000Z
 SUMMARY:Onsen\, then dinner
@@ -724,7 +715,7 @@ DESCRIPTION:Soup curry or yakitori.\n≈ ¥4\,000–6\,000\nDay 7: Ski day
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d8-0@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART:20261216T233000Z
 DTEND:20261217T023000Z
 SUMMARY:First lift\, or tour the mountain
@@ -735,7 +726,7 @@ DESCRIPTION:Fresh snow: first lift at Hirafu. Otherwise use the All Mounta
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d8-1@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART:20261217T030000Z
 DTEND:20261217T053000Z
 SUMMARY:Lunch on the mountain
@@ -743,7 +734,7 @@ DESCRIPTION:≈ ¥1\,800–2\,800\nDay 8: Ski day two
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d8-2@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART:20261217T053000Z
 DTEND:20261217T083000Z
 SUMMARY:Return rentals
@@ -752,7 +743,7 @@ DESCRIPTION:Or keep them until the shop's evening close if you're night sk
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d8-3@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART:20261217T093000Z
 DTEND:20261217T110000Z
 SUMMARY:Dinner in Kutchan town
@@ -764,7 +755,7 @@ DESCRIPTION:10–15 min by taxi: more local and noticeably cheaper than Hi
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d9-0@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART:20261217T234500Z
 DTEND:20261218T003000Z
 SUMMARY:Check out\, taxi to Kutchan
@@ -777,7 +768,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d9-1@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART:20261218T003000Z
 DTEND:20261218T014500Z
 SUMMARY:JR to Yoichi
@@ -791,7 +782,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d9-2@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART:20261218T014500Z
 DTEND:20261218T040000Z
 SUMMARY:Nikka Yoichi Distillery
@@ -804,7 +795,7 @@ DESCRIPTION:3 min from the station. The free guided tour (coal-fired still
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d9-3@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART:20261218T040000Z
 DTEND:20261218T053000Z
 SUMMARY:Train to Otaru\, sushi lunch
@@ -815,7 +806,7 @@ DESCRIPTION:Otaru is known for sushi\, or grab a seafood bowl at Sankaku M
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d9-4@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART:20261218T053000Z
 DTEND:20261218T074500Z
 SUMMARY:Sakaimachi Street → Otaru Canal
@@ -826,7 +817,7 @@ DESCRIPTION:Glass shops\, LeTAO cheesecake\, a sake brewery\, down to the
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d9-5@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART:20261218T074500Z
 DTEND:20261218T093000Z
 SUMMARY:Train to Sapporo\, check in
@@ -839,7 +830,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d9-6@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART:20261218T093000Z
 DTEND:20261218T110000Z
 SUMMARY:Christmas market + White Illumination
@@ -850,7 +841,7 @@ DESCRIPTION:Munich Christmas Market in Ōdōri Park (11:00–21:00\, to De
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d9-7@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART:20261218T110000Z
 DTEND:20261218T123000Z
 SUMMARY:Soup curry\, Susukino\, miso ramen
@@ -862,7 +853,7 @@ DESCRIPTION:Soup curry (Garaku or Suage+) or a crab-and-sashimi izakaya. F
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d10-0@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART:20261218T230000Z
 DTEND:20261219T004500Z
 SUMMARY:Nijō Market breakfast
@@ -873,7 +864,7 @@ DESCRIPTION:10 min walk from the hotel: a seafood rice bowl with crab\, un
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d10-1@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART:20261219T004500Z
 DTEND:20261219T030000Z
 SUMMARY:Check out\, train to New Chitose
@@ -887,7 +878,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d10-2@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART:20261219T030000Z
 DTEND:20261219T060000Z
 SUMMARY:Fly to Haneda
@@ -901,7 +892,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d10-3@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART:20261219T070000Z
 DTEND:20261219T075000Z
 SUMMARY:Back at the Shinjuku hotel
@@ -909,7 +900,7 @@ DESCRIPTION:≈ ¥550–1\,400\nDay 10: South again; the last night
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d10-4@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART:20261219T075000Z
 DTEND:20261219T081500Z
 SUMMARY:United check-in opens for UA 804
@@ -923,7 +914,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d10-5@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART:20261219T081500Z
 DTEND:20261219T094500Z
 SUMMARY:Hagoita-ichi at Sensō-ji
@@ -935,7 +926,7 @@ DESCRIPTION:Year-end fair (Dec 17–19 only\, 09:00–20:00) selling decor
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d10-6@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART:20261219T094500Z
 DTEND:20261219T120000Z
 SUMMARY:Hoppy Street
@@ -946,16 +937,19 @@ DESCRIPTION:5 min from the temple: open-fronted izakaya with stewed beef a
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d10-7@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART:20261219T120000Z
 DTEND:20261219T150000Z
-SUMMARY:Last night out
-DESCRIPTION:Shinjuku or Shibuya. Your call.\nDay 10: South again; the last
-  night
+SUMMARY:Last night out in Sangenjaya
+LOCATION:Sangenjaya Sankaku Chitai
+DESCRIPTION:Ginza Line to Shibuya\, then 2 stops on the Den-en-toshi Line;
+  45 min. The "Sankaku Chitai" triangle of tiny alley bars\, mostly locals
+ . Back to Shinjuku in 20 min.\n≈ ¥3\,000–5\,000\nDay 10: South again
+ ; the last night
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d10-8@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART:20261219T151500Z
 DTEND:20261219T164500Z
 SUMMARY:Last trains
@@ -969,7 +963,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d11-0@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART:20261220T000000Z
 DTEND:20261220T020000Z
 SUMMARY:Slow breakfast\, pack
@@ -978,26 +972,27 @@ DESCRIPTION:Pack tax-refund goods where you can show them at the airport.\
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d11-1@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART:20261220T020000Z
 DTEND:20261220T030000Z
 SUMMARY:Check out\, last shopping
 LOCATION:Don Quijote Shinjuku
 DESCRIPTION:Leave bags at the desk. Don Quijote for whisky and snacks\, Bi
- c Camera\, the department-store food halls.\nDay 11: Home
+ c Camera for electronics.\nDay 11: Home
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d11-2@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART:20261220T030000Z
 DTEND:20261220T040000Z
-SUMMARY:Last lunch
-DESCRIPTION:Conveyor sushi or tonkatsu.\n≈ ¥1\,500–3\,000\nDay 11: Ho
- me
+SUMMARY:Last lunch: tsukemen
+LOCATION:Fūunji
+DESCRIPTION:Dipping ramen. Fūunji\, near the South Exit\, is the famous o
+ ne; expect a queue.\n≈ ¥1\,200–1\,500\nDay 11: Home
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d11-3@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART:20261220T040000Z
 DTEND:20261220T050000Z
 SUMMARY:Leave for Haneda Terminal 3
@@ -1011,7 +1006,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d11-4@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART:20261220T050000Z
 DTEND:20261220T075000Z
 SUMMARY:T3: tax refund FIRST
@@ -1026,7 +1021,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d11-5@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART:20261220T075000Z
 DTEND:20261220T204000Z
 SUMMARY:UA 804 Haneda → Dulles
@@ -1039,7 +1034,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d11-6@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART:20261220T204000Z
 DTEND:20261220T221800Z
 SUMMARY:Dulles: US customs\, re-drop bags
@@ -1050,7 +1045,7 @@ DESCRIPTION:Clear US immigration and customs\, collect and re-drop checked
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d11-7@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART:20261220T221800Z
 DTEND:20261221T000100Z
 SUMMARY:UA 3453 Dulles → Toronto
@@ -1063,7 +1058,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-d11-8@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART:20261221T000100Z
 DTEND:20261221T013100Z
 SUMMARY:Toronto Pearson
@@ -1072,10 +1067,10 @@ DESCRIPTION:Declare everything. UP Express to Union every 15 min.\nUP ≈
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-prep-2026-11-15@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART;VALUE=DATE:20261115
 DTEND;VALUE=DATE:20261116
-SUMMARY:Japan trip: 10 tasks due
+SUMMARY:Japan trip: 9 tasks due
 DESCRIPTION:• Moziah/AJ: Confirm you're on the same four United flights;
   pick seats together in the United app\n• Trenton: Ask United to move a
  ll three to an earlier BUF → Dulles flight on Dec 9 (the 52-min connect
@@ -1084,10 +1079,30 @@ DESCRIPTION:• Moziah/AJ: Confirm you're on the same four United flights;
  nton: Tokyo hotel Dec 10–13 and Dec 19–20; Sapporo hotel Dec 14 and D
  ec 18\n• Trenton: Flights HND → CTS Mon Dec 14 (17:30–18:30) and CT
  S → HND Sat Dec 19 (12:00–13:00)\n• Moziah: Snow Monkey Park dated 
- web ticket for Dec 13\n• Moziah: Shibuya Sky\, Fri Dec 11\, ~15:40 entr
- y\n• Trenton: Shinkansen seats Tokyo → Nagano Dec 13 and Nagano → T
- okyo Dec 14\n• AJ: Buffalo: OurBus for Tue Dec 8 and one airport-hotel 
- room
+ web ticket for Dec 13\n• Trenton: Shinkansen seats Tokyo → Nagano Dec
+  13 and Nagano → Tokyo Dec 14\n• AJ: Buffalo: OurBus for Tue Dec 8 an
+ d one airport-hotel room
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Japan trip tasks due today
+TRIGGER:PT9H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:jt26-prep-2026-12-07@japan26-trip
+DTSTAMP:20261113T175817Z
+DTSTART;VALUE=DATE:20261207
+DTEND;VALUE=DATE:20261208
+SUMMARY:Japan trip: 7 tasks due
+DESCRIPTION:• Moziah: Check the Yokohama Red Brick Christmas Market hour
+ s for Fri Dec 11\n• Trenton/Moziah/AJ: Visit Japan Web: register and sa
+ ve the QR code\n• Trenton/Moziah/AJ: Suica: Apple Wallet (Moziah\, AJ).
+  Trenton: try Google Wallet; else Welcome Suica at Haneda\n• Trenton/Mo
+ ziah/AJ: eSIM (Ubigi\, Airalo or similar; 10 GB) ≈ C$20–30\n• Trent
+ on/Moziah/AJ: Tell your banks; bring a no-FX-fee card and a debit card fo
+ r 7-Eleven ATMs\n• AJ: Check the Niseko snow report; Plan B if the base
+  is thin\n• Trenton/Moziah/AJ: Download: Google Maps offline areas\, Go
+ ogle Translate Japanese offline\, United\, GO taxi
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Japan trip tasks due today
@@ -1096,7 +1111,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-prep-2026-11-22@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART;VALUE=DATE:20261122
 DTEND;VALUE=DATE:20261123
 SUMMARY:Japan trip: 1 task due
@@ -1110,35 +1125,14 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:jt26-prep-2026-11-25@japan26-trip
-DTSTAMP:20261113T174614Z
+DTSTAMP:20261113T175817Z
 DTSTART;VALUE=DATE:20261125
 DTEND;VALUE=DATE:20261126
-SUMMARY:Japan trip: 4 tasks due
+SUMMARY:Japan trip: 3 tasks due
 DESCRIPTION:• AJ: Sapporo → Niseko Resort Liner\, Tue Dec 15 morning\n
- • AJ: Niseko lift tickets (online) and ski rental pre-booking\n• Mozi
- ah: teamLab Borderless\, Fri Dec 11\, late-morning slot\n• Trenton/Mozi
- ah/AJ: Travel insurance that covers skiing (check credit-card coverage fi
- rst)
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:Japan trip tasks due today
-TRIGGER:PT9H
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:jt26-prep-2026-12-07@japan26-trip
-DTSTAMP:20261113T174614Z
-DTSTART;VALUE=DATE:20261207
-DTEND;VALUE=DATE:20261208
-SUMMARY:Japan trip: 6 tasks due
-DESCRIPTION:• Trenton/Moziah/AJ: Visit Japan Web: register and save the 
- QR code\n• Trenton/Moziah/AJ: Suica: Apple Wallet (Moziah\, AJ). Trento
- n: try Google Wallet; else Welcome Suica at Haneda\n• Trenton/Moziah/AJ
- : eSIM (Ubigi\, Airalo or similar; 10 GB) ≈ C$20–30\n• Trenton/Mozi
- ah/AJ: Tell your banks; bring a no-FX-fee card and a debit card for 7-Ele
- ven ATMs\n• AJ: Check the Niseko snow report; Plan B if the base is thi
- n\n• Trenton/Moziah/AJ: Download: Google Maps offline areas\, Google Tr
- anslate Japanese offline\, United\, GO taxi
+ • AJ: Niseko lift tickets (online) and ski rental pre-booking\n• Tren
+ ton/Moziah/AJ: Travel insurance that covers skiing (check credit-card cov
+ erage first)
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Japan trip tasks due today

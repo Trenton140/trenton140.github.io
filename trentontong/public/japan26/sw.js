@@ -1,5 +1,5 @@
 /* Japan '26 offline cache: serves the app from the phone, refreshes it in the background when online */
-const V = 'jt26-dbe7ee4e71';
+const V = 'jt26-44e7440234';
 const ASSETS = ['./', 'index.html', 'css/app.css', 'js/data.js', 'js/core.js', 'js/app.js', 'manifest.webmanifest',
   'icons/icon-192.png', 'icons/icon-512.png', 'icons/icon-maskable-512.png', 'icons/apple-touch-icon.png', 'trip.ics'];
 self.addEventListener('install', e => {
