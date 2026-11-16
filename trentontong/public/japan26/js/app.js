@@ -702,7 +702,13 @@
     document.addEventListener('visibilitychange', () => { if (!document.hidden && S.joined) { S.sync(); render(); } });
     window.addEventListener('online', () => { if (S.joined) S.sync(); });
     window.addEventListener('resize', paintTabs);
-    if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(() => { /* offline shell is optional */ });
+    if ('serviceWorker' in navigator) {
+      // When an update takes over, show it straight away instead of on the next launch.
+      const had = !!navigator.serviceWorker.controller;
+      let swapped = false;
+      navigator.serviceWorker.addEventListener('controllerchange', () => { if (had && !swapped && !X) { swapped = true; location.reload(); } });
+      navigator.serviceWorker.register('sw.js', { updateViaCache: 'none' }).then(r => { document.addEventListener('visibilitychange', () => { if (!document.hidden) r.update().catch(() => 0); }); }).catch(() => { /* offline shell is optional */ });
+    }
   }
   boot();
 })();
