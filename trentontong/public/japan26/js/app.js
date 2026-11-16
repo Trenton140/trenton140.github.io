@@ -221,10 +221,13 @@
   }
 
   function bagStatus(now) {
-    const ship = C.abs('2026-12-12', '09:30', 'JST'), arr = C.abs('2026-12-14', '12:00', 'JST'), pick = C.abs('2026-12-15', '11:10', 'JST');
-    if (now < ship) return null;
-    if (now < arr) return { t: 'In transit with Yamato → Mercure Niseko', s: 'Due Mon Dec 14. You\'re on the daypack until Tuesday.' };
-    if (now < pick) return { t: 'Waiting at the Mercure Niseko', s: 'You pick them up when you arrive Tue 11:10.' };
+    const t = (d, h) => C.abs(d, h, 'JST');
+    if (now < t('2026-12-10', '17:15')) return null;
+    if (now < t('2026-12-13', '12:00')) return { t: 'In transit → The Setsumon, Niseko', s: 'Shipped from Haneda Dec 10. Due about Dec 12–13.' };
+    if (now < t('2026-12-14', '18:30')) return { t: 'Should be waiting at The Setsumon', s: 'Pick it up when you check in Mon evening.' };
+    if (now < t('2026-12-16', '11:30')) return null;
+    if (now < t('2026-12-18', '15:00')) return { t: 'In transit → NAKANO WORLD HOTEL', s: 'Shipped from Hirafu Dec 16. Arrives by Fri Dec 18.' };
+    if (now < t('2026-12-18', '20:00')) return { t: 'Should be at NAKANO WORLD HOTEL', s: 'Ask at the desk when you check in.' };
     return null;
   }
 
@@ -254,7 +257,7 @@
         d.prep.map((p, i) => '<li class="' + (dp[i] ? 'done' : '') + '" data-a="dprep" data-id="' + d.id + '" data-i="' + i + '"><span class="cb">' + ic('check') + '</span>' + esc(p) + '</li>').join('') + '</ul></section>';
     }
     const bag = bagStatus(now);
-    if (bag && live) h += '<section class="card"><div class="ch static">' + ic('bag') + '<div><b>Suitcases: ' + esc(bag.t) + '</b><small>' + esc(bag.s) + (S().bagTrack ? ' · Tracking ' + esc(S().bagTrack) : '') + '</small></div><button class="ib" data-a="page" data-p="notes">' + ic('note') + '</button></div></section>';
+    if (bag && live) h += '<section class="card"><div class="ch static">' + ic('bag') + '<div><b>Mo\'s board: ' + esc(bag.t) + '</b><small>' + esc(bag.s) + (S().bagTrack ? ' · Tracking ' + esc(S().bagTrack) : '') + '</small></div><button class="ib" data-a="page" data-p="notes">' + ic('note') + '</button></div></section>';
     if (d.stamps) {
       const n = T.baths.filter(b => S().stamps[b.n]).length;
       h += '<section class="card stampc" data-a="page" data-p="onsen"><div class="ch">' + ic('stamp') + '<div><b>Nine-bath stamp card</b><small>' + n + ' of 10 stamps · tap to open</small></div>' + ic('chev', 'sm') + '</div><div class="mini">' +
@@ -331,12 +334,12 @@
     const done = T.prepList.filter(p => S().prep[p.id]).length, tot = T.prepList.length;
     const today = C.ymd(now, 'ET');
     const pct = done / tot;
-    let h = '<section class="hero r-pre"><div class="art">' + ART.home + '</div><div class="kick">Countdown · meet at Union Tue Dec 8, 16:40</div>' +
+    let h = '<section class="hero r-pre"><div class="art">' + ART.home + '</div><div class="kick">Countdown · meet at Union Tue Dec 8, 19:40</div>' +
       '<div class="count"><div><b>' + dd + '</b><small>days</small></div><div><b>' + hh + '</b><small>hours</small></div><div><b>' + mm + '</b><small>min</small></div></div>' +
       '<p class="sub">Wheels up from Buffalo Wed Dec 9 at 10:00 · Haneda Thu Dec 10 at 16:50</p></section>';
     h += '<section class="card ready"><div class="ring" style="--p:' + (pct * 100).toFixed(0) + '"><b>' + Math.round(pct * 100) + '%</b></div><div><b>Trip readiness</b><small>' + done + ' of ' + tot + ' prep tasks done.' + (WEB ? '' : ' Ticking a task also cancels its reminder.') + '</small>' +
       '<div class="acts"><button class="pill" data-a="sharePrep">' + ic('share') + 'Send open tasks to the group</button><button class="pill" data-a="go" data-t="demo">' + ic('demo') + 'Preview a day</button></div></div></section>';
-    const groups = [['Overdue', p => p.due < today], ['This weekend', p => p.due >= today && p.due <= '2026-11-15'], ['By Nov 25', p => p.due > '2026-11-15' && p.due <= '2026-11-25'], ['Week before you go', p => p.due > '2026-11-25']];
+    const groups = [['Overdue', p => p.due < today], ['By Nov 22', p => p.due >= today && p.due <= '2026-11-22'], ['By Nov 30', p => p.due >= today && p.due > '2026-11-22' && p.due <= '2026-11-30'], ['Before you go', p => p.due >= today && p.due > '2026-11-30']];
     groups.forEach(g => {
       const list = T.prepList.filter(p => g[1](p) && !(g[0] === 'Overdue' && S().prep[p.id]));
       if (!list.length) return;
@@ -352,7 +355,7 @@
     const tx = settle(balances());
     const tot = S().exp.reduce((s, e) => s + e.yen, 0);
     const fq = T.food.filter(f => S().food[f.id]).length, st = T.baths.filter(b => S().stamps[b.n]).length;
-    return '<section class="hero r-home"><div class="art">' + ART.home + '</div><div class="kick">Trip complete</div><h1>Welcome home.</h1><p class="sub">Eleven days, four bases, one onsen town and a mountain.</p></section>' +
+    return '<section class="hero r-home"><div class="art">' + ART.home + '</div><div class="kick">Trip complete</div><h1>Welcome home.</h1><p class="sub">Eleven days, seven beds, nine baths and a mountain.</p></section>' +
       '<section class="card stats"><div><b>' + C.yen(tot) + '</b><small>shared spending</small></div><div><b>' + fq + '/' + T.food.length + '</b><small>food quests</small></div><div><b>' + st + '/10</b><small>bath stamps</small></div></section>' +
       '<section class="card"><div class="ch static">' + ic('wallet') + '<div><b>Settle up</b><small>' + (tx.length ? tx.map(t => P[t.from] + ' → ' + P[t.to] + ' ' + C.yen(t.amt) + ' (' + C.cad(C.y2c(t.amt), 1) + ')').join(' · ') : 'All square.') + '</small></div></div></section>' +
       '<button class="btn wide" data-a="go" data-t="trip">' + ic('trip') + 'Relive any day</button>';
@@ -361,7 +364,7 @@
   /* ================= TRIP ================= */
   function vTrip(now) {
     const ph = C.phase(now);
-    let h = '<div class="ph"><h2>The route</h2><p>Tokyo 3 · Shibu Onsen 1 · Sapporo 1 · Niseko 3 · Sapporo 1 · Tokyo 1</p></div><ol class="route">';
+    let h = '<div class="ph"><h2>The route</h2><p>Tokyo 2 · Shibu Onsen 1 · Nagano 1 · Niseko 2 · Sapporo 2 · Tokyo 2 (nights)</p></div><ol class="route">';
     DAYS.forEach(d => {
       const st = C.stay(d.sleep), cur = ph.kind === 'day' && ph.day.id === d.id, past = now >= d.end;
       h += '<li class="rt r-' + d.region + (cur ? ' cur' : '') + (past ? ' past' : '') + '" data-a="day" data-id="' + d.id + '">' +
@@ -369,7 +372,7 @@
         '<div class="rl"><i></i></div><div class="rc"><small>' + (d.n > 0 ? 'Day ' + d.n : 'Travel') + ' · ' + REG[d.region].name + (cur ? ' · <b>Today</b>' : '') + '</small><b>' + esc(d.title) + '</b><span>' + ic('stay', 'xs') + esc(st.short || st.name) + '</span></div></li>';
     });
     h += '</ol><section class="card"><div class="ch static">' + ic('stay') + '<div><b>Where you sleep</b><small>Tap a hotel for its taxi card</small></div></div><ul class="stays">' +
-      ['buf', 'tokyo', 'shibu', 'sapporo', 'niseko'].map(k => { const s = C.stay(k); return '<li data-a="taxi" data-k="' + k + '"><b>' + esc(s.name) + '</b>' + (s.jp ? '<span class="jp">' + esc(s.jp) + '</span>' : '') + '<small>' + esc(s.sub) + '</small></li>'; }).join('') + '</ul></section>';
+      ['buf', 'tokyo', 'shibu', 'nagano', 'niseko', 'sapporo', 'tokyo2'].map(k => { const s = C.stay(k); return '<li data-a="taxi" data-k="' + k + '"><b>' + esc(s.name) + '</b>' + (s.jp ? '<span class="jp">' + esc(s.jp) + '</span>' : '') + '<small>' + esc(s.sub) + '</small></li>'; }).join('') + '</ul></section>';
     return h;
   }
 
@@ -479,7 +482,7 @@
     const auto = C.stayFor(now), key = R.homeTarget || auto || 'tokyo', s = C.stay(key);
     const loc = (C.Clock.sim() && S().fakeLoc) ? S().fakeLoc : R.loc;
     let h = pageHead('Find home');
-    h += '<div class="who">' + ['tokyo', 'shibu', 'sapporo', 'niseko'].map(k => '<button class="' + (k === key ? 'on' : '') + '" data-a="homeT" data-v="' + k + '">' + esc(C.stay(k).short) + (k === auto ? ' · tonight' : '') + '</button>').join('') + '</div>';
+    h += '<div class="who">' + ['tokyo', 'shibu', 'nagano', 'niseko', 'sapporo', 'tokyo2'].map(k => '<button class="' + (k === key ? 'on' : '') + '" data-a="homeT" data-v="' + k + '">' + esc(C.stay(k).short) + (k === auto ? ' · tonight' : '') + '</button>').join('') + '</div>';
     if (s.lat == null) return h + '<p class="empty">No coordinates for this stay.</p>';
     let dist = null, br = null;
     if (loc) { dist = C.distKm(loc, s); br = C.bearing(loc, s); }
@@ -547,7 +550,7 @@
 
   function vEmergency() {
     let h = pageHead('Emergency') + '<section class="card"><ul class="calls">' + T.emergency.map(e => '<li data-a="url" data-u="tel:' + e.tel.replace(/[^0-9+]/g, '') + '"><b>' + esc(e.n) + '</b><span>' + ic('phone') + esc(e.tel) + '</span></li>').join('') + '</ul></section>';
-    h += '<h3 class="sec">Hotels</h3><section class="card"><ul class="calls">' + ['tokyo', 'shibu', 'sapporo', 'niseko'].map(k => { const s = C.stay(k); return '<li data-a="url" data-u="tel:' + s.tel.replace(/[^0-9]/g, '') + '"><b>' + esc(s.name) + '</b><span>' + ic('phone') + esc(s.tel) + '</span></li>'; }).join('') + '</ul></section>';
+    h += '<h3 class="sec">Hotels</h3><section class="card"><ul class="calls">' + ['tokyo', 'shibu', 'nagano', 'niseko', 'sapporo', 'tokyo2'].filter(k => C.stay(k).tel).map(k => { const s = C.stay(k); return '<li data-a="url" data-u="tel:' + s.tel.replace(/[^0-9]/g, '') + '"><b>' + esc(s.name) + '</b><span>' + ic('phone') + esc(s.tel) + '</span></li>'; }).join('') + '</ul></section>';
     const em = T.phrases.find(p => p.c === 'Emergency');
     h += '<h3 class="sec">Say it</h3><section class="card"><ul class="phr">' + em.items.map(p => '<li><button class="ps" data-a="say" data-jp="' + esc(p[1]) + '"><small>' + esc(p[0]) + '</small><b class="jp">' + esc(p[1]) + '</b><i>' + esc(p[2]) + '</i></button><button class="ib" data-a="show" data-jp="' + esc(p[1]) + '" data-en="' + esc(p[0]) + '" data-ro="' + esc(p[2]) + '">' + ic('expand') + '</button></li>').join('') + '</ul></section>';
     h += '<p class="fine">Lost something on a train: tell station staff the same day; things usually turn up. Missed connection: rebook in the United app first, it\'s faster than the desk.</p>';
@@ -556,7 +559,7 @@
 
   function vPacking() {
     return pageHead('Packing') + '<section class="card"><ul class="checks">' + T.packing.map((p, i) => '<li class="' + (S().pack[i] ? 'done' : '') + '" data-a="pack" data-i="' + i + '"><span class="cb">' + ic('check') + '</span>' + esc(p) + '</li>').join('') + '</ul></section>' +
-      '<p class="fine">One mid-size suitcase and one daypack each. The suitcase skips Nagano and Sapporo on Dec 13–14; the daypack carries you for three days.</p>';
+      '<p class="fine">One mid-size suitcase and one daypack each. You carry your own bags the whole way (shinkansen, two domestic flights, the resort bus), so pack light. Only Mo\'s board is shipped: Haneda → Niseko on Dec 10, Niseko → Nakano on Dec 16.</p>';
   }
 
   function vNotes() {

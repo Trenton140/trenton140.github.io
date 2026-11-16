@@ -67,7 +67,7 @@
     const d = ph.day;
     if (d.sleep === 'plane' || d.sleep === 'home') {
       // On the last day you're still near the Tokyo hotel until you leave
-      if (d.id === 'd11') return 'tokyo';
+      if (d.id === 'd11') return 'tokyo2';
       return null;
     }
     return d.sleep;
@@ -323,11 +323,11 @@
       });
       if (d.night && d.nightKit && /^≈/.test(d.nightKit.last)) add(abs(d.date, '23:45', d.tz), 'Last trains soon', 'Last trains leave ' + d.nightKit.last.replace('≈ ', 'about ') + '. ' + d.nightKit.taxi + '. Find Home and the taxi card are in Kit.', 'night');
     });
-    add(abs('2026-12-13', '15:10', 'JST'), 'Monkey park closes at 16:00', 'Start the walk out by 15:15. The trail is icy and it gets dark early.', 'go');
-    add(abs('2026-12-17', '20:00', 'JST'), 'Tonight: pack and book the taxi', 'Book tomorrow\'s 08:45 taxi to Kutchan Station at the front desk and check the train time to Yoichi.', 'go');
+    add(abs('2026-12-12', '15:10', 'JST'), 'Monkey park closes at 16:00', 'Start the walk out by 15:15. The trail is icy and it gets dark early.', 'go');
+    add(abs('2026-12-15', '20:00', 'JST'), 'Tonight: pack and check the train', 'Check tomorrow\'s Kutchan → Otaru train time (trains are sparse). Mo: ¥3,000 cash for the board shipment at 11:30.', 'go');
     add(abs('2026-12-19', '16:50', 'JST'), 'United check-in is open', 'UA 804 tomorrow 16:50 from Haneda T3. Check in all three.', 'flight');
     const tf = S.buys.filter(b => b.tf);
-    add(abs('2026-12-20', '13:40', 'JST'), 'Tax refund before bag drop',
+    add(abs('2026-12-20', '14:20', 'JST'), 'Tax refund before bag drop',
       tf.length ? tf.length + ' tax-free item(s), ' + yen(tf.reduce((s, b) => s + b.yen, 0)) + '. Show passport, receipts and goods at T3 before checking bags.' : 'At T3, do the tax-refund step before checking bags. Have passport, receipts and goods ready.', 'go');
     return out.sort((a, b) => a.at - b.at).slice(0, 150);
   }

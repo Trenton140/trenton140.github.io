@@ -2,41 +2,53 @@
 window.TRIP = {
   title: "Japan '26",
   people: ['Trenton', 'Moziah', 'AJ'],
-  rate: 113, // yen per Canadian dollar (default; editable in Settings)
-  meetAt: { d: '2026-12-08', t: '16:40', tz: 'ET' },
+  rate: 115, // yen per Canadian dollar (default; editable in Settings)
+  meetAt: { d: '2026-12-08', t: '19:40', tz: 'ET' },
   wheelsUp: { d: '2026-12-09', t: '10:00', tz: 'ET' },
   tripEnd: { d: '2026-12-21', t: '04:00', tz: 'ET' },
 
   stays: {
     buf: {
-      name: 'Buffalo airport hotel', short: 'Buffalo',
-      sub: 'Hilton Garden Inn or Hampton Inn & Suites, Buffalo Airport. Both run free 24-hour shuttles.',
+      name: 'Buffalo hotel (to book)', short: 'Buffalo',
+      sub: 'Not booked yet. Near BUF with a 24-hour desk and an airport shuttle is easiest: you arrive about 23:00 and fly at 10:00.',
       addr: 'Buffalo Niagara International Airport area, Cheektowaga, NY', jp: '', addrJp: '', tel: '',
       lat: null, lng: null, inT: '15:00', outT: '11:00', area: 'us'
     },
     tokyo: {
-      name: 'Hotel Gracery Shinjuku', short: 'Shinjuku', jp: 'ホテルグレイスリー新宿',
-      sub: 'Triple Room · the Godzilla-head building in Kabukichō. Lobby on 8F.',
-      addr: '1-19-1 Kabukichō, Shinjuku-ku, Tokyo 160-8466', addrJp: '東京都新宿区歌舞伎町1-19-1',
-      tel: '03-6833-1111', lat: 35.695305, lng: 139.702044, inT: '14:00', outT: '11:00', area: 'tokyo'
+      name: 'J-ARC Akebonobashi', short: 'Akebonobashi', jp: 'J-ARC 曙橋',
+      sub: 'Booked · apartment for 3, Arakichō (Shinjuku) · ≈ C$141 each for 2 nights. No reception: message the property 24 h+ before arrival for the entry instructions. Akebonobashi Stn 4 min, Yotsuya-sanchōme 7 min.',
+      addr: '18-3 Arakichō, Shinjuku-ku, Tokyo 160-0007', addrJp: '東京都新宿区荒木町18-3',
+      tel: '', lat: 35.6908, lng: 139.7208, inT: '15:00', outT: '10:00', area: 'tokyo'
     },
     shibu: {
-      name: 'Rekishi-no-Yado Kanaguya', short: 'Shibu Onsen', jp: '歴史の宿 金具屋',
-      sub: '1758 wooden ryokan · dinner and breakfast included · five private-use baths.',
-      addr: '2202 Hirao, Yamanouchi-machi, Shimotakai-gun, Nagano 381-0401', addrJp: '長野県下高井郡山ノ内町平穏2202',
-      tel: '0269-33-3131', lat: 36.7340, lng: 138.4322, inT: '15:00', outT: '10:00', area: 'nagano'
+      name: 'Koishiya Ryokan', short: 'Shibu Onsen', jp: '渋温泉 小石屋旅館',
+      sub: 'To book · Japanese-style room for 3, room only · ≈ C$94 each. Your key opens all nine public baths. Free pick-up from Yudanaka 15:00–17:30 (reserve), and morning runs to the monkey park.',
+      addr: '2277 Hirao, Yamanouchi-machi, Shimotakai-gun, Nagano 381-0401', addrJp: '長野県下高井郡山ノ内町平穏2277',
+      tel: '0269-38-0311', lat: 36.7337, lng: 138.4328, inT: '16:00', outT: '10:00', area: 'nagano'
     },
-    sapporo: {
-      name: "La'gent Stay Sapporo Odori", short: 'Sapporo', jp: 'ラ・ジェント・ステイ札幌大通',
-      sub: 'Triple-capable rooms · natural hot-spring baths on 3F and 5F · 5 min walk to Susukino.',
-      addr: 'Minami 2-jo Nishi 5-chome 26-5, Chuo-ku, Sapporo 060-0061', addrJp: '北海道札幌市中央区南2条西5丁目26-5',
-      tel: '011-200-5507', lat: 43.0578, lng: 141.3500, inT: '15:00', outT: '11:00', area: 'hokkaido'
+    nagano: {
+      name: 'Chisun Grand Nagano', short: 'Nagano City', jp: 'チサングランド長野',
+      sub: 'To book · ≈ C$50 each. 5 min walk from Nagano Station; the desk holds bags before check-in. Confirm the room has 3 beds.',
+      addr: '2-17-1 Minami-Chitose, Nagano 380-0823', addrJp: '長野県長野市南千歳2-17-1',
+      tel: '026-264-6000', lat: 36.6448, lng: 138.1893, inT: '14:00', outT: '11:00', area: 'nagano'
     },
     niseko: {
-      name: 'Mercure Niseko Resort', short: 'Niseko Hirafu', jp: 'メルキュール ニセコ リゾート',
-      sub: 'Formerly Midtown Niseko; reopens under the Mercure name Nov 20, 2026. Shuttle to the lifts about 5 min.',
-      addr: 'Niseko Hirafu 4-jo 1-chome 3-3, Kutchan-cho, Abuta-gun, Hokkaido 044-0087', addrJp: '北海道虻田郡倶知安町ニセコひらふ4条1丁目3-3',
-      tel: '0136-21-2888', lat: 42.8618, lng: 140.71056, inT: '15:00', outT: '10:00', area: 'hokkaido'
+      name: 'The Setsumon', short: 'Niseko Hirafu', jp: 'ザ・セツモン ニセコ',
+      sub: 'To book · apartment in upper Hirafu, 2 min walk to the lifts · ≈ C$234 each for 2 nights. No front desk on site: get check-in instructions ahead, and book the free pick-up from the Welcome Centre.',
+      addr: '191-54 Yamada (Niseko Hirafu 1-jō), Kutchan-chō, Abuta-gun, Hokkaido 044-0080', addrJp: '北海道虻田郡倶知安町字山田191-54',
+      tel: '', lat: 42.8620, lng: 140.6962, inT: '15:00', outT: '10:00', area: 'hokkaido'
+    },
+    sapporo: {
+      name: 'Quintessa Hotel Sapporo Susukino', short: 'Sapporo', jp: 'クインテッサホテル札幌すすきの',
+      sub: 'To book · ≈ C$72 each for 2 nights. In Susukino: 5 min from Susukino Station, walk to Ōdōri and Nijō Market.',
+      addr: 'Minami 6-jō Nishi 4-chōme 1-2, Chūō-ku, Sapporo 064-0806', addrJp: '北海道札幌市中央区南6条西4丁目1-2',
+      tel: '011-530-6611', lat: 43.0527, lng: 141.3537, inT: '15:00', outT: '11:00', area: 'hokkaido'
+    },
+    tokyo2: {
+      name: 'NAKANO WORLD HOTEL', short: 'Nakano', jp: '中野ワールドホテル',
+      sub: 'To book · ≈ C$209 each for 2 nights. 5 min from Nakano Station, 3 min to Nakano Broadway. The desk can take Mo\'s board delivery: tell them it\'s coming.',
+      addr: '5-55-6 Nakano, Nakano-ku, Tokyo 164-0001', addrJp: '東京都中野区中野5-55-6',
+      tel: '', lat: 35.7082, lng: 139.6655, inT: '15:00', outT: '10:00', area: 'tokyo'
     },
     plane: { name: 'On the plane', short: 'In the air', sub: 'UA 803 · Dulles → Haneda', lat: null, lng: null },
     home: { name: 'Your own bed', short: 'Home', sub: 'Toronto', lat: null, lng: null }
@@ -48,59 +60,64 @@ window.TRIP = {
     buffalo: { n: 'Buffalo', lat: 42.9405, lng: -78.7322, tz: 'ET' },
     tokyo: { n: 'Tokyo', lat: 35.6895, lng: 139.6917, tz: 'JST' },
     shibu: { n: 'Shibu Onsen', lat: 36.7340, lng: 138.4322, tz: 'JST' },
-    sapporo: { n: 'Sapporo', lat: 43.0618, lng: 141.3545, tz: 'JST' },
+    nagano: { n: 'Nagano', lat: 36.6486, lng: 138.1948, tz: 'JST' },
     niseko: { n: 'Niseko', lat: 42.8618, lng: 140.7106, tz: 'JST' },
-    yoichi: { n: 'Yoichi', lat: 43.1907, lng: 140.7837, tz: 'JST' }
+    otaru: { n: 'Otaru', lat: 43.1907, lng: 140.9947, tz: 'JST' },
+    sapporo: { n: 'Sapporo', lat: 43.0618, lng: 141.3545, tz: 'JST' }
   },
 
   climate: {
     toronto: { hi: 1, lo: -6, note: 'Cold; possible lake-effect snow in Buffalo.' },
     buffalo: { hi: 1, lo: -6, note: 'Lake-effect snow can delay morning flights.' },
     tokyo: { hi: 12, lo: 4, note: 'Dry and sunny. Sunset about 16:30.' },
-    shibu: { hi: 4, lo: -4, note: 'Icy paths, maybe snow.' },
-    sapporo: { hi: 1, lo: -5, note: 'Snow on the ground; sidewalks are slick.' },
-    niseko: { hi: -2, lo: -8, note: 'Colder and windy up top.' },
-    yoichi: { hi: 1, lo: -5, note: 'Coastal snow showers.' }
+    shibu: { hi: 5, lo: -4, note: 'Icy paths, maybe snow.' },
+    nagano: { hi: 5, lo: -3, note: 'Cold and dry; snow possible.' },
+    niseko: { hi: -2, lo: -9, note: 'Colder and windy up top.' },
+    otaru: { hi: 2, lo: -4, note: 'Coastal snow showers. Sunset about 16:00.' },
+    sapporo: { hi: 1, lo: -5, note: 'Snow on the ground; sidewalks are slick.' }
   },
 
   days: [
     {
       id: 'd-2', n: -2, date: '2026-12-08', tz: 'ET', from: '04:00',
       region: 'home', place: 'toronto', sleep: 'buf',
-      title: 'After work, to Buffalo', sub: 'Bus from Union, border, airport hotel',
+      title: 'Night bus to Buffalo', sub: 'Union Station 20:00 · border · Buffalo hotel',
       tagline: 'Nobody leaves a car in Buffalo: you fly home into Pearson.',
       plan: 0,
       transit: {
-        title: 'Toronto → Buffalo Airport', meta: '~3 h 10 · ≈ C$49',
+        title: 'Toronto → Buffalo', meta: '2 h 55 + border · booked, C$28.82 each',
         steps: [
-          'OurBus 17:00 from Front St West (by Union Station) → Buffalo Airport about 20:10. ≈ C$49.',
-          'Backup: FlixBus 19:40 from Union Station Bus Terminal → about 23:15. ≈ C$16–28.',
-          'US border at Lewiston or the Peace Bridge: everyone off with bags, passports out.',
-          'At the airport, call the hotel for the free shuttle.'
+          'Adirondack Trailways bus N813-D, Union Station (Front St W) 20:00 → Buffalo NFTA Metro Center 22:55. Booked on Omio; non-refundable, this bus only.',
+          'Be there by 19:40. Bags: 1 carry-on + 2 checked (50 lb, 62 in. each). A board bag is longer than 62 in.: Mo, confirm with Trailways.',
+          'US border: everyone off with bags, passports out.',
+          'Metro Center → hotel: taxi or Uber, about 15 min.'
         ]
       },
       items: [
-        { t: '16:40', k: 'meet', ttl: 'Meet at Union Station', txt: 'With bags. Checked bags ride under the bus.', pl: { n: 'Union Station, Toronto', q: 'Union Station Toronto' } },
-        { t: '17:00', k: 'bus', ttl: 'OurBus to Buffalo Airport', txt: 'From Front St West by Union, arrives about 20:10. Backup: FlixBus 19:40 from Union Station Bus Terminal → ~23:15. Confirm the December timetable when you book.', cost: '≈ C$49 · FlixBus ≈ C$16–28', fix: 1, leave: '16:40', bk: 'ourbus', pl: { n: 'OurBus stop, Front St West', q: 'OurBus Toronto Union Station Front Street West' } },
-        { t: '18:45', a: 1, k: 'admin', ttl: 'US border', txt: 'Lewiston or Peace Bridge. Everyone gets off with their bags. Passports out. Can add up to an hour.' },
-        { t: '20:15', a: 1, k: 'stay', ttl: 'Hotel shuttle, dinner, early night', txt: 'Call the hotel for the free shuttle. Ask for two queens plus a rollaway, or a sofa-bed room.', cost: 'room ≈ US$140–190 (≈ C$65–90 each)', bk: 'buffalo' },
-        { t: '22:00', k: 'sleep', ttl: 'Lights out', txt: 'Alarms for 06:45. The shuttle to the terminal is at 07:30.' }
+        { t: '19:40', k: 'meet', ttl: 'Meet at Union Station', txt: 'Front St West, with bags and passports. Arrive 20 min early.', pl: { n: 'Union Station, Toronto', q: 'Union Station Bus Terminal Toronto' } },
+        { t: '20:00', k: 'bus', ttl: 'Trailways bus to Buffalo', txt: 'Adirondack Trailways N813-D, arrives Metro Center 22:55. Booked (Omio). ID at the border.', cost: 'paid · C$28.82 each', fix: 1, leave: '19:40', bk: 'bus' },
+        { t: '21:00', a: 1, k: 'admin', ttl: 'US border', txt: 'Everyone off with their bags. Passports out. Can add up to an hour.' },
+        { t: '22:55', k: 'move', ttl: 'Buffalo Metro Center → hotel', txt: 'Taxi or Uber, about 15 min. The hotel needs a 24-hour desk.', cost: '≈ US$20–30 total', bk: 'buffalo', pl: { n: 'NFTA Metro Center', q: 'NFTA Metropolitan Transportation Center Buffalo' } },
+        { t: '23:30', k: 'sleep', ttl: 'Lights out', txt: 'Alarms for 06:45. Leave for BUF at 07:30.' }
       ],
+      warn: 'The Buffalo hotel for tonight isn\'t booked yet. Pick one near BUF with an airport shuttle and a 24-hour desk; you arrive around 23:00.',
       go: [
-        { n: 'Union Station bus stop', q: 'OurBus Toronto Union Station Front Street West', why: 'Where the 17:00 OurBus leaves.' },
-        { n: 'Buffalo Niagara Intl Airport (BUF)', q: 'Buffalo Niagara International Airport', why: 'Hotels opposite the terminal run free shuttles.' }
+        { n: 'Union Station Bus Terminal', q: 'Union Station Bus Terminal Toronto', why: 'Where the 20:00 Trailways bus leaves.' },
+        { n: 'NFTA Metro Center, Buffalo', q: 'NFTA Metropolitan Transportation Center Buffalo', why: 'Bus arrives 22:55. Taxi to the hotel.' },
+        { n: 'Buffalo Niagara Intl Airport (BUF)', q: 'Buffalo Niagara International Airport', why: 'UA 6157 at 10:00 tomorrow.' }
       ],
       buy: [
-        { w: 'OurBus ticket', p: '≈ C$49', note: 'Book online now; FlixBus 19:40 is the backup (≈ C$16–28).' },
-        { w: 'Dinner near the hotel', p: '≈ US$20–30' },
-        { w: 'A few US dollars in cash', p: 'US$20–40', note: 'Shuttle tips and vending machines.' }
+        { w: 'Bus (already paid)', p: 'C$28.82 each', note: 'Omio, non-refundable.' },
+        { w: 'Taxi Metro Center → hotel', p: '≈ US$20–30 total' },
+        { w: 'Buffalo hotel room', p: '≈ US$140–190', note: 'Not booked yet.' },
+        { w: 'A few US dollars in cash', p: 'US$20–40', note: 'Taxis, shuttle tips, vending machines.' }
       ],
       do: [
         { ttl: 'Pack for a missed bag', txt: 'Two days of clothes, meds, chargers and cameras in carry-on. The Dulles connection is 52 minutes.' },
         { ttl: 'Border, fast', txt: 'Passports in hand before the bus stops. Declare food. It can take up to an hour.' }
       ],
-      prep: ['Three passports', 'Power banks in carry-on', 'Ski jacket worn, not packed', 'United app open with all three on the booking', 'Visit Japan Web QR saved'],
-      regroup: { n: 'The OurBus stop on Front St West', note: 'By Union Station.' }
+      prep: ['Three passports', 'Power banks in carry-on', 'Ski jacket worn, not packed', 'United app open with all three on the booking', 'Visit Japan Web QR saved', 'Mo: board bag tagged with the Niseko hotel address'],
+      regroup: { n: 'Union Station Bus Terminal', note: 'In Buffalo: the Metro Center taxi rank.' }
     },
 
     {
@@ -111,594 +128,629 @@ window.TRIP = {
       plan: 2000,
       flight: { code: 'UA 803', from: 'IAD', to: 'HND', dep: { d: '2026-12-09', t: '12:20', tz: 'ET' }, arr: { d: '2026-12-10', t: '16:50', tz: 'JST' } },
       items: [
-        { t: '07:30', k: 'bus', ttl: 'Hotel shuttle to BUF', txt: 'Check in at the counter (international trip, so the agent checks passports). Check bags through to Haneda.', cost: '2 checked bags included', fix: 1, leave: '07:30' },
-        { t: '10:00', k: 'flight', ttl: 'UA 6157 Buffalo → Dulles', txt: 'Mesa, Embraer 175. Arrives 11:28. Sit near the front: you have 52 minutes at Dulles.', fix: 1, bk: 'united' },
-        { t: '11:28', k: 'move', ttl: 'Dulles: 52-minute connection', txt: 'No customs here. Walk or take the AeroTrain to the UA 803 gate. Look up the gate in the app before landing.', pl: { n: 'Washington Dulles (IAD)', q: 'Washington Dulles International Airport' } },
-        { t: '12:20', k: 'flight', ttl: 'UA 803 Dulles → Haneda', txt: 'Boeing 777-200, 14 h 30. Stay awake for the first half, sleep the second half. Lands 16:50 Japan time on Thu Dec 10.', fix: 1, bk: 'united', dur: 870 }
+        { t: '07:30', k: 'bus', ttl: 'Hotel → BUF', txt: 'Taxi, Uber or hotel shuttle, about 15 min. Check in by about 09:00. Check bags through to Haneda.', cost: '2 checked bags included', fix: 1, leave: '07:30' },
+        { t: '10:00', k: 'flight', ttl: 'UA 6157 Buffalo → Dulles', txt: 'Arrives 11:28. Sit near the front: you have 52 minutes at Dulles.', fix: 1, bk: 'united' },
+        { t: '11:28', k: 'move', ttl: 'Dulles: 52-minute connection', txt: 'No customs here. Go straight to the UA 803 gate (AeroTrain between concourses). Look up the gate before landing.', pl: { n: 'Washington Dulles (IAD)', q: 'Washington Dulles International Airport' } },
+        { t: '12:20', k: 'flight', ttl: 'UA 803 Dulles → Haneda', txt: '14 h 30. Stay awake for the first half, sleep the second half. Lands 16:50 Japan time on Thu Dec 10.', fix: 1, bk: 'united', dur: 870 }
       ],
-      warn: 'UA 803 is the only Dulles–Haneda flight of the day. A snow or de-icing delay in Buffalo could cost you a day in Tokyo. Best fix: ask United to move all three of you to an earlier Buffalo → Dulles flight. Free fallback: be at BUF by 05:00 and ask to stand by.',
+      warn: 'UA 803 is the only Dulles–Haneda flight of the day. A snow or de-icing delay in Buffalo could cost you a day in Tokyo, and the shinkansen on Dec 12 is booked. Ask United about an earlier Buffalo → Dulles flight; free fallback is to be at BUF by 05:00 and ask to stand by.',
       go: [
         { n: 'Buffalo Niagara Intl Airport', q: 'Buffalo Niagara International Airport', why: 'UA 6157 at 10:00.' },
         { n: 'Washington Dulles (IAD)', q: 'Washington Dulles International Airport', why: 'Connection to UA 803. AeroTrain between concourses.' }
       ],
       buy: [
         { w: 'Snacks and a big water for the flight', p: '≈ US$10–15', note: 'Two meals are served on UA 803.' },
-        { w: 'Nothing else', p: '—', note: 'Change money in Japan: 7-Bank ATMs at Haneda give the best rate.' }
+        { w: 'Nothing else', p: '—', note: 'Get yen in Japan: 7-Bank ATMs at Haneda give a good rate.' }
       ],
       do: [
-        { ttl: 'Jet lag plan', txt: 'Stay awake for roughly the first 7 hours, then sleep. You land late afternoon Tokyo time and should be in bed around 22:30.' },
-        { ttl: 'On landing', txt: 'Have the Visit Japan Web QR code on screen for immigration and customs.' }
+        { ttl: 'Jet lag plan', txt: 'Stay awake for roughly the first 7 hours, then sleep. You land late afternoon Tokyo time and should be in bed around 23:00.' },
+        { ttl: 'On landing', txt: 'Visit Japan Web QR on screen for immigration and customs. Mo heads to the Yamato / JAL ABC counter on 2F with the board.' }
       ],
       prep: ['Passport + boarding passes', 'Carry-on: 2 days of clothes, meds, chargers, cameras', 'Bags checked through to HND', 'Visit Japan Web QR saved offline'],
-      regroup: { n: 'The next gate', note: 'UA 803 gate at Dulles. Do not wait for each other at the BUF gate area.' }
+      regroup: { n: 'The next gate', note: 'UA 803 gate at Dulles. Don\'t wait for each other at the BUF gate area.' }
     },
 
     {
       id: 'd1', n: 1, date: '2026-12-10', tz: 'JST', from: '15:50',
       region: 'tokyo', place: 'tokyo', sleep: 'tokyo',
-      title: 'Land, eat, soak, sleep', sub: 'Haneda → Shinjuku · food hall · hot spring',
-      tagline: 'A neon food hall, then a hot spring five minutes from bed.',
-      plan: 8500,
+      title: 'Land, ship the board, Arakichō', sub: 'Haneda → Akebonobashi · back-alley izakaya',
+      tagline: 'An easy first night in the alleys right outside the door.',
+      plan: 7000,
       transit: {
-        title: 'Haneda Terminal 3 → Shinjuku', meta: '45–70 min · ≈ ¥550–1,400',
+        title: 'Haneda Terminal 3 → J-ARC Akebonobashi', meta: '60–75 min · ≈ ¥720',
         steps: [
-          'Easiest with bags: Airport Limousine Bus from the T3 arrivals curb to Shinjuku (Kabukichō / West Exit). 45–70 min, ≈ ¥1,400. Buy at the counter in arrivals.',
-          'Fastest: Keikyū Airport Line to Shinagawa (15 min, ≈ ¥330), then JR Yamanote Line to Shinjuku (20 min, ≈ ¥210–230). About 50 min. Tap Suica.'
+          'Keikyū Airport Line, Haneda T3 → Shinagawa, about 15 min.',
+          'JR Yamanote Line, Shinagawa → Shinjuku, about 20 min.',
+          'Tokyo Metro Marunouchi Line, Shinjuku → Yotsuya-sanchōme, 3 stops, then a 7 min walk to Arakichō.',
+          'With heavy bags: taxi from Shinjuku Station, about 10 min (≈ ¥1,500–2,000).',
+          'All on Suica. No pass needed (Keikyū isn\'t on the Tokyo Subway Ticket).'
         ]
       },
       items: [
-        { t: '16:50', k: 'flight', ttl: 'Land at Haneda Terminal 3', txt: 'Immigration and customs with your Visit Japan Web QR codes; allow 45–75 min. Pull ¥30,000 each from the 7-Bank ATM in arrivals.', pl: { n: 'Haneda Airport Terminal 3', jp: '羽田空港 第3ターミナル', q: 'Haneda Airport Terminal 3' } },
-        { t: '18:00', a: 1, k: 'bus', ttl: 'Suica, then into the city', txt: 'Moziah and AJ: Suica in Apple Wallet. Trenton: try adding Suica to Google Wallet; global Pixels usually can\'t, so buy a Welcome Suica card at T3. Then the Limousine Bus (≈ ¥1,400) or Keikyū + JR (≈ ¥550).', cost: '≈ ¥550–1,400' },
-        { t: '19:15', a: 1, k: 'stay', ttl: 'Check in at Hotel Gracery Shinjuku', txt: 'Lobby on 8F of the Godzilla-head building. Drop bags.', bk: 'tokyo1', pl: { n: 'Hotel Gracery Shinjuku', jp: 'ホテルグレイスリー新宿', q: 'Hotel Gracery Shinjuku' } },
-        { t: '20:00', k: 'food', ttl: 'Shinjuku Kabuki Hall', txt: 'New for you: a loud, neon, festival-themed food hall on 2F of the Tokyu Kabukichō Tower, two minutes from the hotel. Ten stalls of regional food: Hokkaido yakitori, Kyushu spicy noodles, Korean barbecue. Open most of the night.', cost: '≈ ¥3,000–4,500', pl: { n: 'Shinjuku Kabuki Hall', jp: '新宿カブキhall 歌舞伎横丁', q: 'Shinjuku Kabuki Hall Kabukicho Yokocho' } },
-        { t: '21:15', k: 'onsen', ttl: 'Thermae-Yu hot spring', txt: 'New for you: a hot-spring bathhouse 5 min from the hotel. Outdoor bath, carbonated bath, two saunas. Be out before midnight, when a late-night surcharge starts. No tattoos. Bed by 23:00.', cost: '¥3,100 (Mon–Thu rate)', pl: { n: 'Thermae-Yu', jp: 'テルマー湯', q: 'Thermae-Yu Shinjuku' } }
+        { t: '16:50', k: 'flight', ttl: 'Land at Haneda Terminal 3', txt: 'Immigration and customs with your Visit Japan Web QR codes; allow 45–75 min. Get yen from the 7-Bank ATM in arrivals. Suica in Apple Wallet, eSIM on.', pl: { n: 'Haneda Airport Terminal 3', jp: '羽田空港 第3ターミナル', q: 'Haneda Airport Terminal 3' } },
+        { t: '17:15', a: 1, k: 'admin', ttl: 'Mo: ship the board to Niseko', txt: '2F arrivals, JAL ABC or Yamato counter: ski bag delivery to The Setsumon, Hirafu. Arrives about Dec 12–13. Cash, plus the hotel\'s address and phone for the form. Only send it once The Setsumon has said they\'ll hold it.', cost: '≈ ¥3,500 cash', bk: 'board1' },
+        { t: '17:30', k: 'train', ttl: 'Train to Akebonobashi', txt: 'Keikyū → Shinagawa, JR Yamanote → Shinjuku, Marunouchi Line → Yotsuya-sanchōme, 7 min walk.', cost: '≈ ¥720', leave: '17:30' },
+        { t: '18:40', a: 1, k: 'stay', ttl: 'Self check-in at J-ARC', txt: 'No reception: use the entry instructions the property sent you. Check-in runs to midnight.', bk: 'tokyo1', pl: { n: 'J-ARC Akebonobashi', jp: '東京都新宿区荒木町18-3', q: '18-3 Arakicho Shinjuku Tokyo' } },
+        { t: '19:30', k: 'food', ttl: 'Easy dinner', txt: 'Ramen or a konbini run near the apartment. Grab breakfast for tomorrow while you\'re there.', cost: '≈ ¥1,200–2,000' },
+        { t: '21:00', k: 'night', ttl: 'Arakichō back-alley izakaya', txt: 'Arakichō is a maze of tiny izakaya and bars on stone-stepped lanes, right outside the door. One or two drinks to beat the jet lag, then bed.', cost: '≈ ¥3,000–4,500', pl: { n: 'Arakichō', jp: '荒木町', q: 'Arakicho Shinjuku' } }
       ],
       go: [
-        { n: 'Shinjuku Kabuki Hall', jp: '新宿カブキhall', q: 'Shinjuku Kabuki Hall Kabukicho Yokocho', why: 'Festival-themed food hall in the Tokyu Kabukichō Tower, 2 min from the hotel.' },
-        { n: 'Thermae-Yu', jp: 'テルマー湯', q: 'Thermae-Yu Shinjuku', why: 'Hot-spring baths and saunas, 5 min from the hotel. Open through the night.' },
-        { n: 'Shinjuku Batting Center', jp: '新宿バッティングセンター', q: 'Shinjuku Batting Center', why: 'Batting cages in Kabukichō, open late. A few hundred yen a round.' }
+        { n: 'Arakichō lanes', jp: '荒木町', q: 'Arakicho Shinjuku', why: 'Old geisha quarter turned into tiny local bars, right by the apartment.' },
+        { n: 'Yotsuya-sanchōme Station', jp: '四谷三丁目駅', q: 'Yotsuya-sanchome Station', why: 'Marunouchi Line, 7 min walk.' },
+        { n: 'Akebonobashi Station', jp: '曙橋駅', q: 'Akebonobashi Station', why: 'Toei Shinjuku Line, 4 min walk. Direct to the ski shops tomorrow.' }
       ],
       buy: [
-        { w: 'Cash at the 7-Bank ATM in arrivals', p: '¥30,000 each', note: 'Takes Canadian cards. Small bars and stalls are often cash-only.' },
-        { w: 'Welcome Suica (Trenton, if Google Wallet won\'t take Suica)', p: 'load ¥3,000–5,000', note: 'Sold at Haneda. No deposit; valid 28 days.' },
-        { w: 'Limousine Bus or Keikyū + JR', p: '≈ ¥1,400 / ≈ ¥550' },
-        { w: 'Dinner at Kabuki Hall', p: '≈ ¥3,000–4,500' },
-        { w: 'Thermae-Yu entry', p: '¥3,100', note: 'Towels included. After midnight there\'s a ¥2,000 surcharge.' },
-        { w: 'Konbini breakfast for tomorrow', p: '≈ ¥500', note: 'Egg sandwich, onigiri, canned coffee.' }
+        { w: 'Cash at the 7-Bank ATM in arrivals', p: '¥30,000 each', note: 'Small bars and the Yamato counter are often cash-only.' },
+        { w: 'Board delivery to Niseko (Mo)', p: '≈ ¥3,500', note: 'Cash at the counter.' },
+        { w: 'Keikyū + JR + Metro to the apartment', p: '≈ ¥720' },
+        { w: 'Dinner and a drink in Arakichō', p: '≈ ¥3,000–5,000' },
+        { w: 'Konbini breakfast for tomorrow', p: '≈ ¥500' }
       ],
       do: [
-        { ttl: 'First night rules', txt: 'One food hall, one soak, then bed. Staying up until about 22:30 resets you fastest.' },
-        { ttl: 'New since June', txt: 'You did Omoide Yokochō and Golden Gai last time. Kabuki Hall and Thermae-Yu are both a short walk from the hotel and both new.' }
+        { ttl: 'First night rules', txt: 'One dinner, one or two drinks, then bed. Staying up until about 23:00 resets you fastest.' },
+        { ttl: 'Apartment, not a hotel', txt: 'Nobody at a desk: save the entry instructions offline before you land, and keep the property\'s message thread handy.' }
       ],
-      prep: ['Visit Japan Web QR on screen', 'Find the 7-Bank ATM before the bus counter'],
-      regroup: { n: 'Hotel lobby, 8F', jp: 'ホテルグレイスリー新宿 8階ロビー', note: 'The Godzilla-head building in Kabukichō.' }
+      prep: ['Visit Japan Web QR on screen', 'Entry instructions from J-ARC saved offline', 'Mo: The Setsumon\'s address and phone for the delivery form'],
+      regroup: { n: 'J-ARC Akebonobashi', jp: '東京都新宿区荒木町18-3', note: 'Or the Yotsuya-sanchōme Station ticket gates.' }
     },
 
     {
       id: 'd2', n: 2, date: '2026-12-11', tz: 'JST', from: '04:00',
       region: 'tokyo', place: 'tokyo', sleep: 'tokyo', night: 1,
-      title: 'Yokohama: noodles, harbour, Chinatown, Noge', sub: 'Cup Noodles · Christmas market · sunset pier · bar alleys',
-      tagline: 'Japan\'s second city, half an hour away, and you\'ve never been.',
-      plan: 12500,
+      title: 'Gear day, then under the tracks', sub: 'Kanda ski street · Jimbōchō curry · Ameyoko · Kanda bar hop',
+      tagline: 'Boots fitted in the morning, Friday night out under the rails.',
+      plan: 12000,
       transit: {
-        title: 'Shinjuku → Yokohama (Sakuragichō)', meta: 'about 40 min · ≈ ¥600–700 each way',
+        title: 'Akebonobashi → Ogawamachi', meta: 'about 10 min · ≈ ¥220',
         steps: [
-          'JR Shōnan-Shinjuku Line, Shinjuku → Yokohama, about 30 min.',
-          'Change to the JR Negishi Line for one stop to Sakuragichō (3 min). Tap Suica.',
-          'Everything today is walkable from Sakuragichō. Coming home, leave Noge by 22:50.'
+          'Toei Shinjuku Line, Akebonobashi → Ogawamachi, direct, about 10 min.',
+          'Jimbōchō (curry lunch) is one stop back on the same line, or a 10 min walk.',
+          'Okachimachi / Ameyoko: about 15 min from Ogawamachi (JR from Kanda or Akihabara).',
+          'Home: Toei Shinjuku Line from Iwamotochō or Ogawamachi to Akebonobashi.'
         ]
       },
       items: [
-        { t: '09:00', k: 'train', ttl: 'Train to Sakuragichō', txt: 'JR Shōnan-Shinjuku Line to Yokohama, then one stop on the Negishi Line.', cost: '≈ ¥600–700', leave: '08:45' },
-        { t: '09:45', k: 'see', ttl: 'Yokohama Air Cabin', txt: 'A gondola from Sakuragichō Station over the harbour to the Shinkō pier, 5 min. One cabin fits the three of you.', cost: '¥1,000', pl: { n: 'Yokohama Air Cabin', jp: 'ヨコハマ エア キャビン 桜木町駅', q: 'Yokohama Air Cabin Sakuragicho Station' } },
-        { t: '10:00', k: 'see', ttl: 'Cup Noodles Museum', txt: 'Take a numbered ticket for the My Cupnoodles Factory as you walk in: draw on your own cup, pick the soup and four toppings, take it home sealed. Open 10:00–18:00. Allow 90 min.', cost: '¥500 entry · ¥500 your cup', pl: { n: 'Cup Noodles Museum Yokohama', jp: 'カップヌードルミュージアム 横浜', q: 'Cupnoodles Museum Yokohama' } },
-        { t: '12:00', k: 'food', ttl: 'Red Brick Warehouse Christmas Market', txt: 'Runs Nov 20 – Dec 25. About 60 stalls, an 11 m real tree, mulled wine and sausages with the harbour behind. First lunch. Check the hours that week.', cost: 'entry from ¥500 · food ≈ ¥1,500–2,500', pl: { n: 'Yokohama Red Brick Warehouse', jp: '横浜赤レンガ倉庫', q: 'Yokohama Red Brick Warehouse' } },
-        { t: '13:45', k: 'food', ttl: 'Yamashita Park → Chinatown', txt: 'Walk the waterfront (20 min) to Japan\'s biggest Chinatown. Second lunch on foot: pork buns, soup dumplings, sesame balls.', cost: '≈ ¥1,500–2,500', pl: { n: 'Yokohama Chinatown', jp: '横浜中華街', q: 'Yokohama Chinatown' } },
-        { t: '15:45', k: 'see', ttl: 'Sunset from Ōsanbashi Pier', txt: 'A wooden rooftop deck with the whole Minato Mirai skyline across the water, and Mt Fuji behind it on a clear day. From 17:00 the Yorunoyo harbour light show runs every half hour.', cost: 'free', sun: 1, leave: '15:30', pl: { n: 'Ōsanbashi Pier', jp: '大さん橋', q: 'Osanbashi Pier Yokohama' } },
-        { t: '18:00', k: 'night', ttl: 'Noge bar-hopping', txt: 'About 600 small bars and izakaya in a few blocks by Sakuragichō, mostly locals. Start at a standing bar, then the curved two-storey Miyakobashi "Harmonica Alley" on the river.', cost: '≈ ¥4,000–6,000', pl: { n: 'Noge', jp: '野毛', q: 'Noge Yokohama' } },
-        { t: '23:00', k: 'train', ttl: 'Train back to Shinjuku', txt: 'From Sakuragichō. Don\'t push it: a taxi from Yokohama to Shinjuku is ≈ ¥12,000–15,000.', cost: '≈ ¥600–700', fix: 1, leave: '22:50' }
+        { t: '08:30', k: 'food', ttl: 'Sleep off the flight, konbini breakfast' },
+        { t: '10:00', k: 'shop', ttl: 'Kanda-Ogawamachi ski & snowboard street', txt: 'About 60 shops along Yasukuni-dōri: Victoria main store, Murasaki Sports Ogawamachi (five floors, snowboard focus), Ski Shop Vail, London Sports for cheap outerwear. Shops open about 10:00–20:00. Bring passports.', leave: '09:45', pl: { n: 'Kanda-Ogawamachi ski shops', jp: '神田小川町 スキー街', q: 'Kanda Ogawamachi ski shops' } },
+        { t: '12:30', k: 'food', ttl: 'Curry lunch in Jimbōchō', txt: 'Tokyo\'s "curry town", next to the ski street.', cost: '≈ ¥1,200–1,800', pl: { n: 'Jimbōchō', jp: '神保町', q: 'Jimbocho curry' } },
+        { t: '14:00', k: 'shop', ttl: 'Finish shopping, boots fitted, drop gear', txt: 'Since Nov 1, 2026 you pay the 10% tax up front and claim it back at Haneda customs on Dec 20. Keep every receipt.' },
+        { t: '17:00', k: 'shop', ttl: 'Okachimachi / Ameyoko back streets', txt: 'Discount sneakers and clothing at local prices, about 15 min from Ogawamachi.', pl: { n: 'Ameyoko', jp: 'アメ横', q: 'Ameyoko Shopping Street' } },
+        { t: '19:00', k: 'food', ttl: 'Standing bars under the tracks', txt: 'Izakaya and standing bars under the JR line between Ueno and Okachimachi. Cheap and local.', cost: '≈ ¥2,500–4,000' },
+        { t: '21:00', k: 'night', ttl: 'Night out #1: Kanda under-track bar hop', txt: 'Kanda\'s izakaya under the railway arches, then local bars, not the Shibuya / Shinjuku strip. Keep it sane: you leave at 07:25 tomorrow for the 08:11 shinkansen.', cost: '≈ ¥4,000–6,000', pl: { n: 'Kanda Station (under the tracks)', jp: '神田駅 ガード下', q: 'Kanda Station izakaya under tracks' } }
       ],
-      warn: 'The Landmark Tower observation deck is closed for renovation until 2028, so sunset is at the pier. For height, the Cosmo Clock 21 Ferris wheel is the alternative (combo with the Air Cabin ¥1,700).',
       go: [
-        { n: 'Yokohama Air Cabin', jp: 'ヨコハマ エア キャビン', q: 'Yokohama Air Cabin Sakuragicho Station', why: 'Gondola over the harbour from Sakuragichō Station.' },
-        { n: 'Cup Noodles Museum', jp: 'カップヌードルミュージアム 横浜', q: 'Cupnoodles Museum Yokohama', why: 'Make your own Cup Noodles. Closed Tuesdays.' },
-        { n: 'Red Brick Warehouse', jp: '横浜赤レンガ倉庫', q: 'Yokohama Red Brick Warehouse', why: 'Christmas market, Nov 20 – Dec 25.' },
-        { n: 'Yokohama Chinatown', jp: '横浜中華街', q: 'Yokohama Chinatown', why: 'Street food through the painted gates.' },
-        { n: 'Ōsanbashi Pier', jp: '大さん橋', q: 'Osanbashi Pier Yokohama', why: 'Free rooftop deck: skyline, sunset, maybe Fuji.' },
-        { n: 'Noge', jp: '野毛', q: 'Noge Yokohama', why: 'Hundreds of tiny bars, mostly locals.' },
-        { n: 'Miyakobashi Harmonica Alley', jp: '都橋商店街', q: 'Miyakobashi Shotengai Yokohama', why: 'Curved two-storey row of about 60 bars on the river.' },
-        { n: 'Sakuragichō Station', jp: '桜木町駅', q: 'Sakuragicho Station', why: 'Your way home. Be here by 22:55.' }
+        { n: 'Murasaki Sports Ogawamachi', jp: 'ムラサキスポーツ 小川町', q: 'Murasaki Sports Ogawamachi', why: 'Five floors, snowboard focus.' },
+        { n: 'Victoria main store', jp: 'ヴィクトリア 本店', q: 'Victoria Ski Shop Ogawamachi', why: 'The big ski-gear store on the street.' },
+        { n: 'London Sports', jp: 'ロンドンスポーツ', q: 'London Sports Kanda Ogawamachi', why: 'Cheap outerwear.' },
+        { n: 'Jimbōchō curry', jp: '神保町 カレー', q: 'Jimbocho curry restaurants', why: 'Curry town, one stop away.' },
+        { n: 'Ameyoko', jp: 'アメ横', q: 'Ameyoko Shopping Street', why: 'Discount sneakers, clothing, under-track bars.' },
+        { n: 'Kanda under-track izakaya', jp: '神田 ガード下', q: 'Kanda Station izakaya under tracks', why: 'Tonight\'s bar hop.' }
       ],
       buy: [
-        { w: 'Train to Yokohama and back', p: '≈ ¥1,200–1,400' },
-        { w: 'Air Cabin', p: '¥1,000', note: 'Combo with the Cosmo Clock 21 Ferris wheel: ¥1,700.' },
-        { w: 'Cup Noodles Museum + your own cup', p: '¥500 + ¥500' },
-        { w: 'Christmas market entry and a mug of mulled wine', p: 'from ¥500 + ≈ ¥1,000', note: 'The souvenir mug changes every year.' },
-        { w: 'Chinatown street food', p: '≈ ¥1,500–2,500', note: 'Cash is quickest.' },
-        { w: 'Noge bars', p: '≈ ¥4,000–6,000', note: 'Many are cash-only and add a small seating charge.' }
+        { w: 'Gloves, goggles, base layers, boots', p: '≈ ¥3,000–40,000', note: 'Pay tax now, claim it back at Haneda customs Dec 20. Keep receipts and the goods.' },
+        { w: 'Curry lunch', p: '≈ ¥1,200–1,800' },
+        { w: 'Hand warmers (kairo)', p: '≈ ¥300–600 a pack', note: 'Any konbini. You\'ll want them in Niseko.' },
+        { w: 'Under-track dinner', p: '≈ ¥2,500–4,000' },
+        { w: 'Kanda bar hop', p: '≈ ¥4,000–6,000', note: 'Many bars are cash-only with a small seating charge.' }
       ],
       do: [
-        { ttl: 'My Cupnoodles Factory', txt: 'Tickets are numbered and can run out on busy days, so take one the moment you arrive, then do the museum while you wait.' },
-        { ttl: 'Sunset timing', txt: 'Be on the pier roof by 16:00. Sunset is about 16:29; the towers light up over the next half hour.' },
-        { ttl: 'Noge etiquette', txt: 'One or two drinks and a dish per bar, then move. If a place is full or regulars-only, the next door is three steps away.' }
+        { ttl: 'Tax refund, new system', txt: 'Shops charge the full price now; you claim the 10% back at the airport on the way out. Ask each shop for the tax-free paperwork and keep receipts together.' },
+        { ttl: 'Boot fitting', txt: 'Go in the afternoon when your feet have swollen a bit. Bring the socks you\'ll ride in.' },
+        { ttl: 'Pack tonight', txt: 'Everyone carries their own bags from here to Niseko. Pack before you go out, not after.' }
       ],
-      prep: ['Suica topped up (≈ ¥3,000)', 'Cash for Chinatown and Noge', 'Warm layers: the harbour is windy'],
-      regroup: { n: 'Sakuragichō Station ticket gates', jp: '桜木町駅 改札', note: 'Daytime: the big tree at the Red Brick Warehouse.' },
-      nightKit: { last: 'Leave Noge by 22:50 for the 23:00 train', taxi: 'Yokohama → Shinjuku by taxi ≈ ¥12,000–15,000: catch the train', first: 'Last through trains to Shinjuku leave around 23:30; check Maps that night' }
+      prep: ['Passports for tax-free shopping', 'Suica topped up', 'Cash for the bars'],
+      regroup: { n: 'Ogawamachi Station', jp: '小川町駅', note: 'Late night: Kanda Station north exit, then the apartment.' },
+      nightKit: { last: '≈ 00:00–00:30', taxi: 'Kanda → Arakichō ≈ ¥2,500–3,500 total', first: 'First trains about 05:00' }
     },
 
     {
       id: 'd3', n: 3, date: '2026-12-12', tz: 'JST', from: '04:00',
-      region: 'tokyo', place: 'tokyo', sleep: 'tokyo', night: 1,
-      title: 'Send the bags, ski shops, monjayaki, Ebisu', sub: 'Ameyoko · Kanda ski street · Tsukishima · Ebisu Yokochō',
-      tagline: 'Suitcases go north today; you follow tomorrow.',
-      plan: 13000,
-      items: [
-        { t: '09:30', k: 'admin', ttl: 'Ship suitcases to Niseko', txt: 'Yamato takkyūbin from the front desk to the Mercure Niseko Resort. Tokyo → Hokkaido takes 2 days, so they land Dec 14, ahead of you. Keep a daypack with 3 days of clothes, onsen kit and warm layers.', cost: '≈ ¥3,000–3,700 per bag', bag: 'ship' },
-        { t: '10:30', k: 'food', ttl: 'Ueno → Ameyoko', txt: 'JR Yamanote, Shinjuku → Ueno, 25 min. Market street under the tracks: street food, sneakers, cheap sashimi bowls, standing bars open from late morning.', cost: 'train ≈ ¥210–230 · food ≈ ¥1,500–2,500', pl: { n: 'Ameyoko', jp: 'アメ横', q: 'Ameyoko Shopping Street' } },
-        { t: '13:00', k: 'shop', ttl: 'Kanda-Ogawamachi ski street', txt: 'JR to Ochanomizu (2 stops), then 5 min walk. About 60 ski and board shops in 400 m: gloves, goggles and base layers before Niseko, and Trenton\'s boot hunt. Tax refunds now happen at the airport.', pl: { n: 'Kanda Ogawamachi ski shops', jp: '神田小川町 スキー街', q: 'Kanda Ogawamachi ski shops' } },
-        { t: '16:30', k: 'see', ttl: 'Marunouchi illuminations', txt: 'One stop to Tokyo Station, then walk Naka-dōri under the lit trees. The restored station building is lit too.', cost: 'free', pl: { n: 'Marunouchi Naka-dori', jp: '丸の内仲通り', q: 'Marunouchi Naka-dori' } },
-        { t: '18:00', k: 'food', ttl: 'Monjayaki on Tsukishima Monja Street', txt: 'Yūrakuchō Line, Yūrakuchō → Tsukishima, 5 min. Tokyo\'s own runny, crispy-edged griddle pancake: you cook it at the table and eat it off tiny spatulas. Dozens of shops on one street.', cost: '≈ ¥2,500–4,000', pl: { n: 'Tsukishima Monja Street', jp: '月島もんじゃストリート', q: 'Tsukishima Monja Street' } },
-        { t: '20:30', k: 'night', ttl: 'Ebisu Yokochō and Ebisu bars', txt: 'Ōedo Line to Roppongi, Hibiya Line to Ebisu, 25 min. A covered alley of loud, friendly counters, then the bars around the station.', cost: '≈ ¥3,000–5,000', pl: { n: 'Ebisu Yokochō', jp: '恵比寿横丁', q: 'Ebisu Yokocho' } },
-        { t: '00:15', nd: 1, k: 'train', ttl: 'Last trains · pack tonight', txt: 'Last trains about 00:15–00:45. Tomorrow you check out at 07:45: pack the daypack before you go out, not after.' }
-      ],
-      go: [
-        { n: 'Ameyoko', jp: 'アメ横', q: 'Ameyoko Shopping Street', why: 'Street food and standing bars under the tracks.' },
-        { n: 'Kanda-Ogawamachi ski street', jp: '神田小川町', q: 'Kanda Ogawamachi ski shops', why: 'Best ski-gear prices in Tokyo.' },
-        { n: 'Tokyo Station · Marunouchi', jp: '東京駅 丸の内', q: 'Tokyo Station Marunouchi', why: 'Lit station building and the Naka-dōri lights.' },
-        { n: 'Tsukishima Monja Street', jp: '月島もんじゃストリート', q: 'Tsukishima Monja Street', why: 'Dozens of monjayaki shops on one street.' },
-        { n: 'Ebisu Yokochō', jp: '恵比寿横丁', q: 'Ebisu Yokocho', why: 'Covered alley of loud, friendly izakaya.' },
-        { n: 'Shinjuku Batting Center', jp: '新宿バッティングセンター', q: 'Shinjuku Batting Center', why: 'If you\'re still awake near the hotel.' }
-      ],
-      buy: [
-        { w: 'Luggage forwarding (Yamato)', p: '≈ ¥3,000–3,700 per bag', note: 'Front desk fills the form. Keep the receipt with the tracking number.' },
-        { w: 'Ski gloves, goggles, base layers', p: '≈ ¥3,000–15,000', note: 'Kanda-Ogawamachi. Show your passport; refund at the airport.' },
-        { w: 'Hand warmers (kairo)', p: '≈ ¥300–600 a pack', note: 'Any konbini or drugstore. You\'ll want them in Niseko.' },
-        { w: 'Monjayaki dinner', p: '≈ ¥2,500–4,000' },
-        { w: 'Ebisu Yokochō', p: '≈ ¥3,000–5,000' }
-      ],
-      do: [
-        { ttl: 'How to monja', txt: 'Fry the solids, shape them into a ring, pour the batter in the middle, mix when it bubbles, then press thin and scrape the crispy bits off with the little spatula. Staff will show you the first one. Mentaiko-mochi-cheese is the classic.' },
-        { ttl: 'Ameyoko lunch', txt: 'Look for kaisendon (seafood rice bowls) under ¥1,500 and a standing-bar highball.' },
-        { ttl: 'Swap-ins', txt: 'Kamakura instead of Yokohama or today (JR about 1 h, ≈ ¥950 each way): Great Buddha, Hase-dera, Enoden tram. Rain: teamLab Borderless in Azabudai Hills, a different museum from the Planets you did in June.' }
-      ],
-      prep: ['Suitcases to the front desk before 10:00', 'Daypack: 3 days of clothes, warm layers, chargers', 'Passport for tax-free shopping', 'Tracking number saved in Kit → Notes'],
-      regroup: { n: 'Tsukishima Station, exit 7', jp: '月島駅 7番出口', note: 'Late night: hotel lobby, 8F.' },
-      nightKit: { last: '≈ 00:15–00:45', taxi: 'Ebisu → Shinjuku ≈ ¥2,500–3,500 total', first: 'First trains about 05:00' }
-    },
-
-    {
-      id: 'd4', n: 4, date: '2026-12-13', tz: 'JST', from: '04:00',
       region: 'nagano', place: 'shibu', sleep: 'shibu',
-      title: 'Monkeys in the hot spring, then your own', sub: 'Shinkansen · snow monkeys · nine-bath crawl',
+      title: 'Snow monkeys, then the nine-bath crawl', sub: 'Kagayaki to Nagano · Jigokudani · yukata night in Shibu',
       tagline: 'Yukata, wooden sandals and a key to nine baths.',
-      plan: 17900, stamps: 1,
+      plan: 12500, stamps: 1,
       transit: {
-        title: 'Shinjuku → Shibu Onsen', meta: 'about 3 h · ≈ ¥10,300',
+        title: 'Akebonobashi → Shibu Onsen', meta: 'about 3 h · ≈ ¥10,200',
         steps: [
-          'JR Chūō Line rapid, Shinjuku → Tokyo Station, 15 min, ≈ ¥210–230.',
-          'Hokuriku Shinkansen, Tokyo → Nagano. Kagayaki about 80 min (all reserved); Hakutaka and Asama about 95–105 min. ¥8,340 reserved.',
-          'Nagaden Line from the basement of Nagano Station → Yudanaka (last stop). Limited express 45–50 min; one or two trains an hour.',
-          'Yudanaka → ryokan: 5 min by ryokan pick-up (ask when booking) or taxi (≈ ¥1,000 total), or a 20–25 min walk.'
+          '07:25 leave the apartment. Walk to Yotsuya-sanchōme, Marunouchi Line direct to Tokyo Station, about 12 min.',
+          'Kagayaki 505, Tokyo 08:11 → Nagano 09:38. Booked: Car 3, seats 16-A/B/C. Each of you needs your own Suica linked to the e-ticket on Eki-net, or a paper ticket from a JR machine.',
+          'Nagaden Limited Express from the basement of Nagano Station → Yudanaka, about 45 min, ¥1,760. Check the Snow Monkey Pass (¥5,100) at the Nagaden counter first.',
+          'Yudanaka → Shibu Onsen: local bus 5 min, or taxi. Koishiya\'s free pick-up only runs 15:00–17:30.'
         ]
       },
       items: [
-        { t: '07:45', k: 'stay', ttl: 'Check out', txt: 'Leave any shopping bag with the front desk for your return on Dec 19.' },
-        { t: '08:00', k: 'train', ttl: 'JR to Tokyo Station', txt: 'Chūō Line rapid, 15 min.', cost: '≈ ¥210–230', fix: 1, leave: '07:50' },
-        { t: '08:30', k: 'train', ttl: 'Hokuriku Shinkansen → Nagano', txt: 'Buy an ekiben (station bento) for breakfast on board. Sit on the left for mountain views past Takasaki.', cost: '¥8,340 · bento ≈ ¥1,200', fix: 1, bk: 'shink1' },
-        { t: '10:15', a: 1, k: 'train', ttl: 'Nagano → Yudanaka', txt: 'Down to the Nagaden station. Buy the Snow Monkey Pass (train / local bus version): Nagaden for the day, the bus to the park and back, and park entry. Or pay as you go.', cost: 'pass ¥5,100' },
-        { t: '11:30', a: 1, k: 'food', ttl: 'Drop bags, soba lunch', txt: 'Bags at the ryokan, then soba or a set meal in Shibu.', cost: '≈ ¥1,200–1,800', pl: { n: 'Kanaguya', jp: '歴史の宿 金具屋', q: 'Kanaguya Shibu Onsen' } },
-        { t: '13:00', k: 'bus', ttl: 'Bus + forest trail to the park', txt: 'Local bus to the Snow Monkey Park stop (15 min), then a 1.6 km trail, 30–35 min each way, often icy. Boots with grip; the trailhead shop rents boots and sells slip-on spikes.', cost: 'bus in pass', fix: 1 },
-        { t: '13:45', k: 'see', ttl: 'Jigokudani Monkey Park', txt: 'Wild macaques around and in a steaming pool. Show your dated web-ticket QR. No food, no flash, no selfie sticks, stay 1–2 m back. Winter hours end at 16:00.', cost: '¥1,000 (from Dec 1)', bk: 'monkey', pl: { n: 'Jigokudani Monkey Park', jp: '地獄谷野猿公苑', q: 'Jigokudani Monkey Park' } },
-        { t: '15:15', k: 'bus', ttl: 'Walk out, bus back to Shibu' },
-        { t: '16:00', k: 'onsen', ttl: 'Yukata, bath key, nine-bath circuit', txt: 'Check in, change into yukata, get the bath key and start the kyūtō-meguri. The baths are small and very hot; you won\'t do all nine before dinner. Stamp card is in this app.', cost: 'free for guests', bk: 'ryokan' },
-        { t: '18:00', k: 'food', ttl: 'Kaiseki dinner', txt: 'Ten or so small courses, usually with Shinshū beef, river fish and local sake.', cost: 'included' },
-        { t: '20:00', k: 'onsen', ttl: 'More baths, lanterns, sake', txt: 'The lantern-lit lane, sake, and the retro shooting gallery if it\'s open. Futons get laid out while you eat. Public baths close at 22:00.', cost: 'sake ≈ ¥800 a glass' }
+        { t: '06:45', k: 'stay', ttl: 'Check out', txt: 'Out by 07:25. Leave the apartment as asked (keys, rubbish).' },
+        { t: '07:25', k: 'train', ttl: 'Marunouchi Line to Tokyo Station', txt: 'From Yotsuya-sanchōme, direct, about 12 min. Buy an ekiben at Tokyo Station.', cost: '≈ ¥180 · ekiben ≈ ¥1,200', fix: 1, leave: '07:20' },
+        { t: '08:11', k: 'train', ttl: 'Kagayaki 505 → Nagano', txt: 'Booked: Car 3, seats 16-A/B/C. Arrives 09:38. Linked Suica (or paper ticket) to get through the gate.', cost: 'paid · ¥8,250 each', fix: 1, leave: '07:55', bk: 'shink1' },
+        { t: '10:00', a: 1, k: 'train', ttl: 'Nagaden → Yudanaka', txt: 'From the basement of Nagano Station. Ask about the Snow Monkey Pass: Nagaden for the day, the bus to the park and back, and park entry. Worth it if those add up to more than ¥5,100.', cost: '¥1,760 · or pass ¥5,100' },
+        { t: '11:00', a: 1, k: 'stay', ttl: 'Drop bags at Koishiya', txt: 'Bus or taxi from Yudanaka. Check-in proper is 16:00–21:00.', bk: 'ryokan', pl: { n: 'Koishiya Ryokan', jp: '渋温泉 小石屋旅館', q: 'Shibu Onsen Koishiya Ryokan' } },
+        { t: '11:45', k: 'food', ttl: 'Soba lunch in Shibu or Yudanaka', txt: 'Nagano is soba country.', cost: '≈ ¥1,200–1,800' },
+        { t: '12:30', k: 'see', ttl: 'Jigokudani Snow Monkey Park', txt: 'Bus to the Snow Monkey Park stop, then a 30–35 min snowy trail. Wild macaques in a steaming pool. Dated web ticket (or the pass). Open 9:00–16:00. Boots with grip or slip-on spikes.', cost: '≈ ¥1,000 (new fees from Dec 1)', fix: 1, leave: '12:15', bk: 'monkey', pl: { n: 'Jigokudani Monkey Park', jp: '地獄谷野猿公苑', q: 'Jigokudani Monkey Park' } },
+        { t: '15:30', k: 'bus', ttl: 'Walk out, back to Shibu' },
+        { t: '17:00', k: 'onsen', ttl: 'Check in · first onsen', txt: 'Get the bath key and yukata. Start with one of the nine public baths.', cost: 'free for guests' },
+        { t: '19:00', k: 'food', ttl: 'Dinner in Shibu', txt: 'Your room is room-only, so eat out before about 20:00, or at Koishiya\'s own dining bar (Italian and local dishes, craft beer and wine).', cost: '≈ ¥2,500–4,000', pl: { n: 'Shibu Onsen lane', jp: '渋温泉', q: 'Shibu Onsen' } },
+        { t: '21:00', k: 'onsen', ttl: 'Nine-bath crawl in yukata', txt: 'Your key opens all nine public baths, 6:00–22:00. Stamp a towel at each, then the final stamp at Shibu Takayakushi. Stamp card is in this app.', cost: 'free · stamp towel small fee' }
       ],
-      warn: 'Nagaden revised its fares on Dec 5, 2026. The ¥5,100 pass is still listed by Nagano\'s tourism board; ask at the Nagaden counter whether pass holders also need the dated web reservation. Snow isn\'t guaranteed this early, and on some days the monkeys don\'t get in the water.',
+      warn: 'Shinkansen e-tickets need each person\'s own Suica linked on Eki-net before boarding; the reservation email alone won\'t open the gate. Snow isn\'t guaranteed this early, and some days the monkeys don\'t get in the water.',
       go: [
         { n: 'Jigokudani Monkey Park', jp: '地獄谷野猿公苑', q: 'Jigokudani Monkey Park', why: 'Snow monkeys in the hot pool. Closes 16:00 in winter.' },
-        { n: 'Shibu Onsen lane', jp: '渋温泉', q: 'Shibu Onsen', why: 'Stone lane of wooden inns; the nine public baths are all within 4 minutes\' walk.' },
+        { n: 'Shibu Onsen lane', jp: '渋温泉', q: 'Shibu Onsen', why: 'Stone lane of wooden inns; the nine public baths are all a few minutes apart.' },
         { n: 'Shibu Takayakushi', jp: '渋高薬師', q: 'Shibu Takayakushi', why: 'Small temple above town: the final stamp after all nine baths.' },
         { n: 'Yudanaka Station', jp: '湯田中駅', q: 'Yudanaka Station', why: 'End of the Nagaden line.' }
       ],
       buy: [
-        { w: 'Shinkansen Tokyo → Nagano', p: '¥8,340 reserved' },
-        { w: 'Ekiben for the train', p: '≈ ¥1,200', note: 'Tokyo Station\'s Ekibenya Matsuri has hundreds.' },
-        { w: 'Snow Monkey Pass (train / bus)', p: '¥5,100', note: 'Covers Nagaden, the park bus and park entry. Confirm at the counter.' },
-        { w: 'Park web ticket (if not on the pass)', p: '¥1,000' },
-        { w: 'Kigan tenugui (prayer towel) for the stamps', p: 'small; ask at the front desk', note: 'Stamp it at each bath, then at Shibu Takayakushi.' },
-        { w: 'Local sake', p: '≈ ¥800 a glass' }
+        { w: 'Kagayaki 505 (already paid)', p: '¥8,250 each' },
+        { w: 'Ekiben for the train', p: '≈ ¥1,200', note: 'Tokyo Station has hundreds.' },
+        { w: 'Nagaden → Yudanaka', p: '¥1,760', note: 'Or the Snow Monkey Pass, ¥5,100.' },
+        { w: 'Snow Monkey Park entry', p: '≈ ¥1,000', note: 'Skip the web ticket if you buy the pass.' },
+        { w: 'Dinner in Shibu', p: '≈ ¥2,500–4,000' },
+        { w: 'Stamp towel (kigan tenugui)', p: 'small; ask at the desk' }
       ],
       do: [
-        { ttl: 'Nine-bath crawl', txt: 'Each bath is locked; your ryokan key opens all of them, 6:00–22:00. Knock, peek, add cold water only if you\'re alone. Bring the small towel and a plastic bag for wet things.' },
-        { ttl: 'Yukata 101', txt: 'Left side over right (right over left is for funerals). Wear the haori jacket on top outside; it\'s freezing.' },
-        { ttl: 'Monkey park', txt: 'Best light 14:00–15:00. Phones on silent, no food in sight. Stay on the trail on the way out; it gets dark early.' }
+        { ttl: 'Nine-bath crawl', txt: 'Each bath is locked; your key opens all of them. Knock, peek, add cold water only if you\'re alone. Bring the small towel and a plastic bag for wet things.' },
+        { ttl: 'Yukata 101', txt: 'Left side over right (right over left is for funerals). Wear the jacket on top outside; it\'s freezing.' },
+        { ttl: 'Monkey park', txt: 'Phones on silent, no food in sight, stay 1–2 m back. Start back by 15:15; it gets dark early.' }
       ],
-      prep: ['Daypack only; suitcases are already heading north', 'Grip boots on, not packed', 'Monkey park QR saved', 'Tell the ryokan your arrival time'],
-      regroup: { n: 'Kanaguya front entrance', jp: '金具屋 玄関', note: 'Shibu is one lane; you can\'t get lost for long.' }
+      prep: ['Out of the apartment by 07:25', 'Suica linked to the e-ticket (all three)', 'Grip boots on', 'Monkey park ticket saved', 'Tell Koishiya your arrival time'],
+      regroup: { n: 'Koishiya Ryokan', jp: '渋温泉 小石屋旅館', note: 'Shibu is one lane; you can\'t get lost for long.' }
+    },
+
+    {
+      id: 'd4', n: 4, date: '2026-12-13', tz: 'JST', from: '04:00',
+      region: 'nagano', place: 'nagano', sleep: 'nagano', night: 1,
+      title: 'Chestnut town and Zenkō-ji', sub: 'Obuse day trip · Okaidan tunnel · Gondō',
+      tagline: 'Chestnut sweets, sake tasting, and a pitch-black tunnel under a temple.',
+      plan: 10500,
+      transit: {
+        title: 'Shibu → Nagano City, with Obuse', meta: 'three short Nagaden rides · ≈ ¥2,850',
+        steps: [
+          'Bus or taxi to Yudanaka, then Nagaden to Nagano with bags, about 45 min, ≈ ¥1,290.',
+          'Drop bags at Chisun Grand Nagano, 5 min from Nagano Station.',
+          'Nagaden Nagano ⇄ Obuse, about 25 min each way, ¥780.',
+          'Zenkō-ji: about 25 min walk up Chūō-dōri from the station, or the local bus.'
+        ]
+      },
+      items: [
+        { t: '08:00', k: 'onsen', ttl: 'Morning bath, slow breakfast' },
+        { t: '09:00', o: 1, k: 'see', ttl: 'Option: second monkey visit', txt: 'If Saturday was busy. Koishiya drives guests to the park at 09:00 and 10:00. Then take a later Nagaden and do Obuse after lunch.' },
+        { t: '09:30', k: 'train', ttl: 'Check out, Nagaden to Nagano', txt: 'With bags. Check-out is 10:00.', cost: '≈ ¥1,290', fix: 1, leave: '09:15' },
+        { t: '10:20', a: 1, k: 'stay', ttl: 'Drop bags at Chisun Grand', txt: '5 min walk from the station.', bk: 'nagano', pl: { n: 'Chisun Grand Nagano', jp: 'チサングランド長野', q: 'Chisun Grand Nagano' } },
+        { t: '10:45', k: 'train', ttl: 'Nagaden → Obuse', cost: '¥780', fix: 1 },
+        { t: '11:15', k: 'food', ttl: 'Obuse: chestnut town', txt: 'Kurikinton and Mont Blanc, a Masuichi-Ichimura sake tasting, the Hokusai Museum. Lunch: kuri-okowa (chestnut rice).', cost: '≈ ¥2,300 snacks + tasting · lunch ≈ ¥1,500', pl: { n: 'Obuse', jp: '小布施', q: 'Obuse Masuichi Ichimura' } },
+        { t: '14:30', k: 'train', ttl: 'Nagaden back to Nagano', cost: '¥780' },
+        { t: '15:15', k: 'see', ttl: 'Zenkō-ji', txt: 'Up Chūō-dōri and Nakamise. The Okaidan: a pitch-dark tunnel under the altar where you feel for the "key to paradise". The Ninja Daimon shop is next door (Togakushi\'s ninja sites are closed in winter).', cost: 'grounds free · Okaidan small fee', pl: { n: 'Zenkō-ji', jp: '善光寺', q: 'Zenkoji Temple Nagano' } },
+        { t: '17:30', k: 'stay', ttl: 'Check in at Chisun Grand' },
+        { t: '19:00', k: 'food', ttl: 'Oyaki, soba and Nagano sake', txt: 'Around the Gondō arcade.', cost: '≈ ¥3,000–4,500', pl: { n: 'Gondō arcade', jp: '権堂アーケード', q: 'Gondo Arcade Nagano' } },
+        { t: '21:00', k: 'night', ttl: 'Night out in Gondō / station area', txt: 'Hotel is a short walk; no last train to worry about.', cost: '≈ ¥3,000–5,000' }
+      ],
+      go: [
+        { n: 'Obuse', jp: '小布施', q: 'Obuse Station', why: 'Chestnut sweets, sake brewery, Hokusai Museum.' },
+        { n: 'Masuichi-Ichimura sake brewery', jp: '桝一市村酒造場', q: 'Masuichi Ichimura Sake Brewery Obuse', why: 'Tasting counter in the old brewery.' },
+        { n: 'Hokusai Museum', jp: '北斎館', q: 'Hokusai Museum Obuse', why: 'Festival floats painted by Hokusai.' },
+        { n: 'Zenkō-ji', jp: '善光寺', q: 'Zenkoji Temple Nagano', why: 'The Okaidan tunnel under the altar.' },
+        { n: 'Gondō arcade', jp: '権堂アーケード', q: 'Gondo Arcade Nagano', why: 'Dinner and bars, walkable to the hotel.' }
+      ],
+      buy: [
+        { w: 'Nagaden Yudanaka → Nagano', p: '≈ ¥1,290' },
+        { w: 'Nagaden to Obuse and back', p: '¥1,560' },
+        { w: 'Chestnut sweets + sake tasting', p: '≈ ¥2,300' },
+        { w: 'Kuri-okowa lunch', p: '≈ ¥1,500' },
+        { w: 'Okaidan ticket', p: 'small fee' },
+        { w: 'Oyaki on the approach', p: '≈ ¥200–300 each' },
+        { w: 'Dinner in Gondō', p: '≈ ¥3,000–4,500' }
+      ],
+      do: [
+        { ttl: 'Swap-in', txt: 'Want snowy mountains instead of Obuse? Togakushi Chūsha shrine and soba, ≈ ¥3,000 return by bus. The ninja village and museum are closed in winter.' },
+        { ttl: 'Okaidan', txt: 'Keep your right hand on the wall the whole way. The key is about halfway, at hip height.' }
+      ],
+      prep: ['Out of Koishiya by 10:00', 'Bags to the Chisun desk before Obuse'],
+      regroup: { n: 'Zenkō-ji main gate (Sanmon)', jp: '善光寺 山門', note: 'Night: Chisun Grand lobby.' },
+      nightKit: { last: 'Walkable: Gondō → hotel about 15 min', taxi: 'Taxis at Nagano Station', first: '' }
     },
 
     {
       id: 'd5', n: 5, date: '2026-12-14', tz: 'JST', from: '04:00',
-      region: 'hokkaido', place: 'sapporo', sleep: 'sapporo', night: 1,
-      title: 'Temple, then all the way north', sub: 'Zenkō-ji · Shinkansen · fly to Sapporo · lamb barbecue',
-      tagline: 'Breakfast in Nagano, jingisukan in Sapporo.',
-      plan: 31500,
+      region: 'niseko', place: 'niseko', sleep: 'niseko',
+      title: 'Train, plane, bus to Niseko', sub: 'Nagano → Toyama · fly to Sapporo · Resort Liner to Hirafu',
+      tagline: 'Breakfast in Nagano, Mt Yōtei at dusk.',
+      plan: 18500,
       transit: {
-        title: 'Shibu Onsen → Sapporo', meta: 'about 7 h · ≈ ¥21,000–28,000',
+        title: 'Nagano → Niseko Hirafu', meta: 'about 8 h 30 · ≈ ¥28,800',
         steps: [
-          'Nagaden, Yudanaka → Nagano (45–50 min); get off at Gondō, two stops early, for Zenkō-ji. ≈ ¥1,400.',
-          'Hokuriku Shinkansen, Nagano → Tokyo, 80–105 min, ¥8,340.',
-          'JR Yamanote, Tokyo → Hamamatsuchō (6 min), then Tokyo Monorail → Haneda T1 or T2 (20 min). ≈ ¥700 together.',
-          'Flight Haneda → New Chitose (CTS), 1 h 35. ANA and AIRDO use Terminal 2; JAL and Skymark Terminal 1.',
-          'JR Rapid Airport, New Chitose → Sapporo, 37 min, every 12 min or so, ≈ ¥1,200. Hotel is one subway stop or a 12-min walk from Sapporo Station.'
+          'Hokuriku Shinkansen, Nagano ~10:00 → Toyama, 45–60 min, ¥7,090 reserved. Not booked yet: book on Eki-net and link Suica like Dec 12.',
+          'Airport bus, Toyama Station (south exit) → Toyama Airport, about 25 min. Pay on the bus. Be at TOY by about 12:00.',
+          'ANA NH1181, Toyama 12:50 → New Chitose 14:20. Booked (restricted fare). 1 checked bag each.',
+          'Hokkaido Resort Liner, New Chitose 15:50 → Hirafu Welcome Centre about 18:30, ¥5,700. Book on WAMAZING by 18:00 JST Dec 5. Backups 17:50 and 19:30.',
+          'Welcome Centre → The Setsumon: free pick-up (book it), or a 2 min walk uphill.'
         ]
       },
       items: [
-        { t: '07:00', k: 'onsen', ttl: 'Morning bath, ryokan breakfast', cost: 'included' },
-        { t: '09:45', k: 'train', ttl: 'Check out, Nagaden from Yudanaka', txt: 'Get off at Gondō for Zenkō-ji.', cost: '≈ ¥1,400', fix: 1, leave: '09:30' },
-        { t: '11:00', k: 'see', ttl: 'Zenkō-ji', txt: '10 min walk from Gondō. A 1,400-year-old temple with a pitch-dark tunnel under the altar: find the "key to paradise" by touch. Soba or oyaki on the approach street.', cost: 'inner hall ≈ ¥600 · lunch ≈ ¥1,500', pl: { n: 'Zenkō-ji', jp: '善光寺', q: 'Zenkoji Temple Nagano' } },
-        { t: '13:15', k: 'train', ttl: 'Shinkansen Nagano → Tokyo', txt: 'Be on a train by 13:45 at the latest.', cost: '¥8,340', fix: 1, leave: '12:50', bk: 'shink2' },
-        { t: '15:00', a: 1, k: 'train', ttl: 'Tokyo Station → Haneda', txt: 'Yamanote to Hamamatsuchō, then the monorail. At the airport by 16:00.', cost: '≈ ¥700' },
-        { t: '17:30', k: 'flight', ttl: 'Fly to Sapporo', txt: 'Pick a departure between 17:30 and 18:30. Power banks stay with you at your seat, not in the overhead bin.', cost: '≈ ¥9,000–16,000', fix: 1, bk: 'dom1' },
-        { t: '20:45', a: 1, k: 'stay', ttl: "Check in at La'gent Stay", txt: 'JR Rapid Airport from New Chitose, 37 min. Outside it\'s around −3 °C and probably snowing.', cost: 'train ≈ ¥1,200', bk: 'sapporo1', pl: { n: "La'gent Stay Sapporo Odori", jp: 'ラ・ジェント・ステイ札幌大通', q: "La'gent Stay Sapporo Odori" } },
-        { t: '21:15', k: 'food', ttl: 'Jingisukan at Daruma', txt: 'Grilled lamb on a dome-shaped skillet, Sapporo\'s signature. Several branches in Susukino, open late, counter seats, the queue moves fast. Sapporo Classic on tap.', cost: '≈ ¥3,500–5,000', pl: { n: 'Daruma, Susukino', jp: 'だるま すすきの', q: 'Jingisukan Daruma Susukino' } },
-        { t: '23:00', k: 'night', ttl: 'One drink, or the hotel hot-spring bath', txt: 'The bus leaves early tomorrow.' }
+        { t: '08:00', k: 'food', ttl: 'Slow breakfast, pack' },
+        { t: '09:45', k: 'move', ttl: 'Check out, walk to Nagano Station' },
+        { t: '10:00', k: 'train', ttl: 'Shinkansen Nagano → Toyama', txt: 'Pick a train arriving Toyama by about 11:00.', cost: '¥7,090', fix: 1, leave: '09:45', bk: 'shink2' },
+        { t: '11:10', k: 'bus', ttl: 'Airport bus to Toyama Airport', txt: 'From the south exit, about 25 min. Small airport: be there by 12:00.', cost: 'pay on the bus', fix: 1 },
+        { t: '12:50', k: 'flight', ttl: 'ANA NH1181 Toyama → New Chitose', txt: 'Arrives 14:20. Power banks stay with you, not in the overhead bin.', cost: 'paid · ¥15,600', fix: 1, bk: 'ana' },
+        { t: '15:50', k: 'bus', ttl: 'Hokkaido Resort Liner → Hirafu', txt: 'From the domestic terminal. 2.5–3 h over the pass. Mt Yōtei at dusk.', cost: '¥5,700', fix: 1, leave: '15:30', bk: 'liner', pl: { n: 'New Chitose domestic terminal', jp: '新千歳空港 国内線', q: 'New Chitose Airport Domestic Terminal' } },
+        { t: '18:30', a: 1, k: 'stay', ttl: 'Check in at The Setsumon', txt: 'No front desk on site: follow the check-in instructions, or the after-hours desk at Intuition Niseko. Mo\'s board should be waiting.', bk: 'niseko', bag: 'arrive', pl: { n: 'The Setsumon', jp: '北海道虻田郡倶知安町字山田191-54', q: 'The Setsumon Niseko' } },
+        { t: '19:00', k: 'ski', ttl: 'Pick up rental gear (Trenton & AJ)', txt: 'Tonight, so tomorrow starts on snow, not in a queue.', cost: '≈ ¥12,000 each for 2 days', bk: 'rental' },
+        { t: '20:00', k: 'food', ttl: 'Dinner in Hirafu village, early night', cost: '≈ ¥3,500–5,000' }
       ],
+      warn: 'The Resort Liner booking has a hard cutoff: 18:00 JST on Dec 5 (04:00 Toronto time). Miss it and you\'re on a taxi or a later bus. ANA has 90 min before the bus, so a short delay is fine.',
       go: [
-        { n: 'Zenkō-ji', jp: '善光寺', q: 'Zenkoji Temple Nagano', why: 'The tunnel under the altar (okaidan meguri).' },
-        { n: 'Haneda Airport', jp: '羽田空港', q: 'Haneda Airport Terminal 2', why: 'ANA / AIRDO from T2, JAL / Skymark from T1.' },
-        { n: 'Daruma (jingisukan)', jp: 'だるま 本店', q: 'Jingisukan Daruma Susukino', why: 'Sapporo\'s classic lamb counter.' },
-        { n: 'Susukino crossing', jp: 'すすきの交差点', q: 'Susukino Crossing', why: 'Neon and the giant Nikka whisky sign.' }
+        { n: 'Toyama Airport', jp: '富山空港', q: 'Toyama Airport', why: 'ANA NH1181 at 12:50.' },
+        { n: 'New Chitose domestic terminal', jp: '新千歳空港 国内線', q: 'New Chitose Airport Domestic Terminal', why: 'Resort Liner stop. Ramen and Royce if you have time.' },
+        { n: 'Hirafu Welcome Centre', jp: 'ひらふウェルカムセンター', q: 'Hirafu Welcome Center Niseko', why: 'Bus stop, info desk, Yamato counter.' },
+        { n: 'Seicomart Hirafu', jp: 'セイコーマート', q: 'Seicomart Niseko Hirafu', why: 'Hokkaido\'s konbini; the "Hot Chef" counter does fresh katsudon and fried chicken.' }
       ],
       buy: [
-        { w: 'Oyaki on the Zenkō-ji approach', p: '≈ ¥200–300 each', note: 'Stuffed Nagano dumplings.' },
-        { w: 'Zenkō-ji inner hall ticket', p: '≈ ¥600' },
-        { w: 'Shinkansen Nagano → Tokyo', p: '¥8,340' },
-        { w: 'Flight HND → CTS', p: '≈ ¥9,000–16,000' },
-        { w: 'JR Rapid Airport to Sapporo', p: '≈ ¥1,200' },
-        { w: 'Jingisukan and Sapporo Classic', p: '≈ ¥3,500–5,000' }
+        { w: 'Shinkansen Nagano → Toyama', p: '¥7,090' },
+        { w: 'Toyama airport bus', p: 'pay on board' },
+        { w: 'ANA NH1181 (Mo\'s ticket paid)', p: '¥15,600', note: 'Check Trenton and AJ have tickets on the same flight.' },
+        { w: 'Resort Liner', p: '¥5,700' },
+        { w: 'Board rental, 2 days (Trenton & AJ)', p: '≈ ¥12,000 each' },
+        { w: 'Dinner in Hirafu', p: '≈ ¥3,500–5,000' }
       ],
       do: [
-        { ttl: 'If the morning runs late', txt: 'Skip Zenkō-ji and go straight to Nagano Station. The flight is the thing that can\'t move.' },
-        { ttl: 'Jingisukan', txt: 'Fat goes on the top of the dome, veg on the rim. They\'ll give you a bib; wear it.' }
+        { ttl: 'Rental fitting', txt: 'Boots should touch your toes standing and pull back when you flex. Ask for a snug boot; rental boots pack out fast.' },
+        { ttl: 'Niseko Rules', txt: 'Off-piste only through the marked gates, and only when they\'re open. Ropes are not suggestions; lift passes get cut.' }
       ],
-      prep: ['Last soak, then out by 09:30', 'Domestic flight booking code ready', 'Power banks in your pocket for the flight'],
-      regroup: { n: 'Under the Nikka sign, Susukino crossing', jp: 'すすきの交差点 ニッカの看板', note: 'Zenkō-ji: the main gate (Sanmon).' },
-      nightKit: { last: 'Walkable: Susukino → hotel is 5 min', taxi: 'Taxis queue on Ekimae-dōri', first: '' }
+      prep: ['Nagano → Toyama shinkansen booked and Suica linked', 'Resort Liner booked (by Dec 5)', 'The Setsumon check-in instructions saved', 'Power banks in your pocket for the flight'],
+      regroup: { n: 'Hirafu Welcome Centre', jp: 'ひらふウェルカムセンター', note: 'Airports: the gate. CTS: the Resort Liner stop.' }
     },
 
     {
       id: 'd6', n: 6, date: '2026-12-15', tz: 'JST', from: '04:00',
-      region: 'niseko', place: 'niseko', sleep: 'niseko', night: 1,
-      title: 'Up to the mountain', sub: 'Resort bus · gear · onsen · Bar Gyu+',
-      tagline: 'Three nights under Mt Yōtei.',
-      plan: 27750,
-      transit: {
-        title: 'Sapporo → Niseko Hirafu', meta: 'about 3 h · ≈ ¥6,000',
-        steps: [
-          'Hokkaido Resort Liner RL501 picks up at central Sapporo hotels 07:35–08:25 (Keio Plaza 07:45, Sapporo Tokyu REI 08:15, Sapporo Excel Hotel Tokyu 08:25) and reaches the Hirafu Welcome Centre at 11:10. Runs daily from Dec 2. Tokyu REI is about 8 min walk from La\'gent Stay.',
-          'Backup: Hokkaido Chūō Bus from JR Sapporo Station North Gate, 07:50 or 09:20 last season, ¥6,000, reserve by 18:00 the day before.'
-        ]
-      },
+      region: 'niseko', place: 'niseko', sleep: 'niseko', night: 1, ski: 1,
+      title: 'Ride Niseko', sub: 'Grand Hirafu + Hanazono · onsen · night riding',
+      tagline: 'If it snowed overnight, be on the first chair.',
+      plan: 22000,
       items: [
-        { t: '07:15', k: 'stay', ttl: 'Check out with daypacks', txt: 'Konbini breakfast, walk to the Tokyu REI stop (about 8 min).' },
-        { t: '08:15', k: 'bus', ttl: 'Resort Liner RL501 to Hirafu', txt: 'Over Nakayama Pass with a rest stop.', cost: '≈ ¥6,000', fix: 1, leave: '08:00', bk: 'bus', pl: { n: 'Sapporo Tokyu REI Hotel', jp: '札幌東急REIホテル', q: 'Sapporo Tokyu REI Hotel' } },
-        { t: '11:10', k: 'bus', ttl: 'Hirafu Welcome Centre', txt: 'Call or message the hotel for its shuttle. Your suitcases should be waiting.', bag: 'arrive', pl: { n: 'Hirafu Welcome Centre', jp: 'ひらふウェルカムセンター', q: 'Hirafu Welcome Center Niseko' } },
-        { t: '12:00', k: 'food', ttl: 'Lunch in the village', txt: 'Ramen, katsu curry, or the food trucks.', cost: '≈ ¥1,500–2,500' },
-        { t: '13:30', k: 'ski', ttl: 'Rental fitting', txt: 'Do it now so tomorrow starts on snow, not in a queue. Buy lift tickets online tonight.', cost: '2 days ≈ ¥10,000–16,500 + helmet', bk: 'rental' },
-        { t: '15:30', k: 'onsen', ttl: 'Onsen', txt: 'Yukoro in lower Hirafu is the locals\' bath; Yumoto Niseko Prince Hotel Hirafutei has an outdoor pool facing the slopes.', cost: '≈ ¥1,000–1,500', pl: { n: 'Hirafutei onsen', jp: 'ニセコプリンスホテル ひらふ亭', q: 'Yumoto Niseko Prince Hotel Hirafutei' } },
-        { t: '16:00', k: 'ski', o: 1, ttl: 'Option: night skiing', txt: '16:00–19:00 under lights instead of the onsen.', cost: '¥5,400' },
-        { t: '19:00', k: 'night', ttl: 'Izakaya, then Bar Gyu+', txt: 'Mid-December is before the crowds, but reserve dinner anyway. Bar Gyu+ is the one you enter through a fridge door.', cost: '≈ ¥5,000–8,000', pl: { n: 'Bar Gyu+', jp: 'バー ギュウ', q: 'Bar Gyu+ Niseko' } }
+        { t: '08:00', k: 'food', ttl: 'Breakfast' },
+        { t: '08:30', k: 'ski', ttl: 'First chair: Grand Hirafu + Hanazono', txt: 'All Mountain pass covers all four Niseko United resorts. Regular season from Dec 12. Traverse to Hanazono for wide, quieter runs.', cost: '2-day pass ¥24,700 · 1-day ¥12,600', bk: 'lift', pl: { n: 'Niseko Grand Hirafu', jp: 'ニセコグラン・ヒラフ', q: 'Niseko Tokyu Grand Hirafu' } },
+        { t: '12:00', k: 'food', ttl: 'Lunch on the mountain', cost: '≈ ¥1,800–2,800' },
+        { t: '14:00', k: 'ski', ttl: 'Keep riding, or a half-day guided powder tour', cost: 'tour TBD' },
+        { t: '16:00', k: 'see', ttl: 'Mt Yōtei sunset', txt: 'From the top of the Hirafu gondola, sunset about 16:00.', sun: 1 },
+        { t: '17:00', k: 'onsen', ttl: 'Onsen soak in Hirafu', txt: 'Yukoro in lower Hirafu is the locals\' bath; Yumoto Niseko Prince Hotel Hirafutei has an outdoor bath facing the slopes.', cost: '≈ ¥1,000–1,500', pl: { n: 'Hirafutei onsen', jp: 'ニセコプリンスホテル ひらふ亭', q: 'Yumoto Niseko Prince Hotel Hirafutei' } },
+        { t: '19:00', k: 'food', ttl: 'Izakaya dinner in Hirafu', txt: 'Reserve, even mid-December.', cost: '≈ ¥4,000–6,000' },
+        { t: '21:00', k: 'ski', ttl: 'Night riding under the lights', txt: 'Same pass. Not every lift runs after dark; check the night map.', cost: 'included' }
       ],
       go: [
-        { n: 'Hirafu Welcome Centre', jp: 'ひらふウェルカムセンター', q: 'Hirafu Welcome Center Niseko', why: 'Bus stop, info desk, taxis.' },
+        { n: 'Hirafu gondola', jp: 'ヒラフゴンドラ', q: 'Niseko Grand Hirafu gondola', why: 'Sunset over Mt Yōtei.' },
+        { n: 'Niseko Hanazono', jp: 'ニセコHANAZONO', q: 'Niseko Hanazono Resort', why: 'Wide, quieter groomers.' },
         { n: 'Yukoro onsen', jp: '湯ころ', q: 'Yukoro Onsen Niseko', why: 'Locals\' bath in lower Hirafu.' },
-        { n: 'Hirafutei onsen', jp: 'ひらふ亭', q: 'Yumoto Niseko Prince Hotel Hirafutei', why: 'Outdoor bath facing the slopes.' },
-        { n: 'Bar Gyu+', jp: 'バー ギュウ', q: 'Bar Gyu+ Niseko', why: 'Through the fridge door.' },
-        { n: 'Seicomart Hirafu', jp: 'セイコーマート', q: 'Seicomart Niseko Hirafu', why: 'Hokkaido\'s konbini; the "Hot Chef" counter does fresh katsudon and fried chicken.' }
+        { n: 'Bar Gyu+', jp: 'バー ギュウ', q: 'Bar Gyu+ Niseko', why: 'The bar you enter through a fridge door.' }
       ],
       buy: [
-        { w: 'Resort Liner seat', p: '≈ ¥6,000' },
-        { w: 'Lift tickets for Wed and Thu (online)', p: '¥11,900 each day', note: 'All Mountain 1-day includes night skiing. Counter price ¥12,600.' },
-        { w: 'Rental, 2 days', p: '≈ ¥10,000 standard · ≈ ¥16,500 premium', note: 'Helmet ≈ ¥1,500–3,000 a day. Credit card for the deposit.' },
+        { w: 'All Mountain 2-day pass', p: '¥24,700', note: 'Online is about 5% cheaper; ¥500 keycard. Collect at the Hirafu ticket machine.' },
+        { w: 'Mountain lunch', p: '≈ ¥1,800–2,800' },
         { w: 'Onsen entry', p: '≈ ¥1,000–1,500' },
-        { w: 'Hand warmers and a neck gaiter', p: '≈ ¥300–2,000', note: 'Seicomart or the ski shops.' }
+        { w: 'Izakaya dinner', p: '≈ ¥4,000–6,000' },
+        { w: 'Hand warmers and a neck gaiter', p: '≈ ¥300–2,000' }
       ],
       do: [
-        { ttl: 'Rental fitting', txt: 'Boots should touch your toes standing, and pull back when you flex. Ask for a snug boot; rental boots pack out fast.' },
-        { ttl: 'Niseko Rules', txt: 'Off-piste only through the marked gates, and only when they\'re open. Ropes are not suggestions; lift passes get cut.' }
+        { ttl: 'Read the snow', txt: 'Check the snowfall card on this screen first thing. 10 cm+ overnight means powder: go straight up.' },
+        { ttl: 'Regroup on the hill', txt: 'Pick a lift base and a time (top of the gondola at 15:30). Phones die fast in the cold; keep them in an inside pocket.' },
+        { ttl: 'Tonight', txt: 'Pack, check the Kutchan → Otaru train time, and have ¥3,000 cash for Mo\'s board shipment.' }
       ],
-      prep: ['Daypacks only; suitcases are at the hotel', 'Bus booking code', 'Ski jacket and pants for tomorrow'],
-      regroup: { n: 'Hirafu Welcome Centre', jp: 'ひらふウェルカムセンター', note: 'Night: hotel lobby.' },
-      nightKit: { last: 'Ask the front desk about the last evening shuttle', taxi: 'Taxis wait at the Welcome Centre; Hirafu → hotel is a short ride', first: 'Hotel is about a 20-min walk from the Grand Hirafu base' }
+      prep: ['Lift pass collected', 'Hand warmers in gloves', 'Goggles + sunglasses', 'Phone in an inside pocket'],
+      regroup: { n: 'Top of the Hirafu gondola, 15:30', note: 'Otherwise the gondola base. Night: The Setsumon.' },
+      nightKit: { last: 'Walkable: Hirafu village → The Setsumon', taxi: 'Taxis wait at the Welcome Centre', first: '' }
     },
 
     {
       id: 'd7', n: 7, date: '2026-12-16', tz: 'JST', from: '04:00',
-      region: 'niseko', place: 'niseko', sleep: 'niseko', ski: 1,
-      title: 'Ski day one', sub: 'Hirafu · Hanazono · night skiing',
-      tagline: 'Mt Yōtei at sunset from the top of the gondola.',
-      plan: 19200,
+      region: 'hokkaido', place: 'otaru', sleep: 'sapporo', night: 1,
+      title: 'Last runs, Otaru, Susukino', sub: 'Morning on the hill · ship the board · canal at dusk · Sapporo',
+      tagline: 'Powder in the morning, gas lamps by the canal, Susukino by night.',
+      plan: 16500,
+      transit: {
+        title: 'Hirafu → Otaru → Sapporo', meta: 'bus + 2 trains · ≈ ¥3,000',
+        steps: [
+          'Bus from Hirafu to JR Kutchan Station, about 15–20 min.',
+          'JR Hakodate Line, Kutchan → Otaru, about 75–90 min. Trains are sparse: check the time the night before.',
+          'JR rapid, Otaru → Sapporo, about 35 min, every 15 min or so.',
+          'No Hokkaido Rail Pass: your JR total is only about ¥3,000–4,000. Suica works.'
+        ]
+      },
       items: [
-        { t: '08:30', k: 'ski', ttl: 'First lifts at Hirafu', txt: 'Start on the groomed greens and blues off the Ace and King areas, then traverse to Hanazono for wide, quieter runs. New to it? A morning group lesson pays for itself.', cost: 'lift ¥11,900 · lesson ≈ ¥12,000–18,000', bk: 'lift', pl: { n: 'Niseko Grand Hirafu', jp: 'ニセコグラン・ヒラフ', q: 'Niseko Tokyu Grand Hirafu' } },
-        { t: '12:00', k: 'food', ttl: 'Lunch on the mountain', cost: '≈ ¥1,800–2,800' },
-        { t: '15:30', k: 'see', ttl: 'Mt Yōtei sunset', txt: 'From the top of the Hirafu gondola, sunset about 16:00. Best photo of the trip.', sun: 1 },
-        { t: '16:00', k: 'ski', ttl: 'Night skiing until 19:00', txt: 'Same ticket. Not every lift runs after dark.', cost: 'included' },
-        { t: '19:30', k: 'food', ttl: 'Onsen, then dinner', txt: 'Soup curry or yakitori.', cost: '≈ ¥4,000–6,000' }
+        { t: '07:30', k: 'food', ttl: 'Breakfast, pack, bags to lockers', txt: 'Check-out is 10:00; The Setsumon has luggage storage.' },
+        { t: '08:30', k: 'ski', ttl: 'Morning runs until about 11:00', bk: 'lift' },
+        { t: '11:30', k: 'admin', ttl: 'Mo: ship the board to Nakano', txt: 'Yamato counter at the Hirafu Welcome Centre → NAKANO WORLD HOTEL. 2–3 days, arrives by Dec 18. Board, bindings and boots only. Keeps it off the CTS → HND flight.', cost: '≈ ¥3,000 cash', fix: 1, bk: 'board2', bag: 'ship', pl: { n: 'Hirafu Welcome Centre', jp: 'ひらふウェルカムセンター', q: 'Hirafu Welcome Center Niseko' } },
+        { t: '12:15', k: 'train', ttl: 'Bus to Kutchan, JR to Otaru', txt: 'Check the exact train last night.', cost: '≈ ¥1,500–1,800', fix: 1, leave: '12:00' },
+        { t: '14:30', k: 'see', ttl: 'Otaru: Sakaimachi Street', txt: 'Kitaichi Glass, LeTAO, the Music Box Museum. Coin lockers at Otaru Station for the bags.', cost: 'lockers ≈ ¥500–800', pl: { n: 'Sakaimachi Street', jp: '堺町通り', q: 'Sakaimachi Street Otaru' } },
+        { t: '15:15', k: 'food', ttl: 'Otaru Soko No.1 brewery', txt: 'Free 20-min brewery tour, German beer hall: pilsner, dunkel, weiss, sausages and pretzels.', cost: 'pay as you go', pl: { n: 'Otaru Soko No.1', jp: '小樽倉庫No.1', q: 'Otaru Soko No.1' } },
+        { t: '16:00', k: 'see', ttl: 'Otaru Canal at dusk', txt: 'Gas lamps come on around sunset.', sun: 1, pl: { n: 'Otaru Canal', jp: '小樽運河', q: 'Otaru Canal' } },
+        { t: '17:30', k: 'food', ttl: 'Sushi dinner on Sushi-ya Dōri', txt: 'Otaru is a seafood port.', cost: '≈ ¥3,500–6,000', pl: { n: 'Sushi-ya Dōri', jp: '寿司屋通り', q: 'Sushiya Dori Otaru' } },
+        { t: '19:30', k: 'train', ttl: 'JR rapid to Sapporo, check in', txt: 'About 35 min, then a short subway or taxi to Susukino.', cost: '≈ ¥750', fix: 1, bk: 'sapporo' },
+        { t: '21:00', k: 'night', ttl: 'Susukino nightlife', txt: 'Neon, the giant Nikka sign, bars in every building. Finish with a "shime" parfait.', cost: '≈ ¥3,000–6,000', pl: { n: 'Susukino crossing', jp: 'すすきの交差点', q: 'Susukino Crossing' } }
       ],
       go: [
-        { n: 'Hirafu gondola', jp: 'ヒラフゴンドラ', q: 'Niseko Grand Hirafu gondola', why: 'Sunset over Mt Yōtei.' },
-        { n: 'Niseko Hanazono', jp: 'ニセコHANAZONO', q: 'Niseko Hanazono Resort', why: 'Wide, quieter groomers.' }
+        { n: 'Sakaimachi Street', jp: '堺町通り', q: 'Sakaimachi Street Otaru', why: 'Glass, music boxes, LeTAO.' },
+        { n: 'Otaru Soko No.1', jp: '小樽倉庫No.1', q: 'Otaru Soko No.1', why: 'Brewery tour and beer hall.' },
+        { n: 'Otaru Canal', jp: '小樽運河', q: 'Otaru Canal', why: 'Gas lamps at dusk.' },
+        { n: 'Sushi-ya Dōri', jp: '寿司屋通り', q: 'Sushiya Dori Otaru', why: 'Sushi street.' },
+        { n: 'Tanaka Shuzō Kikkogura', jp: '田中酒造 亀甲蔵', q: 'Tanaka Shuzo Kikkogura Otaru', why: 'Optional: sake brewery with free tours.' },
+        { n: 'Susukino crossing', jp: 'すすきの交差点', q: 'Susukino Crossing', why: 'Sapporo\'s nightlife centre, 5 min from the hotel.' }
       ],
       buy: [
-        { w: 'Lift ticket (All Mountain 1-day)', p: '¥11,900 online' },
-        { w: 'Group lesson (if someone is new)', p: '≈ ¥12,000–18,000' },
-        { w: 'Mountain lunch', p: '≈ ¥1,800–2,800' },
-        { w: 'Dinner', p: '≈ ¥4,000–6,000' }
+        { w: 'Board shipment to Nakano (Mo)', p: '≈ ¥3,000', note: 'Cash.' },
+        { w: 'Bus + JR to Otaru', p: '≈ ¥1,500–1,800' },
+        { w: 'LeTAO Double Fromage cheesecake', p: '≈ ¥2,000', note: 'Eat it; it won\'t survive the trip.' },
+        { w: 'Otaru glass', p: 'from ≈ ¥1,000' },
+        { w: 'Coin lockers', p: '≈ ¥500–800' },
+        { w: 'Sushi dinner', p: '≈ ¥3,500–6,000' },
+        { w: 'JR to Sapporo', p: '≈ ¥750' }
       ],
       do: [
-        { ttl: 'Layer like a local', txt: 'Base layer, fleece, shell. −8 °C at night with wind; hand warmers inside gloves.' },
-        { ttl: 'Regroup on the hill', txt: 'Pick a lift base and a time (e.g. top of the gondola at 15:30). Phones die fast in the cold; keep them in an inside pocket.' }
+        { ttl: 'Trains to Otaru', txt: 'Kutchan → Otaru has only a handful of trains a day. If you miss one, buy LeTAO in Sapporo instead and go straight there.' },
+        { ttl: 'Shime parfait', txt: 'Sapporo ends a night with a parfait instead of ramen. Try one after Susukino.' }
       ],
-      prep: ['Lift ticket on your phone or in a pocket', 'Hand warmers in gloves', 'Sunglasses + goggles', 'Phone in an inside pocket'],
-      regroup: { n: 'Top of the Hirafu gondola, 15:30', note: 'Otherwise the gondola base. Night: hotel lobby.' }
+      prep: ['Out by 10:00, bags in storage', 'Kutchan → Otaru train time', '¥3,000 cash for the board', 'Coins for lockers'],
+      regroup: { n: 'Otaru Station', jp: '小樽駅', note: 'Late: under the Nikka sign at the Susukino crossing.' },
+      nightKit: { last: 'Walkable: Susukino → hotel 5 min', taxi: 'Taxis everywhere in Susukino', first: '' }
     },
 
     {
       id: 'd8', n: 8, date: '2026-12-17', tz: 'JST', from: '04:00',
-      region: 'niseko', place: 'niseko', sleep: 'niseko', ski: 1,
-      title: 'Ski day two', sub: 'Powder hunt or All Mountain tour · Kutchan dinner',
-      tagline: 'If it snowed overnight, be on the first lift.',
-      plan: 19700,
+      region: 'hokkaido', place: 'sapporo', sleep: 'sapporo', night: 1,
+      title: 'Sapporo: crab, beer, Christmas lights', sub: 'Nijō Market · Beer Museum · Ōdōri market · Mt Moiwa',
+      tagline: 'Crab for breakfast, lamb for lunch, the city lit up at night.',
+      plan: 13500,
       items: [
-        { t: '08:30', k: 'ski', ttl: 'First lift, or tour the mountain', txt: 'Fresh snow: first lift at Hirafu. Otherwise use the All Mountain ticket to cross to Niseko Village and Annupuri for long, mellow cruisers, and take the free Niseko United shuttle back.', cost: 'lift ¥11,900', bk: 'lift' },
-        { t: '12:00', k: 'food', ttl: 'Lunch on the mountain', cost: '≈ ¥1,800–2,800' },
-        { t: '14:30', k: 'ski', ttl: 'Return rentals', txt: 'Or keep them until the shop\'s evening close if you\'re night skiing.' },
-        { t: '18:30', k: 'food', ttl: 'Dinner in Kutchan town', txt: '10–15 min by taxi: more local and noticeably cheaper than Hirafu. Pack tonight, and book tomorrow\'s 08:45 taxi at the front desk.', cost: 'dinner ≈ ¥3,500–5,500 · taxi ≈ ¥3,000 each way total', pl: { n: 'Kutchan', jp: '倶知安町', q: 'Kutchan Station' } }
+        { t: '09:30', k: 'food', ttl: 'Sleep in, then Nijō Market breakfast', txt: 'Crab, uni and salmon-roe bowls.', cost: '≈ ¥3,000', pl: { n: 'Nijō Market', jp: '二条市場', q: 'Nijo Market Sapporo' } },
+        { t: '11:00', k: 'shop', ttl: 'Tanukikōji shopping arcade', txt: 'Covered arcade, seven blocks long.', pl: { n: 'Tanukikōji', jp: '狸小路商店街', q: 'Tanukikoji Shopping Street' } },
+        { t: '12:30', k: 'food', ttl: 'Sapporo Beer Museum + jingisukan lunch', txt: 'Museum is free (tasting extra). Grilled lamb on a dome skillet at the Beer Garden next door.', cost: 'tasting ≈ ¥1,000 · lunch ≈ ¥3,500–5,000', pl: { n: 'Sapporo Beer Museum', jp: 'サッポロビール博物館', q: 'Sapporo Beer Museum' } },
+        { t: '15:00', k: 'see', ttl: 'Munich Christmas Market, Ōdōri Park', txt: 'Runs Nov 20 – Dec 25. Mulled wine and sausages. Sapporo TV Tower over the top.', cost: 'free · mulled wine ≈ ¥700–1,000', pl: { n: 'Odori Park', jp: '大通公園', q: 'Munich Christmas Market Sapporo Odori Park' } },
+        { t: '16:30', k: 'see', ttl: 'White Illumination lights up', txt: 'Ōdōri Park, from dusk.', cost: 'free', sun: 1 },
+        { t: '18:30', k: 'see', ttl: 'Mt Moiwa ropeway night view', txt: 'Tram or taxi to the ropeway; one of Japan\'s top night views.', cost: '≈ ¥2,000', pl: { n: 'Mt Moiwa Ropeway', jp: '藻岩山ロープウェイ', q: 'Mt Moiwa Ropeway' } },
+        { t: '21:00', k: 'night', ttl: 'Ganso Ramen Yokochō, then bars', txt: 'Miso ramen in the Susukino alley, then bars. Or soup curry earlier.', cost: 'ramen ≈ ¥1,200 · bars ≈ ¥3,000–5,000', pl: { n: 'Ganso Ramen Yokochō', jp: '元祖さっぽろラーメン横丁', q: 'Ganso Ramen Yokocho Sapporo' } }
       ],
-      warn: 'Plan B if the snow is thin: ski one day, and use the other for a longer Otaru and Sapporo day (Sapporo Beer Museum, Mt Moiwa ropeway at night, Jōzankei onsen). Single-day tickets keep that choice open.',
       go: [
-        { n: 'Niseko Village', jp: 'ニセコビレッジ', q: 'Niseko Village Ski Resort', why: 'Long cruisers; free shuttle back.' },
-        { n: 'Niseko Annupuri', jp: 'ニセコアンヌプリ', q: 'Niseko Annupuri International Ski Area', why: 'Mellow, quiet, wide.' },
-        { n: 'Kutchan town', jp: '倶知安', q: 'Kutchan Station', why: 'Cheaper izakaya where locals eat.' }
+        { n: 'Nijō Market', jp: '二条市場', q: 'Nijo Market Sapporo', why: 'Seafood bowls from early morning.' },
+        { n: 'Sapporo Beer Museum', jp: 'サッポロビール博物館', q: 'Sapporo Beer Museum', why: 'Free museum, jingisukan next door.' },
+        { n: 'Ōdōri Christmas Market', jp: 'ミュンヘン・クリスマス市', q: 'Munich Christmas Market Sapporo Odori Park', why: 'Mulled wine under the White Illumination.' },
+        { n: 'Sapporo TV Tower', jp: 'さっぽろテレビ塔', q: 'Sapporo TV Tower', why: 'View over the market, ≈ ¥1,000.' },
+        { n: 'Mt Moiwa Ropeway', jp: '藻岩山ロープウェイ', q: 'Mt Moiwa Ropeway', why: 'Night view over the city.' },
+        { n: 'Ganso Ramen Yokochō', jp: '元祖さっぽろラーメン横丁', q: 'Ganso Ramen Yokocho Sapporo', why: 'Miso ramen alley.' },
+        { n: 'Soup Curry GARAKU', jp: 'スープカレー GARAKU', q: 'Soup Curry GARAKU Sapporo', why: 'The soup curry everyone queues for.' }
       ],
       buy: [
-        { w: 'Lift ticket', p: '¥11,900 online' },
-        { w: 'Mountain lunch', p: '≈ ¥1,800–2,800' },
-        { w: 'Kutchan taxi (each way, total)', p: '≈ ¥3,000' },
-        { w: 'Kutchan dinner', p: '≈ ¥3,500–5,500' }
+        { w: 'Nijō Market bowl', p: '≈ ¥3,000' },
+        { w: 'Beer Museum tasting', p: '≈ ¥1,000' },
+        { w: 'Jingisukan lunch', p: '≈ ¥3,500–5,000' },
+        { w: 'Mulled wine at the market', p: '≈ ¥700–1,000', note: 'The mug is a souvenir.' },
+        { w: 'Mt Moiwa ropeway', p: '≈ ¥2,000' },
+        { w: 'Ramen + bars', p: '≈ ¥4,000–6,000' }
       ],
       do: [
-        { ttl: 'Read the snow', txt: 'Check the snowfall on this screen first thing. 10 cm+ overnight means powder: go straight to the top lifts at Hirafu.' },
-        { ttl: 'Tonight', txt: 'Pack, book the 08:45 taxi to Kutchan Station at the front desk, and check the Kutchan → Yoichi timetable.' }
+        { ttl: 'Jingisukan', txt: 'Fat goes on the top of the dome, veg on the rim. They\'ll give you a bib; wear it.' },
+        { ttl: 'Soup curry', txt: 'Sapporo\'s other signature. Pick a spice level one step below what you think.' }
       ],
-      prep: ['Return rentals by close', 'Pack suitcases tonight', 'Taxi booked for 08:45', 'Check the Kutchan → Yoichi train time'],
-      regroup: { n: 'Hirafu gondola base', note: 'Night: hotel lobby.' }
+      prep: ['Warm layers: the ropeway top is windy', 'Grip boots for icy sidewalks'],
+      regroup: { n: 'Sapporo TV Tower, Ōdōri Park', jp: 'さっぽろテレビ塔', note: 'Late: under the Nikka sign at the Susukino crossing.' },
+      nightKit: { last: 'Walkable: Susukino → hotel 5 min', taxi: 'Taxis everywhere in Susukino', first: '' }
     },
 
     {
       id: 'd9', n: 9, date: '2026-12-18', tz: 'JST', from: '04:00',
-      region: 'hokkaido', place: 'sapporo', sleep: 'sapporo', night: 1,
-      title: 'Yoichi, Otaru, Susukino', sub: 'Nikka distillery · canal · Christmas market',
-      tagline: 'Whisky at the source, then Friday in Sapporo.',
-      plan: 14400,
+      region: 'tokyo', place: 'tokyo', sleep: 'tokyo2', night: 1,
+      title: 'Back to Tokyo: Nakano and Kōenji', sub: 'Fly CTS → HND · Nakano Broadway · Friday in Kōenji',
+      tagline: 'Secondhand watches by day, tiny music bars by night.',
+      plan: 26500,
       transit: {
-        title: 'Hirafu → Yoichi → Otaru → Sapporo', meta: 'three short trains · ≈ ¥3,400 with the taxi share',
+        title: 'Sapporo → Nakano', meta: 'about 4 h 30 door to door · ≈ ¥22,000',
         steps: [
-          'Taxi, Hirafu → JR Kutchan Station, 15 min, ≈ ¥3,000–3,500 total (book at the front desk the night before).',
-          'JR Hakodate Line local, Kutchan → Yoichi, about 1 h, ≈ ¥1,000. Only a handful of trains a day: plan around the mid-morning one.',
-          'JR, Yoichi → Otaru, 25 min, ¥440. Hourly-ish.',
-          'JR Rapid Airport or local, Otaru → Sapporo, 35–45 min, ≈ ¥800. Every 10–20 min.',
-          'Suitcases: coin lockers at Yoichi Station or the distillery entrance, and at Otaru Station (≈ ¥500–800).'
+          'JR Rapid Airport, Sapporo → New Chitose, about 40 min, ≈ ¥1,230.',
+          'JAL JL508, New Chitose 11:40 → Haneda 13:25. Not booked yet: check the JAL Japan Explorer Pass first; fallback ≈ C$530 for 3 with a bag each.',
+          'Keikyū → Shinagawa, JR Yamanote → Shinjuku, JR Chūō → Nakano. About 70 min, on Suica.',
+          'Tokyo Subway 48-hour Ticket (¥1,500) only pays off with 3+ subway rides a day. Most of today and tomorrow is on JR Chūō, which it doesn\'t cover.'
         ]
       },
       items: [
-        { t: '08:45', k: 'bus', ttl: 'Check out, taxi to Kutchan', cost: '≈ ¥1,100 each', fix: 1, leave: '08:45' },
-        { t: '09:30', a: 1, k: 'train', ttl: 'JR to Yoichi', txt: 'Local train, about 1 h. Check the exact time on Thursday night.', cost: '≈ ¥1,000', fix: 1 },
-        { t: '10:45', k: 'see', ttl: 'Nikka Yoichi Distillery', txt: '3 min from the station. The free guided tour (coal-fired stills, the founder\'s house) is reservation-only. Without one you can still walk in to the museum, the paid tasting bar and the shop with distillery-only bottles.', cost: 'tour free · tastings ≈ ¥500–1,500 a glass', bk: 'nikka', pl: { n: 'Nikka Yoichi Distillery', jp: 'ニッカウヰスキー余市蒸溜所', q: 'Nikka Whisky Yoichi Distillery' } },
-        { t: '13:00', k: 'food', ttl: 'Train to Otaru, sushi lunch', txt: 'Otaru is known for sushi, or grab a seafood bowl at Sankaku Market beside the station.', cost: 'train ¥440 · lunch ≈ ¥3,000–5,000', pl: { n: 'Sankaku Market', jp: '三角市場', q: 'Sankaku Market Otaru' } },
-        { t: '14:30', k: 'see', ttl: 'Sakaimachi Street → Otaru Canal', txt: 'Glass shops, LeTAO cheesecake, a sake brewery, down to the canal. Gas lamps come on at dusk, around 16:00.', sun: 1, pl: { n: 'Otaru Canal', jp: '小樽運河', q: 'Otaru Canal' } },
-        { t: '16:45', k: 'train', ttl: 'Train to Sapporo, check in', cost: '≈ ¥800', fix: 1, bk: 'sapporo2' },
-        { t: '18:30', k: 'see', ttl: 'Christmas market + White Illumination', txt: 'Munich Christmas Market in Ōdōri Park (11:00–21:00, to Dec 25); White Illumination 16:30–22:00. Mulled wine, sausages, snow.', cost: 'free · mulled wine ≈ ¥700–1,000', pl: { n: 'Odori Park', jp: '大通公園', q: 'Odori Park Sapporo' } },
-        { t: '20:00', k: 'night', ttl: 'Soup curry, Susukino, miso ramen', txt: 'Soup curry (Garaku or Suage+) or a crab-and-sashimi izakaya. Friday night in Susukino, finishing the Sapporo way with miso ramen in Ganso Ramen Yokochō.', cost: '≈ ¥2,000–6,000 · ramen ≈ ¥1,100–1,400', pl: { n: 'Ganso Ramen Yokochō', jp: '元祖さっぽろラーメン横丁', q: 'Ganso Ramen Yokocho Sapporo' } }
+        { t: '09:00', k: 'stay', ttl: 'Pack, check out' },
+        { t: '10:15', k: 'train', ttl: 'JR Rapid Airport to New Chitose', txt: 'Ramen Dōjō and Royce Chocolate World in the domestic terminal.', cost: '≈ ¥1,230', fix: 1, leave: '10:00' },
+        { t: '11:40', k: 'flight', ttl: 'JAL JL508 New Chitose → Haneda', txt: 'Arrives 13:25. 20 kg checked limit on domestic flights; Mo\'s board is going by Yamato.', cost: '≈ ¥20,300', fix: 1, bk: 'jal' },
+        { t: '13:45', a: 1, k: 'train', ttl: 'Haneda → Nakano', txt: 'Keikyū → Shinagawa, JR Yamanote → Shinjuku, JR Chūō → Nakano.', cost: '≈ ¥750' },
+        { t: '15:00', k: 'stay', ttl: 'Check in at NAKANO WORLD HOTEL', txt: 'Ask whether Mo\'s board has arrived.', bk: 'tokyo2', bag: 'arrive2', pl: { n: 'NAKANO WORLD HOTEL', jp: '東京都中野区中野5-55-6', q: 'NAKANO WORLD HOTEL' } },
+        { t: '15:30', k: 'shop', ttl: 'Nakano Broadway', txt: 'Secondhand electronics, watches, cameras, anime and collectibles at local prices. 3 min from the hotel.', pl: { n: 'Nakano Broadway', jp: '中野ブロードウェイ', q: 'Nakano Broadway' } },
+        { t: '17:30', k: 'see', ttl: 'Nakano\'s back alleys', txt: 'The side streets off Sun Mall: tiny bars and yakitori counters lighting up.' },
+        { t: '19:00', k: 'food', ttl: 'Dinner in the Nakano izakaya alleys', txt: 'Cheap and local.', cost: '≈ ¥3,000–4,500' },
+        { t: '21:00', k: 'night', ttl: 'Night out #2: Kōenji bar hop', txt: 'Tiny music bars and izakaya, one stop on JR Chūō. Mostly locals.', cost: '≈ ¥3,000–5,000', pl: { n: 'Kōenji', jp: '高円寺', q: 'Koenji Station' } }
       ],
-      warn: 'Easier version: skip Yoichi and Otaru and take the afternoon resort bus from Hirafu to Sapporo (Resort Liner 14:00 → about 16:30–17:10; White Liner 15:00 → 17:30). That buys a third morning on the mountain.',
+      warn: 'JL508 isn\'t booked. Fares rise as the date gets close: check the JAL Japan Explorer Pass for JL508 and book whichever is cheaper this week.',
       go: [
-        { n: 'Nikka Yoichi Distillery', jp: 'ニッカウヰスキー余市蒸溜所', q: 'Nikka Whisky Yoichi Distillery', why: 'Coal-fired stills and distillery-only bottles.' },
-        { n: 'Sankaku Market', jp: '三角市場', q: 'Sankaku Market Otaru', why: 'Seafood bowls beside Otaru Station.' },
-        { n: 'Sakaimachi Street', jp: '堺町通り', q: 'Sakaimachi Street Otaru', why: 'Glass, music boxes, LeTAO.' },
-        { n: 'Otaru Canal', jp: '小樽運河', q: 'Otaru Canal', why: 'Gas lamps at dusk.' },
-        { n: 'Odori Park Christmas Market', jp: 'ミュンヘン・クリスマス市', q: 'Munich Christmas Market Sapporo Odori Park', why: 'Mulled wine under the White Illumination.' },
-        { n: 'Soup Curry GARAKU', jp: 'スープカレー GARAKU', q: 'Soup Curry GARAKU Sapporo', why: 'The soup curry everyone queues for.' },
-        { n: 'Ganso Ramen Yokochō', jp: '元祖さっぽろラーメン横丁', q: 'Ganso Ramen Yokocho Sapporo', why: 'Miso ramen alley to end the night.' }
+        { n: 'New Chitose domestic terminal', jp: '新千歳空港 国内線', q: 'New Chitose Airport Domestic Terminal', why: 'Ramen Dōjō, Royce, Shiroi Koibito.' },
+        { n: 'Nakano Broadway', jp: '中野ブロードウェイ', q: 'Nakano Broadway', why: 'Secondhand electronics, watches, collectibles.' },
+        { n: 'Nakano Sun Mall', jp: '中野サンモール', q: 'Nakano Sun Mall', why: 'Covered arcade from the station; alleys off both sides.' },
+        { n: 'Kōenji', jp: '高円寺', q: 'Koenji Station', why: 'Music bars, izakaya, thrift. One stop on JR Chūō.' }
       ],
       buy: [
-        { w: 'Distillery-only Nikka bottle', p: 'varies; check the shop', note: 'Counts toward your 1.14 L duty-free allowance home. One 700 ml bottle each fits.' },
-        { w: 'Tasting bar', p: '≈ ¥500–1,500 a glass' },
-        { w: 'LeTAO Double Fromage cheesecake', p: '≈ ¥2,000', note: 'Eat it; it won\'t survive the trip.' },
-        { w: 'Otaru glass (Kitaichi Glass)', p: 'from ≈ ¥1,000' },
-        { w: 'Coin lockers', p: '≈ ¥500–800' },
-        { w: 'Mulled wine at the market', p: '≈ ¥700–1,000' },
-        { w: 'Soup curry', p: '≈ ¥1,500–2,000' }
+        { w: 'JR to New Chitose', p: '≈ ¥1,230' },
+        { w: 'Royce Nama Chocolate', p: '≈ ¥900–1,000 a box', note: 'Keep cold; buy at the airport.' },
+        { w: 'JAL JL508', p: '≈ ¥20,300', note: 'Or the Explorer Pass fare.' },
+        { w: 'Haneda → Nakano', p: '≈ ¥750' },
+        { w: 'Nakano izakaya dinner', p: '≈ ¥3,000–4,500' },
+        { w: 'Kōenji bars', p: '≈ ¥3,000–5,000', note: 'Small seating charges are normal.' }
       ],
       do: [
-        { ttl: 'Nikka tour', txt: 'Reservations open 4 weeks ahead (about Nov 20). Show up 10 min early. The tasting at the end is free; the paid bar has the rare stuff.' },
-        { ttl: 'Shime parfait', txt: 'Sapporo ends a night with a "shime" parfait instead of ramen. Try one if you\'re still standing after Susukino.' }
+        { ttl: 'Nakano Broadway', txt: 'Upper floors are where the watch and camera shops are. Many open around noon; most close by 20:00.' },
+        { ttl: 'Kōenji', txt: 'Bars seat six to ten. If it\'s full, the next one is two doors down.' }
       ],
-      prep: ['Taxi at 08:45', 'Nikka tour confirmation', 'Coins for lockers', 'Passport for tax-free bottles'],
-      regroup: { n: 'Sapporo TV Tower, Ōdōri Park', jp: 'さっぽろテレビ塔', note: 'Late: under the Nikka sign at the Susukino crossing.' },
-      nightKit: { last: 'Walkable: Susukino → hotel 5 min', taxi: 'Taxis on Ekimae-dōri', first: '' }
+      prep: ['Out by 10:00', 'JL508 booked', 'Hotel told about the board delivery'],
+      regroup: { n: 'Nakano Station north exit', jp: '中野駅 北口', note: 'Night: hotel lobby.' },
+      nightKit: { last: '≈ 00:15–00:45 (JR Chūō)', taxi: 'Kōenji → Nakano is a short ride, or a 20 min walk', first: 'First trains about 04:45' }
     },
 
     {
       id: 'd10', n: 10, date: '2026-12-19', tz: 'JST', from: '04:00',
-      region: 'tokyo', place: 'tokyo', sleep: 'tokyo', night: 1,
-      title: 'South again; the last night', sub: 'Nijō Market · fly to Tokyo · Sensō-ji year-end fair',
-      tagline: 'Crab for breakfast, Asakusa by lantern light.',
-      plan: 26600,
+      region: 'tokyo', place: 'tokyo', sleep: 'tokyo2', night: 1,
+      title: 'Thrift, wagyu, Harmonica Yokochō', sub: 'Shimokitazawa · Kōenji · last big dinner · Kichijōji',
+      tagline: 'The last night out, in a 60-bar alley four stops away.',
+      plan: 22000,
       transit: {
-        title: 'Sapporo → Shinjuku', meta: 'about 4 h 30 door to door · ≈ ¥11,500–20,000',
+        title: 'Nakano ⇄ Shimokitazawa, Kōenji, Kichijōji', meta: 'all short JR / private-line hops · ≈ ¥1,200 for the day',
         steps: [
-          'JR Rapid Airport, Sapporo → New Chitose, 37 min, ≈ ¥1,200.',
-          'Flight CTS → Haneda, 1 h 40. Snow at New Chitose causes delays, which is why you fly back a full day before the flight home.',
-          'Limousine Bus (≈ ¥1,400) or Keikyū + JR (≈ ¥550) to Shinjuku.'
+          'Shimokitazawa: JR Chūō to Shinjuku (5 min), then Odakyū Line to Shimokitazawa (about 10 min).',
+          'Kōenji: 1 stop from Nakano on JR Chūō.',
+          'Kichijōji: 4 stops from Nakano on JR Chūō rapid, about 10 min.'
         ]
       },
       items: [
-        { t: '08:00', k: 'food', ttl: 'Nijō Market breakfast', txt: '10 min walk from the hotel: a seafood rice bowl with crab, uni and salmon roe.', cost: '≈ ¥2,500–4,000', pl: { n: 'Nijō Market', jp: '二条市場', q: 'Nijo Market Sapporo' } },
-        { t: '09:45', k: 'train', ttl: 'Check out, train to New Chitose', txt: 'The domestic terminal has a ramen street and the best souvenir shopping in Hokkaido.', cost: '≈ ¥1,200', fix: 1, leave: '09:30' },
-        { t: '12:00', k: 'flight', ttl: 'Fly to Haneda', txt: 'Pick a departure between 12:00 and 13:00.', cost: '≈ ¥9,000–17,000', fix: 1, bk: 'dom2' },
-        { t: '16:00', a: 1, k: 'stay', ttl: 'Back at the Shinjuku hotel', cost: '≈ ¥550–1,400', bk: 'tokyo2' },
+        { t: '10:00', k: 'food', ttl: 'Sleep in, breakfast' },
+        { t: '11:00', k: 'shop', ttl: 'Shimokitazawa thrift and vintage', txt: 'Tokyo\'s vintage capital, local not touristy. About 20 min away.', pl: { n: 'Shimokitazawa', jp: '下北沢', q: 'Shimokitazawa' } },
+        { t: '13:00', k: 'food', ttl: 'Lunch in Shimokitazawa', txt: 'Curry or the cafés.', cost: '≈ ¥1,200–2,000' },
+        { t: '15:00', k: 'shop', ttl: 'Kōenji thrift + a last Nakano Broadway run', pl: { n: 'Kōenji', jp: '高円寺', q: 'Koenji vintage shops' } },
         { t: '16:50', k: 'admin', ttl: 'United check-in opens for UA 804', txt: 'Check in all three in the app and add passports.' },
-        { t: '17:15', k: 'see', ttl: 'Hagoita-ichi at Sensō-ji', txt: 'Year-end fair (Dec 17–19 only, 09:00–20:00) selling decorated good-luck paddles; sellers clap out a rhythm for each sale. The temple is lit up. JR Chūō rapid to Kanda, Ginza Line to Asakusa, about 35 min.', cost: 'free · train ≈ ¥400', pl: { n: 'Sensō-ji', jp: '浅草寺', q: 'Sensoji Temple Asakusa' } },
-        { t: '18:45', k: 'food', ttl: 'Hoppy Street', txt: '5 min from the temple: open-fronted izakaya with stewed beef and cheap drinks.', cost: '≈ ¥3,000–4,500', pl: { n: 'Hoppy Street', jp: 'ホッピー通り', q: 'Hoppy Street Asakusa' } },
-        { t: '21:00', k: 'night', ttl: 'Last night out in Sangenjaya', txt: 'Ginza Line to Shibuya, then 2 stops on the Den-en-toshi Line; 45 min. The "Sankaku Chitai" triangle of tiny alley bars, mostly locals. Back to Shinjuku in 20 min.', cost: '≈ ¥3,000–5,000', pl: { n: 'Sangenjaya Sankaku Chitai', jp: '三軒茶屋 三角地帯', q: 'Sangenjaya Sankaku Chitai' } },
-        { t: '00:15', nd: 1, k: 'train', ttl: 'Last trains', txt: 'About 00:15–00:45. Flight home is at 16:50 tomorrow; checkout is 11:00.' }
+        { t: '19:00', k: 'food', ttl: 'Last big dinner: wagyu / yakiniku', txt: 'Book a table for three.', cost: '≈ ¥6,000–12,000', bk: 'dinner' },
+        { t: '21:00', k: 'night', ttl: 'Last night out: Harmonica Yokochō', txt: 'Kichijōji\'s alley of tiny local bars by the station, 4 stops on JR Chūō. Pack before you go.', cost: '≈ ¥3,000–5,000', pl: { n: 'Harmonica Yokochō', jp: 'ハモニカ横丁', q: 'Harmonica Yokocho Kichijoji' } },
+        { t: '23:00', o: 1, k: 'night', ttl: 'Option: Daikoku PA car meet', txt: 'Weekend nights, JDM cars. Taxi only, and police often close it: have a backup.', cost: 'taxi ≈ ¥8,000–12,000 each way total' }
       ],
       go: [
-        { n: 'Nijō Market', jp: '二条市場', q: 'Nijo Market Sapporo', why: 'Crab, uni and ikura bowls from 7am.' },
-        { n: 'New Chitose domestic terminal', jp: '新千歳空港 国内線', q: 'New Chitose Airport Domestic Terminal', why: 'Ramen Dojo, Royce, Shiroi Koibito.' },
-        { n: 'Sensō-ji', jp: '浅草寺', q: 'Sensoji Temple Asakusa', why: 'You\'ve seen the temple; the Hagoita-ichi paddle fair (Dec 17–19 only) is new.' },
-        { n: 'Sangenjaya Sankaku Chitai', jp: '三軒茶屋 三角地帯', q: 'Sangenjaya Sankaku Chitai', why: 'Triangle of tiny alley bars for the last night.' },
-        { n: 'Kaminarimon', jp: '雷門', q: 'Kaminarimon Gate', why: 'The giant lantern gate; meet here.' },
-        { n: 'Hoppy Street', jp: 'ホッピー通り', q: 'Hoppy Street Asakusa', why: 'Stewed beef, cheap beer, plastic stools.' }
+        { n: 'Shimokitazawa', jp: '下北沢', q: 'Shimokitazawa', why: 'Vintage and thrift district.' },
+        { n: 'Kōenji vintage shops', jp: '高円寺 古着', q: 'Koenji vintage shops', why: 'Cheaper thrift, one stop from the hotel.' },
+        { n: 'Harmonica Yokochō', jp: 'ハモニカ横丁', q: 'Harmonica Yokocho Kichijoji', why: 'Tiny bar alley by Kichijōji Station.' },
+        { n: 'Daikoku PA', jp: '大黒パーキングエリア', q: 'Daikoku Parking Area', why: 'Optional: JDM car meet, weekend nights.' }
       ],
       buy: [
-        { w: 'Kaisendon at Nijō Market', p: '≈ ¥2,500–4,000' },
-        { w: 'Royce Nama Chocolate', p: '≈ ¥900–1,000 a box', note: 'Needs to stay cold: buy at the airport, it\'s a short flight.' },
-        { w: 'Shiroi Koibito', p: '≈ ¥1,000–2,000 a box', note: 'The classic Hokkaido gift.' },
-        { w: 'Flight CTS → HND', p: '≈ ¥9,000–17,000' },
-        { w: 'A small hagoita paddle', p: 'small ones from a few thousand yen', note: 'Big ones run into six figures; haggling is part of the show.' },
-        { w: 'Hoppy Street dinner', p: '≈ ¥3,000–4,500' }
+        { w: 'Trains for the day', p: '≈ ¥1,200' },
+        { w: 'Thrift finds', p: 'your call', note: 'Tax-free only from ¥5,000 per shop; keep receipts for Haneda.' },
+        { w: 'Wagyu / yakiniku dinner', p: '≈ ¥6,000–12,000' },
+        { w: 'Harmonica Yokochō bars', p: '≈ ¥3,000–5,000' }
       ],
       do: [
-        { ttl: 'Hagoita-ichi', txt: 'When someone buys a paddle, the stall claps a rhythm (tejime). Watch a few, then buy a small one for the clap.' },
-        { ttl: 'Last night', txt: 'Sangenjaya is two stops past Shibuya and feels nothing like it. Set a hard "home by" time: you fly at 16:50 tomorrow.' }
+        { ttl: 'Last night', txt: 'Set a hard "home by" time. Check-out is 10:00 and the flight is 16:50 tomorrow.' },
+        { ttl: 'Duty-free home', txt: 'C$800 each in goods, plus 1.14 L of spirits. One 700 ml bottle per person is duty-free.' }
       ],
-      prep: ['Check out by 09:30', 'Flight booking code', 'United check-in at 16:50'],
-      regroup: { n: 'Kaminarimon (the big lantern gate)', jp: '雷門', note: 'Late night: hotel lobby, 8F.' },
-      nightKit: { last: '≈ 00:15–00:45', taxi: 'Sangenjaya → Shinjuku ≈ ¥3,500–4,500 total', first: 'First trains about 05:00' }
+      prep: ['Dinner booked for 3', 'United check-in done', 'Pack before going out'],
+      regroup: { n: 'Kichijōji Station north exit', jp: '吉祥寺駅 北口', note: 'Late night: Nakano hotel lobby.' },
+      nightKit: { last: '≈ 00:15–00:45 (JR Chūō)', taxi: 'Kichijōji → Nakano ≈ ¥3,000–4,000 total', first: 'First trains about 04:45' }
     },
 
     {
       id: 'd11', n: 11, date: '2026-12-20', tz: 'JST', from: '04:00', until: { d: '2026-12-21', t: '04:00', tz: 'ET' },
       region: 'home', place: 'tokyo', sleep: 'home',
-      title: 'Home', sub: 'Last shopping · Haneda 16:50 → Dulles → Toronto',
+      title: 'Home', sub: 'Last omiyage · Haneda 16:50 → Dulles → Toronto',
       tagline: 'Tax refund first, then bags.',
-      plan: 3250,
+      plan: 4000,
       flight: { code: 'UA 804', from: 'HND', to: 'IAD', dep: { d: '2026-12-20', t: '16:50', tz: 'JST' }, arr: { d: '2026-12-20', t: '15:40', tz: 'ET' } },
+      transit: {
+        title: 'Nakano → Haneda Terminal 3', meta: 'about 60–70 min · ≈ ¥750',
+        steps: [
+          'JR Chūō → Shinjuku, JR Yamanote → Shinagawa, Keikyū Airport Line → Haneda T3.',
+          'Aim to be at the United counter by 14:30. Check-in closes 15:50.'
+        ]
+      },
       items: [
-        { t: '09:00', k: 'food', ttl: 'Slow breakfast, pack', txt: 'Pack tax-refund goods where you can show them at the airport.' },
-        { t: '11:00', k: 'shop', ttl: 'Check out, last shopping', txt: 'Leave bags at the desk. Don Quijote for whisky and snacks, Bic Camera for electronics.', pl: { n: 'Don Quijote Shinjuku', jp: 'ドン・キホーテ 新宿', q: 'Don Quijote Shinjuku' } },
-        { t: '12:00', k: 'food', ttl: 'Last lunch: tsukemen', txt: 'Dipping ramen. Fūunji, near the South Exit, is the famous one; expect a queue.', cost: '≈ ¥1,200–1,500', pl: { n: 'Fūunji', jp: '風雲児 新宿', q: 'Fuunji Shinjuku' } },
-        { t: '13:00', k: 'bus', ttl: 'Leave for Haneda Terminal 3', txt: 'Limousine Bus from Shinjuku (45–70 min, ≈ ¥1,400) or JR + Keikyū (50 min, ≈ ¥550).', cost: '≈ ¥550–1,400', fix: 1, leave: '13:00' },
-        { t: '14:00', k: 'admin', ttl: 'T3: tax refund FIRST', txt: 'Do the tax-refund step before you check bags (customs may ask to see the goods), then United check-in, security, immigration.', taxfree: 1 },
-        { t: '16:50', k: 'flight', ttl: 'UA 804 Haneda → Dulles', txt: 'Arrives 15:40 the same day, 12 h 50.', fix: 1, bk: 'united', dur: 770 },
-        { t: '15:40', tz: 'ET', k: 'move', ttl: 'Dulles: US customs, re-drop bags', txt: 'Clear US immigration and customs, collect and re-drop checked bags, back through security. 1 h 38. Use Mobile Passport Control if you have it.', pl: { n: 'Washington Dulles (IAD)', q: 'Washington Dulles International Airport' } },
-        { t: '17:18', tz: 'ET', k: 'flight', ttl: 'UA 3453 Dulles → Toronto', txt: 'Republic, Embraer 175. Lands Pearson 19:01.', fix: 1, bk: 'united' },
+        { t: '08:30', k: 'food', ttl: 'Breakfast, pack', txt: 'Pack tax-refund goods where you can show them at the airport.' },
+        { t: '10:00', k: 'shop', ttl: 'Check out, last omiyage', txt: 'Leave bags at the desk. Free morning in Tokyo.' },
+        { t: '13:15', k: 'train', ttl: 'Leave for Haneda Terminal 3', txt: 'JR Chūō → Shinjuku → Yamanote → Shinagawa → Keikyū. About 60–70 min.', cost: '≈ ¥750', fix: 1, leave: '13:15' },
+        { t: '14:30', k: 'admin', ttl: 'T3: tax refund, then check-in', txt: 'Claim the tax back at customs (passport, receipts and goods) before you check bags, then United, security, immigration.', taxfree: 1 },
+        { t: '16:50', k: 'flight', ttl: 'UA 804 Haneda → Dulles', txt: 'Arrives 15:40 the same day.', fix: 1, bk: 'united', dur: 770 },
+        { t: '15:40', tz: 'ET', k: 'move', ttl: 'Dulles: US customs, re-drop bags', txt: 'Clear US immigration and customs, re-check bags, back through security. 1 h 38.', pl: { n: 'Washington Dulles (IAD)', q: 'Washington Dulles International Airport' } },
+        { t: '17:18', tz: 'ET', k: 'flight', ttl: 'UA 3453 Dulles → Toronto', txt: 'Lands Pearson 19:01. Pick a seat in the app.', fix: 1, bk: 'united' },
         { t: '19:01', tz: 'ET', k: 'move', ttl: 'Toronto Pearson', txt: 'Declare everything. UP Express to Union every 15 min.', cost: 'UP ≈ C$12.35', duty: 1 }
       ],
       go: [
-        { n: 'Don Quijote Shinjuku', jp: 'ドン・キホーテ 新宿東南口', q: 'Don Quijote Shinjuku', why: 'Whisky, snacks, everything else. Open late.' },
-        { n: 'Bic Camera Shinjuku', jp: 'ビックカメラ 新宿', q: 'Bic Camera Shinjuku East', why: 'Electronics and camera gear.' },
-        { n: 'Fūunji', jp: '風雲児', q: 'Fuunji Shinjuku', why: 'Tsukemen for the last lunch.' },
+        { n: 'Nakano Broadway', jp: '中野ブロードウェイ', q: 'Nakano Broadway', why: 'Last-minute finds near the hotel.' },
         { n: 'Haneda Terminal 3', jp: '羽田空港 第3ターミナル', q: 'Haneda Airport Terminal 3', why: 'Tax refund before bag drop.' }
       ],
       buy: [
-        { w: 'Whisky at Don Quijote', p: '≈ ¥2,000–6,000 a bottle for common bottles', note: 'Duty-free home: 1.14 L of spirits each, so one 700 ml bottle per person. A second bottle is taxed.' },
-        { w: 'Snacks (KitKat flavours, Jagariko, senbei)', p: '≈ ¥200–600 each' },
-        { w: 'Tsukemen', p: '≈ ¥1,200–1,500' },
-        { w: 'Limousine Bus to Haneda', p: '≈ ¥1,400' },
+        { w: 'Last omiyage', p: '≈ ¥2,000–6,000' },
+        { w: 'Train to Haneda', p: '≈ ¥750' },
         { w: 'UP Express home', p: '≈ C$12.35' }
       ],
       do: [
         { ttl: 'Tax refund, new system', txt: 'Since Nov 1, 2026 shops charge the full price and you claim the 10% back at the airport. Show passport, receipts and goods at T3 before bag drop. The refund goes to your card later, minus a handling fee.' },
-        { ttl: 'Dulles in 1 h 38', txt: 'Walk fast, have passports and the customs app ready, re-drop bags at the connection desk right after customs.' }
+        { ttl: 'Dulles in 1 h 38', txt: 'Walk fast, have passports ready, re-drop bags at the connection desk right after customs.' }
       ],
-      prep: ['Passports', 'Receipts for tax-free goods in one envelope', 'Tax-free goods packed on top', 'Bags under 23 kg each'],
-      regroup: { n: 'United check-in, Haneda T3', jp: '羽田空港 第3ターミナル ユナイテッド航空カウンター', note: 'Morning: hotel front desk.' }
+      prep: ['Passports', 'Receipts for tax-free goods in one envelope', 'Tax-free goods packed on top', 'Bags under 23 kg each', 'Mo: board packed for United'],
+      regroup: { n: 'United check-in, Haneda T3', jp: '羽田空港 第3ターミナル ユナイテッド航空カウンター', note: 'Morning: hotel lobby.' }
     }
   ],
 
   prepList: [
-    { id: 'p1', due: '2026-11-15', who: [1, 2], t: 'Confirm you\'re on the same four United flights; pick seats together in the United app' },
-    { id: 'p2', due: '2026-11-15', who: [0], t: 'Ask United to move all three to an earlier BUF → Dulles flight on Dec 9 (the 52-min connection)' },
-    { id: 'p3', due: '2026-11-15', who: [1], t: 'Shibu Onsen ryokan, Sun Dec 13 (1 room, 3 futons, dinner + breakfast)' },
-    { id: 'p4', due: '2026-11-15', who: [2], t: 'Niseko lodging Dec 15–18 (3 nights)' },
-    { id: 'p5', due: '2026-11-15', who: [0], t: 'Tokyo hotel Dec 10–13 and Dec 19–20; Sapporo hotel Dec 14 and Dec 18' },
-    { id: 'p6', due: '2026-11-15', who: [0], t: 'Flights HND → CTS Mon Dec 14 (17:30–18:30) and CTS → HND Sat Dec 19 (12:00–13:00)' },
-    { id: 'p7', due: '2026-11-15', who: [1], t: 'Snow Monkey Park dated web ticket for Dec 13' },
-    { id: 'p8', due: '2026-12-07', who: [1], t: 'Check the Yokohama Red Brick Christmas Market hours for Fri Dec 11' },
-    { id: 'p9', due: '2026-11-15', who: [0], t: 'Shinkansen seats Tokyo → Nagano Dec 13 and Nagano → Tokyo Dec 14' },
-    { id: 'p10', due: '2026-11-15', who: [2], t: 'Buffalo: OurBus for Tue Dec 8 and one airport-hotel room' },
-    { id: 'p11', due: '2026-11-22', who: [1], t: 'Nikka Yoichi guided tour, Fri Dec 18 (bookings open ~Nov 20)' },
-    { id: 'p12', due: '2026-11-25', who: [2], t: 'Sapporo → Niseko Resort Liner, Tue Dec 15 morning' },
-    { id: 'p13', due: '2026-11-25', who: [2], t: 'Niseko lift tickets (online) and ski rental pre-booking' },
-    { id: 'p15', due: '2026-11-25', who: [0, 1, 2], t: 'Travel insurance that covers skiing (check credit-card coverage first)' },
-    { id: 'p16', due: '2026-12-07', who: [0, 1, 2], t: 'Visit Japan Web: register and save the QR code' },
-    { id: 'p17', due: '2026-12-07', who: [0, 1, 2], t: 'Suica: Apple Wallet (Moziah, AJ). Trenton: try Google Wallet; else Welcome Suica at Haneda' },
-    { id: 'p18', due: '2026-12-07', who: [0, 1, 2], t: 'eSIM (Ubigi, Airalo or similar; 10 GB) ≈ C$20–30' },
-    { id: 'p19', due: '2026-12-07', who: [0, 1, 2], t: 'Tell your banks; bring a no-FX-fee card and a debit card for 7-Eleven ATMs' },
-    { id: 'p20', due: '2026-12-07', who: [2], t: 'Check the Niseko snow report; Plan B if the base is thin' },
-    { id: 'p21', due: '2026-12-07', who: [0, 1, 2], t: 'Download: Google Maps offline areas, Google Translate Japanese offline, United, GO taxi' }
+    { id: 'q1', due: '2026-11-20', who: [0, 1, 2], t: 'Book Koishiya Ryokan, Shibu Onsen, Sat Dec 12 (≈ C$282 for 3, room only)' },
+    { id: 'q2', due: '2026-11-20', who: [0, 1, 2], t: 'Book Chisun Grand Nagano, Sun Dec 13 (≈ C$150 for 3; confirm 3 beds)' },
+    { id: 'q3', due: '2026-11-20', who: [0, 1, 2], t: 'Book The Setsumon, Niseko, Dec 14–16 (≈ C$702 for 3)' },
+    { id: 'q4', due: '2026-11-20', who: [0, 1, 2], t: 'JAL JL508 CTS → HND Fri Dec 18: check the Japan Explorer Pass, else ≈ C$530 for 3' },
+    { id: 'q5', due: '2026-11-20', who: [1], t: 'Book Nagano → Toyama shinkansen Mon Dec 14, ~10:00 (¥7,090 each, Eki-net e-ticket)' },
+    { id: 'q6', due: '2026-11-20', who: [0, 2], t: 'Confirm you\'re on ANA NH1181 Toyama → New Chitose, Dec 14' },
+    { id: 'q7', due: '2026-11-22', who: [0, 1, 2], t: 'Link a Suica to the Eki-net e-tickets, one per person (Trenton & AJ: send Mo your card number)' },
+    { id: 'q8', due: '2026-11-25', who: [0, 1, 2], t: 'Book the Buffalo hotel, Tue Dec 8 (arrive ~23:00; 24-h desk, airport shuttle)' },
+    { id: 'q9', due: '2026-11-25', who: [1], t: 'Email The Setsumon: will they hold a board delivery arriving Dec 12–13? Get address + phone' },
+    { id: 'q10', due: '2026-11-25', who: [0, 1, 2], t: 'Book Quintessa Hotel Sapporo Susukino, Dec 16–18 (≈ C$215 for 3)' },
+    { id: 'q11', due: '2026-11-25', who: [0, 1, 2], t: 'Book NAKANO WORLD HOTEL, Dec 18–20 (≈ C$627 for 3); tell them Mo\'s board arrives ~Dec 18' },
+    { id: 'q12', due: '2026-11-25', who: [1], t: 'Trailways: check a board bag over 62 in. is OK on the Dec 8 bus' },
+    { id: 'q13', due: '2026-11-30', who: [0, 1, 2], t: 'Snow monkey park: dated web ticket for Dec 12, or plan on the Snow Monkey Pass (not both)' },
+    { id: 'q14', due: '2026-12-03', who: [0, 1, 2], t: 'Last day to cancel J-ARC for free is Dec 3 (18:00 JST)' },
+    { id: 'q15', due: '2026-12-04', who: [0, 1, 2], t: 'Resort Liner CTS → Hirafu 15:50, Dec 14 — hard cutoff 18:00 JST Dec 5 (04:00 Toronto)' },
+    { id: 'q16', due: '2026-12-04', who: [0, 1, 2], t: 'Niseko 2-day lift pass online (¥24,700)' },
+    { id: 'q17', due: '2026-12-04', who: [0, 2], t: 'Board + boot rental in Hirafu, pick-up Dec 14 evening' },
+    { id: 'q18', due: '2026-12-04', who: [0, 1, 2], t: 'Travel insurance that covers snowboarding (check credit-card coverage first)' },
+    { id: 'q19', due: '2026-12-07', who: [0, 1, 2], t: 'Visit Japan Web: register and save the QR code' },
+    { id: 'q20', due: '2026-12-07', who: [0, 1, 2], t: 'eSIM (10 GB) ≈ C$20–30' },
+    { id: 'q21', due: '2026-12-07', who: [0, 1, 2], t: 'Tell your banks; bring a no-FX-fee card and a debit card for 7-Eleven ATMs' },
+    { id: 'q22', due: '2026-12-07', who: [0, 1, 2], t: 'Download: Google Maps offline areas, Google Translate Japanese, United, GO taxi' },
+    { id: 'q23', due: '2026-12-08', who: [0], t: 'Message J-ARC (no front desk) for entry instructions; say you land 16:50, arrive ~18:30' },
+    { id: 'q24', due: '2026-12-08', who: [0, 1, 2], t: 'Pick seats on UA 3453 Dulles → Toronto' },
+    { id: 'q25', due: '2026-12-15', who: [0, 1, 2], t: 'Book wagyu / yakiniku for 3, Sat Dec 19' }
   ],
 
   packing: [
     'Passport', 'Visit Japan Web QR (saved offline)', 'Ski jacket and pants', 'Gloves + liner gloves', 'Goggles', 'Neck warmer',
     '2 sets of base layers', 'Ski socks ×3', 'Waterproof boots with real tread', 'Slip-on shoes', 'Socks without holes',
-    'Power banks (carry-on only)', 'Chargers + 3-prong adapter', 'Daypack for 3 days (Dec 12–15)', 'Two days of clothes in carry-on',
+    'Power banks (carry-on only)', 'Chargers + 3-prong adapter', 'Two days of clothes in carry-on', 'Mo: board, bindings, boots in one bag',
     'Meds', 'No-FX credit card + debit card', 'Camera + spare battery', 'Sunglasses', 'Lip balm and moisturiser (dry cold)'
   ],
 
   bookings: [
     { k: 'united', n: 'United flights (all four)', d: 'd-1' },
-    { k: 'ourbus', n: 'OurBus Toronto → Buffalo', d: 'd-2' },
-    { k: 'buffalo', n: 'Buffalo airport hotel', d: 'd-2' },
-    { k: 'tokyo1', n: 'Tokyo hotel, Dec 10–13', d: 'd1' },
-    { k: 'shink1', n: 'Shinkansen Tokyo → Nagano', d: 'd4' },
-    { k: 'monkey', n: 'Snow Monkey Park ticket', d: 'd4' },
-    { k: 'ryokan', n: 'Shibu Onsen ryokan', d: 'd4' },
-    { k: 'shink2', n: 'Shinkansen Nagano → Tokyo', d: 'd5' },
-    { k: 'dom1', n: 'Flight Haneda → New Chitose', d: 'd5' },
-    { k: 'sapporo1', n: 'Sapporo hotel, Dec 14', d: 'd5' },
-    { k: 'bus', n: 'Resort Liner Sapporo → Hirafu', d: 'd6' },
-    { k: 'niseko', n: 'Niseko hotel, Dec 15–18', d: 'd6' },
-    { k: 'rental', n: 'Ski rental', d: 'd6' },
-    { k: 'lift', n: 'Lift tickets', d: 'd7' },
-    { k: 'nikka', n: 'Nikka Yoichi tour', d: 'd9' },
-    { k: 'sapporo2', n: 'Sapporo hotel, Dec 18', d: 'd9' },
-    { k: 'dom2', n: 'Flight New Chitose → Haneda', d: 'd10' },
-    { k: 'tokyo2', n: 'Tokyo hotel, Dec 19', d: 'd10' },
-    { k: 'insurance', n: 'Travel insurance (ski)', d: '' }
+    { k: 'bus', n: 'Bus Toronto → Buffalo (Omio)', d: 'd-2' },
+    { k: 'buffalo', n: 'Buffalo hotel, Dec 8', d: 'd-2' },
+    { k: 'tokyo1', n: 'J-ARC Akebonobashi, Dec 10–12', d: 'd1' },
+    { k: 'board1', n: 'Board delivery Haneda → Niseko', d: 'd1' },
+    { k: 'shink1', n: 'Kagayaki 505 Tokyo → Nagano', d: 'd3' },
+    { k: 'monkey', n: 'Snow Monkey Park ticket / pass', d: 'd3' },
+    { k: 'ryokan', n: 'Koishiya Ryokan, Dec 12', d: 'd3' },
+    { k: 'nagano', n: 'Chisun Grand Nagano, Dec 13', d: 'd4' },
+    { k: 'shink2', n: 'Shinkansen Nagano → Toyama', d: 'd5' },
+    { k: 'ana', n: 'ANA NH1181 Toyama → New Chitose', d: 'd5' },
+    { k: 'liner', n: 'Resort Liner CTS → Hirafu', d: 'd5' },
+    { k: 'niseko', n: 'The Setsumon, Dec 14–16', d: 'd5' },
+    { k: 'rental', n: 'Board rental (Trenton & AJ)', d: 'd5' },
+    { k: 'lift', n: 'Niseko lift pass', d: 'd6' },
+    { k: 'board2', n: 'Board delivery Niseko → Nakano', d: 'd7' },
+    { k: 'sapporo', n: 'Quintessa Sapporo, Dec 16–18', d: 'd7' },
+    { k: 'jal', n: 'JAL JL508 New Chitose → Haneda', d: 'd9' },
+    { k: 'tokyo2', n: 'NAKANO WORLD HOTEL, Dec 18–20', d: 'd9' },
+    { k: 'dinner', n: 'Wagyu / yakiniku, Dec 19', d: 'd10' },
+    { k: 'insurance', n: 'Travel insurance (snowboard)', d: '' }
   ],
 
   food: [
-    { id: 'f1', n: 'Regional plates at Kabuki Hall', r: 'tokyo', d: 'd1' },
-    { id: 'f2', n: 'Your own Cup Noodles', r: 'tokyo', d: 'd2' },
-    { id: 'f3', n: 'Mulled wine at the Red Brick market', r: 'tokyo', d: 'd2' },
-    { id: 'f4', n: 'Chinatown pork bun and soup dumplings', r: 'tokyo', d: 'd2' },
-    { id: 'f5', n: 'Standing bar in Noge', r: 'tokyo', d: 'd2' },
-    { id: 'f6', n: 'Konbini egg sandwich', r: 'tokyo', d: 'd2' },
-    { id: 'f7', n: 'Monjayaki at Tsukishima', r: 'tokyo', d: 'd3' },
-    { id: 'f8', n: 'Ekiben on the Shinkansen', r: 'nagano', d: 'd4' },
-    { id: 'f9', n: 'Shinshū soba', r: 'nagano', d: 'd4' },
-    { id: 'f10', n: 'Ryokan kaiseki', r: 'nagano', d: 'd4' },
-    { id: 'f11', n: 'Oyaki at Zenkō-ji', r: 'nagano', d: 'd5' },
-    { id: 'f12', n: 'Jingisukan at Daruma', r: 'hokkaido', d: 'd5' },
-    { id: 'f13', n: 'Sapporo Classic on tap', r: 'hokkaido', d: 'd5' },
-    { id: 'f14', n: 'Seicomart Hot Chef', r: 'hokkaido', d: 'd6' },
-    { id: 'f15', n: 'Soup curry', r: 'hokkaido', d: 'd7' },
-    { id: 'f16', n: 'Nikka at the source', r: 'hokkaido', d: 'd9' },
-    { id: 'f17', n: 'Otaru sushi', r: 'hokkaido', d: 'd9' },
-    { id: 'f18', n: 'LeTAO cheesecake', r: 'hokkaido', d: 'd9' },
-    { id: 'f19', n: 'Miso ramen, Ramen Yokochō', r: 'hokkaido', d: 'd9' },
-    { id: 'f20', n: 'Shime parfait', r: 'hokkaido', d: 'd9' },
-    { id: 'f21', n: 'Kaisendon at Nijō Market', r: 'hokkaido', d: 'd10' },
-    { id: 'f22', n: 'Hoppy Street stewed beef', r: 'tokyo', d: 'd10' },
-    { id: 'f23', n: 'Tsukemen at Fūunji', r: 'tokyo', d: 'd11' },
-    { id: 'f24', n: 'Sangenjaya alley bar', r: 'tokyo', d: 'd10' }
+    { id: 'g1', n: 'Arakichō back-alley izakaya', r: 'tokyo', d: 'd1' },
+    { id: 'g2', n: 'Jimbōchō curry', r: 'tokyo', d: 'd2' },
+    { id: 'g3', n: 'Under-track standing bar', r: 'tokyo', d: 'd2' },
+    { id: 'g4', n: 'Ekiben on the Kagayaki', r: 'nagano', d: 'd3' },
+    { id: 'g5', n: 'Shinshū soba', r: 'nagano', d: 'd3' },
+    { id: 'g6', n: 'Obuse chestnut Mont Blanc', r: 'nagano', d: 'd4' },
+    { id: 'g7', n: 'Masuichi-Ichimura sake', r: 'nagano', d: 'd4' },
+    { id: 'g8', n: 'Oyaki at Zenkō-ji', r: 'nagano', d: 'd4' },
+    { id: 'g9', n: 'Seicomart Hot Chef', r: 'hokkaido', d: 'd5' },
+    { id: 'g10', n: 'Hirafu izakaya', r: 'hokkaido', d: 'd6' },
+    { id: 'g11', n: 'Otaru Soko No.1 house beer', r: 'hokkaido', d: 'd7' },
+    { id: 'g12', n: 'LeTAO cheesecake', r: 'hokkaido', d: 'd7' },
+    { id: 'g13', n: 'Otaru sushi', r: 'hokkaido', d: 'd7' },
+    { id: 'g14', n: 'Shime parfait', r: 'hokkaido', d: 'd7' },
+    { id: 'g15', n: 'Nijō Market seafood bowl', r: 'hokkaido', d: 'd8' },
+    { id: 'g16', n: 'Jingisukan at the Beer Garden', r: 'hokkaido', d: 'd8' },
+    { id: 'g17', n: 'Soup curry', r: 'hokkaido', d: 'd8' },
+    { id: 'g18', n: 'Miso ramen, Ramen Yokochō', r: 'hokkaido', d: 'd8' },
+    { id: 'g19', n: 'Ramen Dōjō at New Chitose', r: 'hokkaido', d: 'd9' },
+    { id: 'g20', n: 'Nakano izakaya alley', r: 'tokyo', d: 'd9' },
+    { id: 'g21', n: 'Kōenji music bar', r: 'tokyo', d: 'd9' },
+    { id: 'g22', n: 'Wagyu / yakiniku', r: 'tokyo', d: 'd10' },
+    { id: 'g23', n: 'Harmonica Yokochō bar', r: 'tokyo', d: 'd10' }
   ],
 
   baths: [
@@ -746,7 +798,7 @@ window.TRIP = {
       ['To here, please (show the card)', 'ここまでお願いします', 'Koko made onegaishimasu'],
       ['Does this train go to Nagano?', 'この電車は長野に行きますか?', 'Kono densha wa Nagano ni ikimasu ka?'],
       ['What time is the next train?', '次の電車は何時ですか?', 'Tsugi no densha wa nan-ji desu ka?'],
-      ['We\'d like to send our suitcases to our hotel in Niseko', 'スーツケースをニセコのホテルに送りたいです', 'Sūtsukēsu o Niseko no hoteru ni okuritai desu'],
+      ['We\'d like to send this snowboard to our hotel', 'このスノーボードをホテルに送りたいです', 'Kono sunōbōdo o hoteru ni okuritai desu'],
       ['Can you hold our bags?', '荷物を預かってもらえますか?', 'Nimotsu o azukatte moraemasu ka?'],
       ['Where are the coin lockers?', 'コインロッカーはどこですか?', 'Koin rokkā wa doko desu ka?']
     ]},
@@ -792,13 +844,14 @@ window.TRIP = {
 
   // Demo "pretend I'm here" spots for the Find Home compass
   demoSpots: [
-    { n: 'Noge, Yokohama', lat: 35.4466, lng: 139.6306, area: 'tokyo' },
-    { n: 'Ebisu Yokochō', lat: 35.6477, lng: 139.7107, area: 'tokyo' },
-    { n: 'Sensō-ji', lat: 35.7148, lng: 139.7967, area: 'tokyo' },
-    { n: 'Susukino crossing', lat: 43.0553, lng: 141.3530, area: 'hokkaido' },
+    { n: 'Kanda under the tracks', lat: 35.6918, lng: 139.7709, area: 'tokyo' },
+    { n: 'Kōenji Station', lat: 35.7053, lng: 139.6496, area: 'tokyo' },
+    { n: 'Harmonica Yokochō, Kichijōji', lat: 35.7038, lng: 139.5797, area: 'tokyo' },
+    { n: 'Jigokudani trailhead', lat: 36.7313, lng: 138.4442, area: 'nagano' },
+    { n: 'Zenkō-ji', lat: 36.6617, lng: 138.1878, area: 'nagano' },
     { n: 'Hirafu Welcome Centre', lat: 42.8607, lng: 140.6976, area: 'hokkaido' },
-    { n: 'Jigokudani trailhead', lat: 36.7313, lng: 138.4442, area: 'nagano' }
+    { n: 'Susukino crossing', lat: 43.0553, lng: 141.3530, area: 'hokkaido' }
   ],
 
-  sources: 'Plan checked Nov 12–13, 2026: United itinerary email, Niseko United and Grand Hirafu, Japan Ski Experience, Niseko Central, Skye Niseko, White Liner, Go Nagano, Snow Monkey Guide, Ekitan, Selected Ryokan, Gracery Shinjuku, ikyu, Accor, NISADE, Skyscanner, Jorudan (Yokohama Christmas market), Kanagawa tourism (Cup Noodles Museum), Japan Activity (Air Cabin), Time Out (Kabuki Hall), Nifty Onsen (Thermae-Yu), sapporo.travel, japan-guide, Tokyo Cheapo. Hotel addresses from Jalan, KNT, NTA, Mapple and Accor (Nov 13, 2026).'
+  sources: 'Plan synced Nov 15, 2026 from the group\'s Japan_Round2_Trip_Planner sheet (Itinerary, Lodging, Transport, Activities, Eats, Book Now, Budget tabs). Hotel addresses, phones and check-in times from Koishiya (489ban), Chisun Grand Nagano (Solare), Quintessa Hotels, Expedia / Hotels.com listings for J-ARC Akebonobashi, The Setsumon and NAKANO WORLD HOTEL, and Japan Ski Experience / SamuraiSnow (The Setsumon), Nov 15, 2026.'
 };
