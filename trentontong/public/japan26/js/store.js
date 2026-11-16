@@ -3,15 +3,15 @@
 (function () {
   'use strict';
 
-  const LS = { auth: 'jt26.auth', plan: 'jt26.plan', db: 'jt26.db', old: 'jt26.v1' };
-  const COLS = ['exp', 'todo', 'book', 'set'];
+  const LS = { auth: 'jt26.auth', plan: 'jt26.plan', db: 'jt26.db', old: 'jt26.v1', dv: 'jt26.dv' };
+  const COLS = ['exp', 'todo', 'book', 'set', 'note'];
   const CATS = ['food', 'drinks', 'transit', 'taxi', 'tickets', 'shop', 'stay', 'other'];
   const INVITE = /([A-Za-z0-9_-]{30,200})\.([A-Za-z0-9_-]{40,128})/;
 
   const load = (k, d) => { try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : d; } catch { return d; } };
   const keep = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch { /* storage full or blocked: keep running from memory */ } };
   const drop = k => { try { localStorage.removeItem(k); } catch { /* ignore */ } };
-  const blank = () => ({ rev: 0, me: 0, names: [], recs: { exp: {}, todo: {}, book: {}, set: {} }, q: [], last: 0 });
+  const blank = () => ({ rev: 0, me: 0, names: [], recs: { exp: {}, todo: {}, book: {}, set: {}, note: {} }, q: [], last: 0, api: 1, mail: null, mailq: null });
 
   let auth = load(LS.auth, null);
   let plan = load(LS.plan, null); // { pv, data }
@@ -51,6 +51,8 @@
     });
     db.q.forEach(applyLocal); // edits still waiting to upload stay on top
     db.rev = res.rev; db.me = res.me; db.names = Array.isArray(res.names) ? res.names.map(String) : []; db.last = Date.now();
+    db.api = Number(res.api) || 1;
+    if (res.mail && typeof res.mail === 'object') db.mail = { e: String(res.mail.e || '').slice(0, 120), on: res.mail.on === true };
     if (res.plan && res.pv) { plan = { pv: res.pv, data: res.plan }; keep(LS.plan, plan); model = null; }
   }
 
@@ -59,17 +61,20 @@
     if (busy) { again = true; return; }
     clearTimeout(timer);
     busy = true; state = 'syncing'; emit();
-    const sent = db.q.slice();
+    const sent = db.q.slice(), mailSent = db.mailq;
     try {
-      const res = await call({ a: 'sync', k: auth.key, since: db.rev, pv: plan ? plan.pv : '', ops: sent }, auth.dep);
+      const body = { a: 'sync', k: auth.key, since: db.rev, pv: plan ? plan.pv : '', ops: sent, dv: device() };
+      if (mailSent) body.mail = mailSent;
+      const res = await call(body, auth.dep);
       if (res.ok) {
+        if (db.mailq === mailSent) db.mailq = null;
         db.q = db.q.filter(o => !sent.some(s => s.c === o.c && s.id === o.id && s.ts === o.ts));
         merge(res);
         state = 'ok';
       } else state = res.e === 'auth' ? 'locked' : 'error';
     } catch { state = navigator.onLine === false ? 'offline' : 'error'; }
     busy = false; persist(); emit();
-    if (state === 'ok' && (again || db.q.length)) { again = false; soon(600); }
+    if (state === 'ok' && (again || db.q.length || db.mailq)) { again = false; soon(600); }
     again = false;
   }
   function soon(ms) { clearTimeout(timer); timer = setTimeout(sync, ms == null ? 900 : ms); }
@@ -83,6 +88,14 @@
     persist(); emit(); soon();
   }
 
+  // A random label for this install, so the backend can tell when an invite link is used on a new device.
+  function device() {
+    let v = load(LS.dv, '');
+    if (typeof v !== 'string' || !/^[a-z0-9]{20,40}$/.test(v)) { v = newId() + newId(); keep(LS.dv, v); }
+    return v;
+  }
+  function setMail(e, on) { db.mailq = { e: String(e || '').trim().slice(0, 120), on: !!on }; db.mail = db.mailq; persist(); emit(); soon(200); }
+
   const newId = () => { const a = new Uint8Array(12); crypto.getRandomValues(a); return 'x' + Array.from(a, b => (b % 36).toString(36)).join(''); };
 
   /* ---------- join / leave ---------- */
@@ -92,7 +105,7 @@
     const inv = parseInvite(text);
     if (!inv) return 'This is not a valid invite link.';
     let res;
-    try { res = await call({ a: 'sync', k: inv.key, since: 0, pv: '', ops: [] }, inv.dep); }
+    try { res = await call({ a: 'sync', k: inv.key, since: 0, pv: '', ops: [], dv: device() }, inv.dep); }
     catch { return 'Unable to connect. Check your connection and try again.'; }
     if (!res.ok) return res.e === 'auth' ? 'This invite link is no longer valid. Ask for a new one.' : 'The service is temporarily unavailable. Try again in a few minutes.';
     if (!res.plan) return 'The trip is not available yet. Try again in a few minutes.';
@@ -200,7 +213,10 @@
       bal[d.p] += v; paid[d.p] += v; total += v;
       s.forEach(i => { bal[i] -= v / s.length; share[i] += v / s.length; });
     });
-    return { bal, share, paid, total, pay: settle(bal) };
+    // Whoever is furthest behind is the fairest person to pay next.
+    let turn = -1;
+    bal.forEach((v, i) => { if (v < -1 && (turn < 0 || v < bal[turn])) turn = i; });
+    return { bal, share, paid, total, pay: settle(bal), turn };
   }
   // Fewest payments that square everyone up.
   function settle(bal) {
@@ -219,10 +235,11 @@
   window.Store = {
     CATS,
     get joined() { return !!auth; }, get state() { return state; }, get waiting() { return db.q.length; }, get last() { return db.last; },
-    get me() { return db.me; }, get names() { return db.names; }, get hasPlan() { return !!(plan && plan.data); }, get invite() { return auth; },
+    get me() { return db.me; }, get api() { return db.api || 1; }, get mail() { return db.mail; }, get names() { return db.names; }, get hasPlan() { return !!(plan && plan.data); }, get invite() { return auth; },
     rec: (c, id) => (db.recs[c] && db.recs[c][id]) || null,
-    on: f => subs.push(f), sync, put, newId, join, leave, parseInvite,
+    on: f => subs.push(f), sync, put, setMail, newId, join, leave, parseInvite,
     trip, phase, abs, at, parts, hm, dateLbl, span, pad,
-    fx, toCad, fromCad, expenses, money
+    fx, toCad, fromCad, expenses, money,
+    notes: () => Object.keys(db.recs.note).map(id => Object.assign({ id }, db.recs.note[id])).sort((x, y) => y.ts - x.ts)
   };
 })();
