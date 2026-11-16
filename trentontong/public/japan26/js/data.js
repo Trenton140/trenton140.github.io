@@ -130,9 +130,9 @@ window.TRIP = {
       flight: { code: 'UA 803', from: 'IAD', to: 'HND', dep: { d: '2026-12-09', t: '12:20', tz: 'ET' }, arr: { d: '2026-12-10', t: '16:50', tz: 'JST' } },
       items: [
         { t: '07:30', k: 'bus', ttl: 'Hotel shuttle → BUF', txt: 'Sleep Inn & Suites airport shuttle (booked at the desk last night), 5–10 min; Uber if it doesn\'t show. Check-out is 11:00, so no rush. Check in by about 09:00 and check bags through to Haneda.', cost: 'shuttle free · 2 checked bags included', fix: 1, leave: '07:30' },
-        { t: '10:00', k: 'flight', ttl: 'UA 6157 Buffalo → Dulles', txt: 'Arrives 11:28. Mo is in 23B; sit near the front: you have 52 minutes at Dulles.', fix: 1, bk: 'united' },
+        { t: '10:00', k: 'flight', ttl: 'UA 6157 Buffalo → Dulles', txt: 'Arrives 11:28. Sit near the front: you have 52 minutes at Dulles.', fix: 1, bk: 'united' },
         { t: '11:28', k: 'move', ttl: 'Dulles: 52-minute connection', txt: 'No customs here. Go straight to the UA 803 gate (AeroTrain between concourses). Look up the gate before landing.', pl: { n: 'Washington Dulles (IAD)', q: 'Washington Dulles International Airport' } },
-        { t: '12:20', k: 'flight', ttl: 'UA 803 Dulles → Haneda', txt: 'Mo in 50K. 14 h 30. Stay awake for the first half, sleep the second half. Lands 16:50 Japan time on Thu Dec 10.', fix: 1, bk: 'united', dur: 870 }
+        { t: '12:20', k: 'flight', ttl: 'UA 803 Dulles → Haneda', txt: '14 h 30. Stay awake for the first half, sleep the second half. Lands 16:50 Japan time on Thu Dec 10.', fix: 1, bk: 'united', dur: 870 }
       ],
       warn: 'UA 803 is the only Dulles–Haneda flight of the day. A snow or de-icing delay in Buffalo could cost you a day in Tokyo, and the shinkansen on Dec 12 is booked. Ask United about an earlier Buffalo → Dulles flight; free fallback is to be at BUF by 05:00 and ask to stand by.',
       go: [
@@ -361,9 +361,9 @@ window.TRIP = {
       transit: {
         title: 'Nagano → Niseko Hirafu', meta: 'about 10 h · ≈ ¥28,600',
         steps: [
-          'Kagayaki 503, Nagano 08:39 → Toyama 09:24. Booked (E50023): Car 6, seats 15-A/B/C. Link each Suica to the e-ticket on Eki-net, like Dec 12.',
+          'Kagayaki 503, Nagano 08:39 → Toyama 09:24. Booked: Car 6, seats 15-A/B/C. Link each Suica to the e-ticket on Eki-net, like Dec 12.',
           'Airport bus, Toyama Station → Toyama Airport, 10:20 → 10:44, ¥420, pay when you get off. Backup 10:25 → 10:48, or a taxi (about 15 min). You have about 55 min at the station first.',
-          'ANA NH1181, Toyama 12:50 → New Chitose 14:20. Booked (F8QYFD, restricted fare). 1 checked bag each.',
+          'ANA NH1181, Toyama 12:50 → New Chitose 14:20. Booked (restricted fare). 1 checked bag each.',
           'Hokkaido Resort Liner, New Chitose 15:50 → Hirafu Welcome Centre about 18:30, ¥5,700. Book on WAMAZING by 18:00 JST Dec 5. Backups 17:50 and 19:30.',
           'Welcome Centre → The Setsumon: a short walk in central Hirafu. Check-in officially closes 18:00, so message them about the 18:30 arrival by Dec 11.'
         ]
@@ -390,7 +390,7 @@ window.TRIP = {
       buy: [
         { w: 'Kagayaki 503 (already paid)', p: '¥6,890 each' },
         { w: 'Toyama airport bus', p: '¥420', note: 'Pay on board.' },
-        { w: 'ANA NH1181 (paid)', p: '¥15,600', note: 'Mo and Trenton ticketed. AJ: confirm you\'re on F8QYFD.' },
+        { w: 'ANA NH1181 (paid)', p: '¥15,600', note: 'Mo and Trenton ticketed. AJ: confirm you\'re on the booking.' },
         { w: 'The Setsumon balance', p: 'C$19.20', note: 'Paid at the property.' },
         { w: 'Resort Liner', p: '¥5,700' },
         { w: 'Board rental, 2 days (Trenton & AJ)', p: '≈ ¥12,000 each' },
@@ -400,7 +400,7 @@ window.TRIP = {
         { ttl: 'Rental fitting', txt: 'Boots should touch your toes standing and pull back when you flex. Ask for a snug boot; rental boots pack out fast.' },
         { ttl: 'Niseko Rules', txt: 'Off-piste only through the marked gates, and only when they\'re open. Ropes are not suggestions; lift passes get cut.' }
       ],
-      prep: ['Suica linked to the E50023 e-ticket (all three)', 'Out of Chisun by 08:20', 'Resort Liner booked (by Dec 5)', 'The Setsumon late check-in instructions saved', 'Power banks in your pocket for the flight'],
+      prep: ['Suica linked to the Dec 14 e-ticket (all three)', 'Out of Chisun by 08:20', 'Resort Liner booked (by Dec 5)', 'The Setsumon late check-in instructions saved', 'Power banks in your pocket for the flight'],
       regroup: { n: 'Hirafu Welcome Centre', jp: 'ひらふウェルカムセンター', note: 'Airports: the gate. CTS: the Resort Liner stop.' }
     },
 
@@ -547,7 +547,7 @@ window.TRIP = {
         title: 'Sapporo → Narita → Tokyo #2 hotel', meta: 'about 5 h 30 door to door · ≈ ¥4,000 + the paid flight',
         steps: [
           'JR Rapid Airport, Sapporo 09:30 → New Chitose about 10:10, ≈ ¥1,230. Be at the Jetstar counter by 10:15: bag drop closes 10:25.',
-          'Jetstar GK104, New Chitose 11:05 → Narita Terminal 3 13:00. Booked (HQ9PHD), seats 5D–F. 7 kg carry-on + 20 kg checked each. Web check-in opens Dec 16 at 11:05 JST.',
+          'Jetstar GK104, New Chitose 11:05 → Narita Terminal 3 13:00. Booked. 7 kg carry-on + 20 kg checked each. Web check-in opens Dec 16 at 11:05 JST.',
           'Terminal 3 has no station: walk 10–15 min or take the shuttle to Terminal 2.',
           'Into Tokyo: Skyliner to Ueno / Nippori 36–41 min ¥2,580; N\'EX to Tokyo 53–60 min ¥3,140 or Shinjuku 75–85 min ¥3,330; Access Express direct to Asakusa about 60 min ¥1,270; bus to Tokyo Station 65–90 min ¥1,500. Pick by where the Tokyo #2 hotel is (not booked yet).',
           'Nakano is about 5 min from Shinjuku on JR Chūō; Kōenji is one more stop. The Tokyo Subway 48-hour Ticket (¥1,500) doesn\'t cover JR, so it may not pay off.'
@@ -557,7 +557,7 @@ window.TRIP = {
         { t: '08:30', k: 'stay', ttl: 'Pack, check out of Quintessa' },
         { t: '09:30', k: 'train', ttl: 'JR Rapid Airport to New Chitose', txt: 'About 40 min. Royce Chocolate World and quick ramen in the domestic terminal if there\'s time.', cost: '≈ ¥1,230', fix: 1, leave: '09:20' },
         { t: '10:15', k: 'admin', ttl: 'Jetstar bag drop', txt: 'Closes 10:25 (40 min before departure). 20 kg checked + 7 kg carry-on each; weigh at the self-service kiosks.' },
-        { t: '11:05', k: 'flight', ttl: 'Jetstar GK104 New Chitose → Narita', txt: 'Booked HQ9PHD, seats 5D / 5E / 5F. Lands Narita Terminal 3 at 13:00, not Haneda.', cost: 'paid · ¥10,500 each', fix: 1, bk: 'jetstar' },
+        { t: '11:05', k: 'flight', ttl: 'Jetstar GK104 New Chitose → Narita', txt: 'Booked. Lands Narita Terminal 3 at 13:00, not Haneda.', cost: 'paid · ¥10,500 each', fix: 1, bk: 'jetstar' },
         { t: '13:00', a: 1, k: 'train', ttl: 'Narita T3 → Tokyo', txt: 'Walk or shuttle to the Terminal 2 station, then Skyliner, N\'EX, Access Express or the bus, depending on the hotel. 60–90 min.', cost: '≈ ¥1,270–3,330', pl: { n: 'Narita Airport Terminal 2 Station', jp: '空港第2ビル駅', q: 'Narita Airport Terminal 2 Station' } },
         { t: '15:00', k: 'stay', ttl: 'Check in at the Tokyo #2 hotel', txt: 'Not booked yet: see Bookings. No board to collect; it\'s waiting at Haneda.', bk: 'tokyo2' },
         { t: '15:30', k: 'shop', ttl: 'Nakano Broadway', txt: 'Secondhand electronics, watches, cameras, anime and collectibles at local prices. 5 min from Shinjuku on JR Chūō.', pl: { n: 'Nakano Broadway', jp: '中野ブロードウェイ', q: 'Nakano Broadway' } },
@@ -654,7 +654,7 @@ window.TRIP = {
         { t: '13:15', k: 'train', ttl: 'Leave for Haneda Terminal 3', txt: 'Keikyū or the monorail, 30–40 min from central Tokyo (longer from Nakano).', cost: '≈ ¥500–750', fix: 1, leave: '13:15' },
         { t: '14:00', k: 'admin', ttl: 'Mo: pick up the board', txt: 'Yamato / JAL ABC counter, Haneda T3. Shipped from Hirafu Dec 16. Bring the slip and passport.', bk: 'board2', bag: 'arrive2', pl: { n: 'Haneda Airport Terminal 3', jp: '羽田空港 第3ターミナル', q: 'Haneda Airport Terminal 3' } },
         { t: '14:30', k: 'admin', ttl: 'T3: tax refund, then check-in', txt: 'Claim the tax back at customs (passport, receipts and goods) before you check bags, then United, security, immigration.', taxfree: 1 },
-        { t: '16:50', k: 'flight', ttl: 'UA 804 Haneda → Dulles', txt: 'Mo in 50E. Arrives 15:40 the same day.', fix: 1, bk: 'united', dur: 770 },
+        { t: '16:50', k: 'flight', ttl: 'UA 804 Haneda → Dulles', txt: 'Arrives 15:40 the same day.', fix: 1, bk: 'united', dur: 770 },
         { t: '15:40', tz: 'ET', k: 'move', ttl: 'Dulles: US customs, re-drop bags', txt: 'Clear US immigration and customs, re-check bags, back through security. 1 h 38.', pl: { n: 'Washington Dulles (IAD)', q: 'Washington Dulles International Airport' } },
         { t: '17:18', tz: 'ET', k: 'flight', ttl: 'UA 3453 Dulles → Toronto', txt: 'Lands Pearson 19:01. Pick a seat in the app.', fix: 1, bk: 'united' },
         { t: '19:01', tz: 'ET', k: 'move', ttl: 'Toronto Pearson', txt: 'Declare everything. Then the ride home you arranged (you left by bus via Buffalo), or UP Express to Union every 15 min.', cost: 'UP ≈ C$12.35', duty: 1, bk: 'ridehome' }
@@ -680,7 +680,7 @@ window.TRIP = {
   prepList: [
     { id: 'q6', due: '2026-11-20', who: [2], t: 'AJ: forward your United and ANA NH1181 ticket receipts (no agent has seen them yet)' },
     { id: 'q26', due: '2026-11-20', who: [0], t: 'Read J-ARC\'s self check-in message in the Expedia app (arrived Nov 16)' },
-    { id: 'q7', due: '2026-11-22', who: [0, 1, 2], t: 'Link a Suica to BOTH Eki-net e-tickets (E81032 Dec 12, E50023 Dec 14), one per person. Trenton & AJ: send Mo your card number' },
+    { id: 'q7', due: '2026-11-22', who: [0, 1, 2], t: 'Link a Suica to BOTH Eki-net e-tickets (Dec 12 and Dec 14), one per person. Trenton & AJ: send Mo your card number' },
     { id: 'q11', due: '2026-11-25', who: [0, 1, 2], t: 'Book the Tokyo #2 hotel, Dec 18–20. You land at Narita: Asakusa (OTHER SPACE ≈ C$740 for 3) or Nakano (NAKANO WORLD HOTEL ≈ C$627 for 3)' },
     { id: 'q9', due: '2026-11-25', who: [1], t: 'Email The Setsumon (+81 136-23-1724): will they hold a board delivery arriving Dec 12–13? Get the exact address for the form' },
     { id: 'q12', due: '2026-11-25', who: [1], t: 'Trailways: check a board bag over 62 in. is OK on the Dec 8 bus' },
@@ -696,7 +696,7 @@ window.TRIP = {
     { id: 'q21', due: '2026-12-07', who: [0, 1, 2], t: 'Tell your banks; bring a no-FX-fee card and a debit card for 7-Eleven ATMs' },
     { id: 'q22', due: '2026-12-07', who: [0, 1, 2], t: 'Download: Google Maps offline areas, Google Translate Japanese, United, Jetstar, GO taxi' },
     { id: 'q23', due: '2026-12-08', who: [0], t: 'Message J-ARC (no front desk) if you still need entry instructions; say you land 16:50, arrive ~18:30' },
-    { id: 'q24', due: '2026-12-08', who: [0, 1, 2], t: 'United: pick seats (Mo has none on IAD → YYZ; Trenton\'s P63QJM shows none) and confirm AJ\'s booking' },
+    { id: 'q24', due: '2026-12-08', who: [0, 1, 2], t: 'United: pick seats (Mo has none on IAD → YYZ; Trenton\'s shows none) and confirm AJ\'s booking' },
     { id: 'q27', due: '2026-12-11', who: [0, 1, 2], t: 'Message The Setsumon: arriving ~18:30 Dec 14, after the 18:00 check-in cutoff (no front desk)' },
     { id: 'q28', due: '2026-12-15', who: [0, 1, 2], t: 'Arrange the ride home from Pearson, Sun Dec 20 ~19:01 (you left by bus via Buffalo)' },
     { id: 'q29', due: '2026-12-16', who: [0, 1, 2], t: 'Jetstar GK104 web check-in, opens Dec 16 11:05 JST (Dec 15 21:05 Toronto)' }
