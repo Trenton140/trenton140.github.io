@@ -226,8 +226,8 @@
     if (now < t('2026-12-13', '12:00')) return { t: 'In transit → The Setsumon, Niseko', s: 'Shipped from Haneda Dec 10. Due about Dec 12–13.' };
     if (now < t('2026-12-14', '18:30')) return { t: 'Should be waiting at The Setsumon', s: 'Pick it up when you check in Mon evening.' };
     if (now < t('2026-12-16', '11:30')) return null;
-    if (now < t('2026-12-18', '15:00')) return { t: 'In transit → NAKANO WORLD HOTEL', s: 'Shipped from Hirafu Dec 16. Arrives by Fri Dec 18.' };
-    if (now < t('2026-12-18', '20:00')) return { t: 'Should be at NAKANO WORLD HOTEL', s: 'Ask at the desk when you check in.' };
+    if (now < t('2026-12-19', '12:00')) return { t: 'In transit → Haneda T3', s: 'Shipped from Hirafu Dec 16 by Yamato airport delivery. Collect it at the T3 counter before UA 804 check-in on Dec 20.' };
+    if (now < t('2026-12-20', '15:00')) return { t: 'Waiting at the Haneda T3 Yamato counter', s: 'Pick it up on Dec 20 before United check-in (allow 15 min).' };
     return null;
   }
 
@@ -483,7 +483,7 @@
     const loc = (C.Clock.sim() && S().fakeLoc) ? S().fakeLoc : R.loc;
     let h = pageHead('Find home');
     h += '<div class="who">' + ['tokyo', 'shibu', 'nagano', 'niseko', 'sapporo', 'tokyo2'].map(k => '<button class="' + (k === key ? 'on' : '') + '" data-a="homeT" data-v="' + k + '">' + esc(C.stay(k).short) + (k === auto ? ' · tonight' : '') + '</button>').join('') + '</div>';
-    if (s.lat == null) return h + '<p class="empty">No coordinates for this stay.</p>';
+    if (s.lat == null) return h + '<p class="empty">No address yet for this stay.</p><section class="card"><div class="ch static">' + ic('pin') + '<div><b>At the hotel now?</b><small>Stand at the door and pin it, so the arrow can bring you back.</small></div><button class="pill" data-a="pinHere" data-k="' + key + '">Pin here</button></div></section>';
     let dist = null, br = null;
     if (loc) { dist = C.distKm(loc, s); br = C.bearing(loc, s); }
     const head = R.heading;
@@ -559,7 +559,7 @@
 
   function vPacking() {
     return pageHead('Packing') + '<section class="card"><ul class="checks">' + T.packing.map((p, i) => '<li class="' + (S().pack[i] ? 'done' : '') + '" data-a="pack" data-i="' + i + '"><span class="cb">' + ic('check') + '</span>' + esc(p) + '</li>').join('') + '</ul></section>' +
-      '<p class="fine">One mid-size suitcase and one daypack each. You carry your own bags the whole way (shinkansen, two domestic flights, the resort bus), so pack light. Only Mo\'s board is shipped: Haneda → Niseko on Dec 10, Niseko → Nakano on Dec 16.</p>';
+      '<p class="fine">One mid-size suitcase and one daypack each. You carry your own bags the whole way (shinkansen, two domestic flights, the resort bus), so pack light. Only Mo\'s board is shipped: Haneda → Niseko on Dec 10, Niseko → Haneda T3 on Dec 16 (collect it Dec 20). Jetstar on Dec 18 allows 7 kg carry-on + 20 kg checked each.</p>';
   }
 
   function vNotes() {
