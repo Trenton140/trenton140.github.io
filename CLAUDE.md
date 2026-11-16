@@ -72,7 +72,16 @@ A single-page React 19 app built with Vite. Plain CSS (CSS Modules + theme varia
   keys live in the owner's Drive folder "Japan26 App (private)".
 - `index.html` has a strict Content-Security-Policy (no inline scripts or styles). Keep it: build HTML with escaped strings,
   use classes instead of `style=""`, and add no third-party requests.
-- After changing any file in that folder, bump `V` in `sw.js` so installed copies update.
+- `index.html` also refuses to run inside a frame (first lines of `js/app.js`). Keep that guard.
+- Look: snow-paper background, indigo ink, one hanko red (`css/app.css` tokens). Two self-hosted OFL fonts in `fonts/`:
+  Zen Kaku Gothic New for the interface, DotGothic16 for the till receipt, keypad, times and codes only. Screens stay
+  bare until tapped: rows open in place (`fold()`), pages open with a view transition (`go()`).
+- Charges are added in the register (`openExp` / `saveExp` in `js/app.js`): the receipt in `#reg` prints live, and
+  "Ring it up" feeds, stamps and tears it. The charge is saved by `done()`, which also runs on a timer, so the
+  animation can never lose an entry. Sounds are synthesised with WebAudio; there are no audio files.
+- Features that need backend API 2 (shared notes, email alerts) hide themselves when `Store.api < 2`.
+- After changing any file in that folder, bump `V` in `sw.js` so installed copies update. New files must also be added
+  to `ASSETS` there.
 
 ## Develop, test, build
 
