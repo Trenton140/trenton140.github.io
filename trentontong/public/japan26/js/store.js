@@ -131,7 +131,7 @@
   }
 
   /* ---------- time ---------- */
-  const OFF = { ET: -5, JST: 9 }; // December: Toronto is UTC-5, Japan UTC+9
+  const OFF = { ET: -5, JST: 9 }; // fixed winter offsets from UTC for the two zones a plan can use
   const pad = n => String(n).padStart(2, '0');
   const abs = (d, t, tz) => Date.UTC(+d.slice(0, 4), +d.slice(5, 7) - 1, +d.slice(8, 10), +t.slice(0, 2) - (OFF[tz] || 0), +t.slice(3, 5));
   const at = o => abs(o.d, o.t, o.tz);
