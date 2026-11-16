@@ -59,6 +59,21 @@ A single-page React 19 app built with Vite. Plain CSS (CSS Modules + theme varia
   `src/assets/images/logos/`). CI does **not** run the optimizer.
   The WebP files must be committed.
 
+## The private trip app under `public/japan26/`
+
+`trentontong/public/japan26/` is a separate, dependency-free web app (plain HTML, CSS and JS, copied as-is by Vite). It is a
+**private app with a public shell**:
+
+- Nothing about the trip may ever be committed here: no itinerary, dates, hotels, names, booking codes or backend address.
+  The shell only knows how to join with an invite link, then fetches the plan and shared data from a private backend
+  (a Google Apps Script bound to a Google Sheet in the owner's Drive) and keeps them in the phone's local storage.
+- The invite link carries the backend's deployment id and a personal key, so neither appears in this repo.
+- The plan is updated through the backend's admin endpoint, not by editing files here. The backend code, the plan and the
+  keys live in the owner's Drive folder "Japan26 App (private)".
+- `index.html` has a strict Content-Security-Policy (no inline scripts or styles). Keep it: build HTML with escaped strings,
+  use classes instead of `style=""`, and add no third-party requests.
+- After changing any file in that folder, bump `V` in `sw.js` so installed copies update.
+
 ## Develop, test, build
 
 Requires **Node 22.12+** (CI uses Node 22). All commands run from `trentontong/`.

@@ -1,7 +1,7 @@
 {
   "name": "Japan '26",
   "short_name": "Japan '26",
-  "description": "Trip plan for Trenton, Moziah and AJ, Dec 2026. Works offline.",
+  "description": "Private trip app. Opens with an invite.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
