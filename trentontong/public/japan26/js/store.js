@@ -90,12 +90,12 @@
 
   async function join(text) {
     const inv = parseInvite(text);
-    if (!inv) return 'That doesn\'t look like an invite link.';
+    if (!inv) return 'This is not a valid invite link.';
     let res;
     try { res = await call({ a: 'sync', k: inv.key, since: 0, pv: '', ops: [] }, inv.dep); }
-    catch { return 'Couldn\'t reach the trip. Check your connection and try again.'; }
-    if (!res.ok) return res.e === 'auth' ? 'That invite isn\'t valid any more. Ask for a new one.' : 'The trip isn\'t reachable right now. Try again in a minute.';
-    if (!res.plan) return 'The trip isn\'t ready yet. Try again in a minute.';
+    catch { return 'Unable to connect. Check your connection and try again.'; }
+    if (!res.ok) return res.e === 'auth' ? 'This invite link is no longer valid. Ask for a new one.' : 'The service is temporarily unavailable. Try again in a few minutes.';
+    if (!res.plan) return 'The trip is not available yet. Try again in a few minutes.';
     const waiting = auth && auth.dep === inv.dep ? db.q : []; // same trip, new key: keep unsent edits
     auth = inv; keep(LS.auth, auth);
     db = blank(); db.q = waiting; merge(res); migrateOld(); persist();
@@ -139,7 +139,7 @@
   const hm = (ms, tz) => { const p = parts(ms, tz); return pad(p.h) + ':' + pad(p.mi); };
   const WD = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'], MO = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
   const dateLbl = iso => { const x = new Date(iso + 'T12:00:00Z'); return WD[x.getUTCDay()] + ' ' + MO[x.getUTCMonth()] + ' ' + x.getUTCDate(); };
-  const span = ms => { const m = Math.max(0, Math.round(ms / 60000)); return m < 60 ? m + ' min' : Math.floor(m / 60) + ' h' + (m % 60 ? ' ' + pad(m % 60) : ''); };
+  const span = ms => { const m = Math.max(0, Math.round(ms / 60000)); return m < 60 ? m + ' min' : Math.floor(m / 60) + ' h' + (m % 60 ? ' ' + (m % 60) + ' min' : ''); };
 
   /* ---------- the plan, with times worked out ---------- */
   function trip() {

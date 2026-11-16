@@ -1,5 +1,5 @@
 /* Offline shell for the private trip app. Only the app's own static files are cached here: no trip data is in them. */
-const V = 'jt26-shell-c06365e902';
+const V = 'jt26-shell-b01a811b';
 const ASSETS = ['./', 'index.html', 'css/app.css', 'js/store.js', 'js/app.js', 'manifest.webmanifest',
   'icons/icon-192.png', 'icons/icon-512.png', 'icons/icon-maskable-512.png', 'icons/apple-touch-icon.png'];
 self.addEventListener('install', e => {
